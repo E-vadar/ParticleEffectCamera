@@ -29,7 +29,7 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
     private JavaCameraView mcameraView;
     private static int cameraIndex = 0;//前置1，后置0
     int option = 0;
-    int t = 0;
+    static int t = 0;
     MTCNN mtcnn;
     BitmapFactory.Options options = new BitmapFactory.Options();
 
@@ -80,18 +80,23 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
                    switch (id) {
                        case R.id.glasses:
                            option = 1;
+                           t = 0;
                            break;
                        case R.id.circle:
                            option = 2;
+                           t = 0;
                            break;
                        case R.id.mouth:
                            option = 3;
+                           t = 0;
                            break;
                        case R.id.eye:
                            option = 4;
+                           t = 0;
                            break;
                        default:
                            option = 0;
+                           t = 0;
                            break;
                    }
         return super.onOptionsItemSelected(item);
@@ -109,6 +114,7 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
 
     @Override
     public Mat onCameraFrame(CameraBridgeViewBase.CvCameraViewFrame inputFrame) {
+        mtcnn=new MTCNN(getAssets());
         Mat frame = inputFrame.rgba();
         Mat temp = new Mat();
         Mat clockFrame=new Mat();
@@ -118,164 +124,30 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
         }
         transpose(frame, temp);
         flip(temp,clockFrame,1);
-        resize(clockFrame,clockFrame1, new Size(clockFrame.height() / 4, clockFrame.width()/ 4),0,0, INTER_LINEAR);
+        resize(clockFrame,clockFrame1, new Size(clockFrame.height() / 2, clockFrame.width()/ 2),0,0, INTER_LINEAR);
         process(clockFrame1);
-        resize(clockFrame1,clockFrame, new Size(clockFrame1.height()* 4, clockFrame1.width()* 4),0,0, INTER_LINEAR);
+        resize(clockFrame1,clockFrame, new Size(clockFrame1.height()* 2, clockFrame1.width()* 2),0,0, INTER_LINEAR);
         transpose(clockFrame, temp);
         flip(temp,frame,0);
-        mtcnn=new MTCNN(getAssets());
         return frame;
-
     }
 
-   //目前先不考虑菜单问题，默认option为0
+    //处理帧图片逻辑
     private void process(Mat frame) {
         Bitmap bitmap = BitmapFactory.decodeResource(this.getResources(),R.drawable.a36799,options);
         bitmap=Bitmap.createScaledBitmap(bitmap,frame.width(),frame.height(),true);
         Utils.matToBitmap(frame,bitmap);
+        Vector<Box> boxes=mtcnn.detectFaces(bitmap,40);//mtcnn()的作用结果为生成一系列Box类（结构）
         if (option==0)
-            pureProcess(frame,bitmap);
+            Process.pureProcess(frame,bitmap,boxes);
         else if (option==1)
-            glassProcess(frame,bitmap);
+            Process.glassProcess(frame,boxes);
         else if (option==2)
-            particleProcess(frame,bitmap);
+            Process.particleProcess(frame,boxes,t);
         else if (option==3)
-            mouthProcess(frame,bitmap);
+            Process.mouthProcess(frame,bitmap,boxes,t);
         else if (option==4)
-            eyeProcess(frame,bitmap);
-    }
-
-    public void glassProcess(Mat frame,Bitmap bm){//两张图片的内容一样，格式不一样
-        try {
-            Vector<Box> boxes=mtcnn.detectFaces(bm,40);//mtcnn()的作用结果为生成一系列Box类（结构）
-            Bitmap glass = BitmapFactory.decodeResource(this.getResources(),R.drawable.glass,options);
-            Mat glass1=new Mat();
-            Utils.bitmapToMat(glass,glass1);//现在的背景图和素材图分别是frame和glass1两个Mat
-
-            for (int i=0;i<boxes.size();i++){//对于检测到的i张脸中的每一张脸分别戴上眼镜
-
-                int glassWidth=boxes.get(i).width();
-                int glassHeight=glassWidth*glass1.height()/glass1.width();
-                Size s = new Size(glassWidth,glassHeight);
-                resize(glass1,glass1, s,0,0, INTER_LINEAR);//把眼镜贴图等距缩放为   与面部矩形同宽,高度等比例缩小
-
-                int faceHeight=boxes.get(i).height();
-
-
-               Mat faceROI;
-
-               faceROI = frame.submat( (int) (boxes.get(i).box[1]+0.25*faceHeight),(int) (boxes.get(i).box[1]+0.25*faceHeight)+glassHeight,boxes.get(i).left(), boxes.get(i).left()+glassWidth);
-
-                Mat glass2=new Mat();
-
-                glass2=blend(glass1,faceROI);
-                glass2.copyTo(faceROI);
-            }
-        }
-        catch (Exception e){
-        }
-    }
-
-    public void particleProcess(Mat frame,Bitmap bm){//两张图片的内容一样，格式不一样
-        try {
-            Bitmap background = BitmapFactory.decodeResource(this.getResources(),R.drawable.white,options);
-            Mat backgroundmat=new Mat();
-            Utils.bitmapToMat(background,backgroundmat);//现在的背景图和素材图分别是frame和glass1两个Mat
-            Mat effect1 = Particle.drawParticle(backgroundmat,t);
-            Vector<Box> boxes=mtcnn.detectFaces(bm,40);//mtcnn()的作用结果为生成一系列Box类（结构）
-
-            for (int i=0;i<boxes.size();i++){//对于检测到的i张脸中的每一张脸分别戴上眼镜
-
-                int effectWidth=boxes.get(i).width();
-                int effectHeight=effectWidth*effect1.height()/effect1.width();
-                Size s = new Size(effectWidth,effectHeight);
-                resize(effect1,effect1, s,0,0, INTER_LINEAR);//把眼镜贴图等距缩放为   与面部矩形同宽,高度等比例缩小
-
-                int faceHeight=boxes.get(i).height();
-
-                Mat faceROI;
-
-                faceROI = frame.submat( (int) (boxes.get(i).box[1]+0.25*faceHeight),(int) (boxes.get(i).box[1]+0.25*faceHeight)+effectHeight,boxes.get(i).left(), boxes.get(i).left()+effectWidth);
-
-                Mat effect2=new Mat();
-                effect2=blend(effect1,faceROI);//混合特效图和原图。
-                effect2.copyTo(faceROI);
-                if(t>=30){
-                    t=1;
-                }else{
-                    t++;
-                }
-            }
-        }
-        catch (Exception e){
-        }
-    }
-
-
-    public void mouthProcess(Mat frame,Bitmap bm){//两张图片的内容一样，格式不一样
-        try {
-            Vector<Box> boxes=mtcnn.detectFaces(bm,40);//mtcnn()的作用结果为生成一系列Box类（结构）
-            for (int i=0;i<boxes.size();i++) {//对于检测到的i张脸中的每一张脸分别戴上眼镜
-                int effectWidth=boxes.get(i).width()/2;
-                int effectHeight=boxes.get(i).height()/3;
-                Blend.draw(bm, WelcomeActivity.listmouth.get(t), boxes.get(i).landmark,effectWidth,effectHeight,option);
-                Utils.bitmapToMat(bm, frame);
-            }
-            if(t>=11){
-                t=0;
-            }else{
-                t++;
-            }
-        }
-        catch (Exception e){
-        }
-    }
-    public void eyeProcess(Mat frame,Bitmap bm){//两张图片的内容一样，格式不一样
-        try {
-            Vector<Box> boxes=mtcnn.detectFaces(bm,40);//mtcnn()的作用结果为生成一系列Box类（结构）
-            for (int i=0;i<boxes.size();i++) {//对于检测到的i张脸中的每一张脸分别戴上眼镜
-                int effectWidth=boxes.get(i).width()/2;
-                int effectHeight=boxes.get(i).height()/3;
-                Blend.draw(bm,  WelcomeActivity.listeye.get(t), boxes.get(i).landmark,effectWidth,effectHeight,option);
-                Utils.bitmapToMat(bm, frame);
-            }
-            if(t>=20){
-                t=0;
-            }else{
-                t++;
-            }
-        }
-        catch (Exception e){
-        }
-    }
-
-    public void pureProcess(Mat frame,Bitmap bm){
-        try {
-            Vector<Box> boxes=mtcnn.detectFaces(bm,40);
-            for (int i=0;i<boxes.size();i++){
-                com.ParticleEffectCamera.Utils.drawRect(bm,boxes.get(i).transform2Rect());
-                com.ParticleEffectCamera.Utils.drawPoints(bm,boxes.get(i).landmark);
-            }
-            Utils.bitmapToMat(bm,frame);
-        }catch (Exception e){
-        }
-    }
-
-
-    Mat blend(Mat glass1,Mat faceROI){
-        Mat glass=new Mat(glass1.rows(),glass1.cols(),glass1.type());
-        for (int i = 0; i < glass1.rows(); i++) {
-
-            for (int j = 0; j < glass1.cols(); j++) {
-                if(glass1.get(i,j)[0]>240&&glass1.get(i,j)[1]>240&&glass1.get(i,j)[2]>240){
-                    glass.put(i,j,faceROI.get(i,j));
-                }
-                else{
-                    glass.put(i,j,glass1.get(i,j));
-                }
-            }
-        }
-        return glass;
+            Process.eyeProcess(frame,bitmap,boxes,t);
     }
 
     public void onPause() {

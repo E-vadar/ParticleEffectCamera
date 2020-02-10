@@ -10,8 +10,8 @@ public class Particle {
     public static Mat drawParticle(Mat background,int t) {
         //width=400,height=500
         int x1=0,x2=0,y1=0,y2=0;
-         Mat effect = drawdot(background,t,x1,x2,y1,y2);
-         return effect;
+        Mat effect = drawdot(background,t,x1,x2,y1,y2);
+        return effect;
     }
 
     private static Mat drawdot(Mat image,int t,int x1,int x2,int y1,int y2){
@@ -39,7 +39,6 @@ public class Particle {
             circle(image,re,r,color3,th);
             circle(image,re,r+th*4,color4,th);
         }
-
         return image;
     }
 }

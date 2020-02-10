@@ -3,8 +3,10 @@ package com.ParticleEffectCamera;
 import android.graphics.Bitmap;
 import android.graphics.Point;
 import android.graphics.Color;
+import org.opencv.core.Mat;
 
 public class Blend {
+
     public static void draw(Bitmap background, Bitmap effect, Point[] landmark,int effectwidth,int effectheight,int opt){
         if(opt == 4){
             int x1 = landmark[0].x;
@@ -32,6 +34,35 @@ public class Blend {
                 }
             }
         }
+    }
 
+    public static Mat blendblackbg(Mat glass1, Mat faceROI){
+        Mat glass=new Mat(glass1.rows(),glass1.cols(),glass1.type());
+        for (int i = 0; i < glass1.rows(); i++) {
+            for (int j = 0; j < glass1.cols(); j++) {
+                if(glass1.get(i,j)[0]<40 && glass1.get(i,j)[1]<40 && glass1.get(i,j)[2]<40){
+                    glass.put(i,j,faceROI.get(i,j));
+                }
+                else{
+                    glass.put(i,j,glass1.get(i,j));
+                }
+            }
+        }
+        return glass;
+    }
+
+    public static Mat blendwhitebg(Mat glass1, Mat faceROI){
+        Mat glass=new Mat(glass1.rows(),glass1.cols(),glass1.type());
+        for (int i = 0; i < glass1.rows(); i++) {
+            for (int j = 0; j < glass1.cols(); j++) {
+                if(glass1.get(i,j)[0]>240 && glass1.get(i,j)[1]>240 && glass1.get(i,j)[2]>240){
+                    glass.put(i,j,faceROI.get(i,j));//画上原图
+                }
+                else{
+                    glass.put(i,j,glass1.get(i,j));//画上素材
+                }
+            }
+        }
+        return glass;
     }
 }

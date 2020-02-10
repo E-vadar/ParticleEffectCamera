@@ -14,14 +14,16 @@ import android.os.Handler;
 import android.os.Message;
 import android.view.WindowManager;
 import org.opencv.android.OpenCVLoader;
-
 import java.util.ArrayList;
-
 
 public class WelcomeActivity extends AppCompatActivity {
     @SuppressLint("HandlerLeak")
+    //初始化加载一些常用素材资源
+    BitmapFactory.Options options = new BitmapFactory.Options();
     public static ArrayList<Bitmap> listeye = new ArrayList<Bitmap>();
     public static ArrayList<Bitmap> listmouth = new ArrayList<Bitmap>();
+    public static Bitmap glass,white;
+
     private Handler handler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
@@ -38,7 +40,10 @@ public class WelcomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
 
-        //读取gif数据
+        //读取素材数据
+        glass = BitmapFactory.decodeResource(getResources(),R.drawable.glass,options);
+        white = BitmapFactory.decodeResource(getResources(),R.drawable.white,options);
+
         listeye.add(BitmapFactory.decodeResource(getResources(),R.drawable.f0));
         listeye.add(BitmapFactory.decodeResource(getResources(),R.drawable.f1));
         listeye.add(BitmapFactory.decodeResource(getResources(),R.drawable.f2));
@@ -73,9 +78,9 @@ public class WelcomeActivity extends AppCompatActivity {
         listmouth.add(BitmapFactory.decodeResource(getResources(),R.drawable.s9));
         listmouth.add(BitmapFactory.decodeResource(getResources(),R.drawable.s10));
         listmouth.add(BitmapFactory.decodeResource(getResources(),R.drawable.s11));
+        //读取完成
 
         ActionBar actionBar = getSupportActionBar();     //取消标题头actionbar
-
         if (actionBar != null) {
             actionBar.hide();
         }

@@ -50,13 +50,7 @@ public class Utils {
                  data[(x*h+y)*stride+z]=tmp[(y*w+x)*stride+z];
             }
     }
-    //src转为二维存放到dst中
-    public static void expand(float[] src,float[][]dst){
-        int idx=0;
-        for (int y=0;y<dst.length;y++)
-            for (int x=0;x<dst[0].length;x++)
-                dst[y][x]=src[idx++];
-    }
+
     //src转为三维存放到dst中
     public static void expand(float[] src,float[][][] dst){
         int idx=0;
@@ -73,17 +67,7 @@ public class Utils {
             for (int x=0;x<dst[0].length;x++)
                 dst[y][x]=src[idx++*2+1];
     }
-    //box转化为rect
-    public static Rect[] boxes2rects(Vector<Box> boxes){
-        int cnt=0;
-        for (int i=0;i<boxes.size();i++) if (!boxes.get(i).deleted) cnt++;
-        Rect[] r=new Rect[cnt];
-        int idx=0;
-        for (int i=0;i<boxes.size();i++)
-            if (!boxes.get(i).deleted)
-                r[idx++]=boxes.get(i).transform2Rect();
-        return r;
-    }
+
     //删除做了delete标记的box
     public static Vector<Box> updateBoxes(Vector<Box> boxes){
         Vector<Box> b=new Vector<Box>();
@@ -91,9 +75,5 @@ public class Utils {
             if (!boxes.get(i).deleted)
                 b.addElement(boxes.get(i));
         return b;
-    }
-    //
-    static public void showPixel(int v){
-        Log.i("MainActivity","[*]Pixel:R"+((v>>16)&0xff)+"G:"+((v>>8)&0xff)+ " B:"+(v&0xff));
     }
 }
