@@ -10,7 +10,7 @@ import static org.opencv.imgproc.Imgproc.resize;
 
 public class Process {
 
-    //渲染的具体操作过程
+    //渲染的具体操作过程+1
     public static void mouthProcess(Mat frame, Bitmap bm,Vector<Box> boxes,int t){//两张图片的内容一样，格式不一样
         try {
             for (int i=0;i<boxes.size();i++) {//对于检测到的i张脸中的每一张脸分别戴上眼镜
