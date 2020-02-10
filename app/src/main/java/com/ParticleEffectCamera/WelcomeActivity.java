@@ -6,6 +6,8 @@ import androidx.core.app.ActivityCompat;
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -13,9 +15,13 @@ import android.os.Message;
 import android.view.WindowManager;
 import org.opencv.android.OpenCVLoader;
 
+import java.util.ArrayList;
+
 
 public class WelcomeActivity extends AppCompatActivity {
     @SuppressLint("HandlerLeak")
+    public static ArrayList<Bitmap> listeye = new ArrayList<Bitmap>();
+    public static ArrayList<Bitmap> listmouth = new ArrayList<Bitmap>();
     private Handler handler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
@@ -32,7 +38,44 @@ public class WelcomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
 
+        //读取gif数据
+        listeye.add(BitmapFactory.decodeResource(getResources(),R.drawable.f0));
+        listeye.add(BitmapFactory.decodeResource(getResources(),R.drawable.f1));
+        listeye.add(BitmapFactory.decodeResource(getResources(),R.drawable.f2));
+        listeye.add(BitmapFactory.decodeResource(getResources(),R.drawable.f3));
+        listeye.add(BitmapFactory.decodeResource(getResources(),R.drawable.f4));
+        listeye.add(BitmapFactory.decodeResource(getResources(),R.drawable.f5));
+        listeye.add(BitmapFactory.decodeResource(getResources(),R.drawable.f6));
+        listeye.add(BitmapFactory.decodeResource(getResources(),R.drawable.f7));
+        listeye.add(BitmapFactory.decodeResource(getResources(),R.drawable.f8));
+        listeye.add(BitmapFactory.decodeResource(getResources(),R.drawable.f9));
+        listeye.add(BitmapFactory.decodeResource(getResources(),R.drawable.f10));
+        listeye.add(BitmapFactory.decodeResource(getResources(),R.drawable.f11));
+        listeye.add(BitmapFactory.decodeResource(getResources(),R.drawable.f12));
+        listeye.add(BitmapFactory.decodeResource(getResources(),R.drawable.f13));
+        listeye.add(BitmapFactory.decodeResource(getResources(),R.drawable.f14));
+        listeye.add(BitmapFactory.decodeResource(getResources(),R.drawable.f15));
+        listeye.add(BitmapFactory.decodeResource(getResources(),R.drawable.f16));
+        listeye.add(BitmapFactory.decodeResource(getResources(),R.drawable.f17));
+        listeye.add(BitmapFactory.decodeResource(getResources(),R.drawable.f18));
+        listeye.add(BitmapFactory.decodeResource(getResources(),R.drawable.f19));
+        listeye.add(BitmapFactory.decodeResource(getResources(),R.drawable.f20));
+
+        listmouth.add(BitmapFactory.decodeResource(getResources(),R.drawable.s0));
+        listmouth.add(BitmapFactory.decodeResource(getResources(),R.drawable.s1));
+        listmouth.add(BitmapFactory.decodeResource(getResources(),R.drawable.s2));
+        listmouth.add(BitmapFactory.decodeResource(getResources(),R.drawable.s3));
+        listmouth.add(BitmapFactory.decodeResource(getResources(),R.drawable.s4));
+        listmouth.add(BitmapFactory.decodeResource(getResources(),R.drawable.s5));
+        listmouth.add(BitmapFactory.decodeResource(getResources(),R.drawable.s6));
+        listmouth.add(BitmapFactory.decodeResource(getResources(),R.drawable.s7));
+        listmouth.add(BitmapFactory.decodeResource(getResources(),R.drawable.s8));
+        listmouth.add(BitmapFactory.decodeResource(getResources(),R.drawable.s9));
+        listmouth.add(BitmapFactory.decodeResource(getResources(),R.drawable.s10));
+        listmouth.add(BitmapFactory.decodeResource(getResources(),R.drawable.s11));
+
         ActionBar actionBar = getSupportActionBar();     //取消标题头actionbar
+
         if (actionBar != null) {
             actionBar.hide();
         }

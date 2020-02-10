@@ -18,14 +18,11 @@ import org.opencv.android.Utils;
 import org.opencv.core.Mat;
 import org.opencv.core.Size;
 import android.util.Log;
-//import com.ParticleEffectCamera.R;
 import java.util.Vector;
 import static org.opencv.core.Core.flip;
 import static org.opencv.core.Core.transpose;
 import static org.opencv.imgproc.Imgproc.INTER_LINEAR;
 import static org.opencv.imgproc.Imgproc.resize;
-import java.util.ArrayList;
-
 
 public class CameraViewActivity extends AppCompatActivity implements CameraBridgeViewBase.CvCameraViewListener2, View.OnClickListener{
     String TAG="CameraViewActivity";
@@ -35,7 +32,6 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
     int t = 0;
     MTCNN mtcnn;
     BitmapFactory.Options options = new BitmapFactory.Options();
-    public ArrayList<Bitmap> list = new ArrayList<Bitmap>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,42 +58,7 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
         backOption.setOnClickListener(this);
         frontOption.setOnClickListener(this);
         backOption.setSelected(true);
-
         options.inPreferredConfig = Bitmap.Config.ARGB_8888;
-        //读取gif数据
-        list.add(BitmapFactory.decodeResource(getResources(),R.drawable.f0));
-        list.add(BitmapFactory.decodeResource(getResources(),R.drawable.f1));
-        list.add(BitmapFactory.decodeResource(getResources(),R.drawable.f2));
-        list.add(BitmapFactory.decodeResource(getResources(),R.drawable.f3));
-        list.add(BitmapFactory.decodeResource(getResources(),R.drawable.f4));
-        list.add(BitmapFactory.decodeResource(getResources(),R.drawable.f5));
-        list.add(BitmapFactory.decodeResource(getResources(),R.drawable.f6));
-        list.add(BitmapFactory.decodeResource(getResources(),R.drawable.f7));
-        list.add(BitmapFactory.decodeResource(getResources(),R.drawable.f8));
-        list.add(BitmapFactory.decodeResource(getResources(),R.drawable.f9));
-        list.add(BitmapFactory.decodeResource(getResources(),R.drawable.f10));
-        list.add(BitmapFactory.decodeResource(getResources(),R.drawable.f11));
-        list.add(BitmapFactory.decodeResource(getResources(),R.drawable.f12));
-        list.add(BitmapFactory.decodeResource(getResources(),R.drawable.f13));
-        list.add(BitmapFactory.decodeResource(getResources(),R.drawable.f14));
-        list.add(BitmapFactory.decodeResource(getResources(),R.drawable.f15));
-        list.add(BitmapFactory.decodeResource(getResources(),R.drawable.f16));
-        list.add(BitmapFactory.decodeResource(getResources(),R.drawable.f17));
-        list.add(BitmapFactory.decodeResource(getResources(),R.drawable.f18));
-        list.add(BitmapFactory.decodeResource(getResources(),R.drawable.f19));
-        list.add(BitmapFactory.decodeResource(getResources(),R.drawable.f20));
-        list.add(BitmapFactory.decodeResource(getResources(),R.drawable.s0));
-        list.add(BitmapFactory.decodeResource(getResources(),R.drawable.s1));
-        list.add(BitmapFactory.decodeResource(getResources(),R.drawable.s2));
-        list.add(BitmapFactory.decodeResource(getResources(),R.drawable.s3));
-        list.add(BitmapFactory.decodeResource(getResources(),R.drawable.s4));
-        list.add(BitmapFactory.decodeResource(getResources(),R.drawable.s5));
-        list.add(BitmapFactory.decodeResource(getResources(),R.drawable.s6));
-        list.add(BitmapFactory.decodeResource(getResources(),R.drawable.s7));
-        list.add(BitmapFactory.decodeResource(getResources(),R.drawable.s8));
-        list.add(BitmapFactory.decodeResource(getResources(),R.drawable.s9));
-        list.add(BitmapFactory.decodeResource(getResources(),R.drawable.s10));
-        list.add(BitmapFactory.decodeResource(getResources(),R.drawable.s11));
     }
 
     private void initLoadOpenCVLibs() {
@@ -157,17 +118,18 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
         }
         transpose(frame, temp);
         flip(temp,clockFrame,1);
-        resize(clockFrame,clockFrame1, new Size(clockFrame.height() / 2, clockFrame.width()/ 2),0,0, INTER_LINEAR);
+        resize(clockFrame,clockFrame1, new Size(clockFrame.height() / 4, clockFrame.width()/ 4),0,0, INTER_LINEAR);
         process(clockFrame1);
-        resize(clockFrame1,clockFrame, new Size(clockFrame1.height()*2, clockFrame1.width()*2),0,0, INTER_LINEAR);
+        resize(clockFrame1,clockFrame, new Size(clockFrame1.height()* 4, clockFrame1.width()* 4),0,0, INTER_LINEAR);
         transpose(clockFrame, temp);
         flip(temp,frame,0);
+        mtcnn=new MTCNN(getAssets());
         return frame;
+
     }
 
    //目前先不考虑菜单问题，默认option为0
     private void process(Mat frame) {
-        mtcnn=new MTCNN(getAssets());
         Bitmap bitmap = BitmapFactory.decodeResource(this.getResources(),R.drawable.a36799,options);
         bitmap=Bitmap.createScaledBitmap(bitmap,frame.width(),frame.height(),true);
         Utils.matToBitmap(frame,bitmap);
@@ -182,6 +144,7 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
         else if (option==4)
             eyeProcess(frame,bitmap);
     }
+
     public void glassProcess(Mat frame,Bitmap bm){//两张图片的内容一样，格式不一样
         try {
             Vector<Box> boxes=mtcnn.detectFaces(bm,40);//mtcnn()的作用结果为生成一系列Box类（结构）
@@ -237,7 +200,7 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
                 Mat effect2=new Mat();
                 effect2=blend(effect1,faceROI);//混合特效图和原图。
                 effect2.copyTo(faceROI);
-                if(t==30){
+                if(t>=30){
                     t=1;
                 }else{
                     t++;
@@ -255,10 +218,10 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
             for (int i=0;i<boxes.size();i++) {//对于检测到的i张脸中的每一张脸分别戴上眼镜
                 int effectWidth=boxes.get(i).width()/2;
                 int effectHeight=boxes.get(i).height()/3;
-                Blend.draw(bm, list.get(t+21), boxes.get(i).landmark,effectWidth,effectHeight,option);
+                Blend.draw(bm, WelcomeActivity.listmouth.get(t), boxes.get(i).landmark,effectWidth,effectHeight,option);
                 Utils.bitmapToMat(bm, frame);
             }
-            if(t==11){
+            if(t>=11){
                 t=0;
             }else{
                 t++;
@@ -273,10 +236,10 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
             for (int i=0;i<boxes.size();i++) {//对于检测到的i张脸中的每一张脸分别戴上眼镜
                 int effectWidth=boxes.get(i).width()/2;
                 int effectHeight=boxes.get(i).height()/3;
-                Blend.draw(bm, list.get(t), boxes.get(i).landmark,effectWidth,effectHeight,option);
+                Blend.draw(bm,  WelcomeActivity.listeye.get(t), boxes.get(i).landmark,effectWidth,effectHeight,option);
                 Utils.bitmapToMat(bm, frame);
             }
-            if(t==20){
+            if(t>=20){
                 t=0;
             }else{
                 t++;
