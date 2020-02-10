@@ -135,5 +135,6 @@
     <orderEntry type="library" name="Gradle: androidx.arch.core:core-runtime:2.0.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: org.tensorflow:tensorflow-android:1.13.1@aar" level="project" />
     <orderEntry type="module" module-name="openCVLibrary340" />
+    <orderEntry type="module" module-name="openCVLibrary340" />
   </component>
 </module>
