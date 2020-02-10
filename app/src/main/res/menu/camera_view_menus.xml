@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:id="@+id/glasses" android:title="@string/glasses"></item>
+<item android:id="@+id/circle" android:title="@string/circle"></item>
+<item android:id="@+id/mouth" android:title="@string/mouth"></item>
+    <item android:id="@+id/eye" android:title="@string/eye"></item>
+</menu>
