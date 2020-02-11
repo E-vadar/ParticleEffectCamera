@@ -6,7 +6,7 @@ import org.opencv.core.Mat;
 
 public class ParticleSystem {
 
-    static int initial_size = 120;
+    static int initial_size = 270;
     static int duration = 30;
     static ArrayDeque<Particle> ptcspool = new ArrayDeque<>();
 
@@ -30,19 +30,19 @@ public class ParticleSystem {
             ptc.y = 0;
             ptc.life = false;
             ptc.lifetime = 0;
-            ptc.size = 3;
-            ptc.v = 1.5;
+            ptc.size = 2;
+            ptc.v = 2;
             ptc.col[0] = 255;
             ptc.col[1] = 0;
             ptc.col[2] = 0;
             ptc.direction[0] = 0;
-            ptc.direction[1] = 1;
+            ptc.direction[1] = 0;
             ptc.duration = duration;
             ptcspool.addLast(ptc);
         }
     }
 
-    //粒子运动
+    //加载粒子系统运动
     public static void runSystem(Mat frame, Point[] landmark, int t){
         int x = landmark[2].x;
         int y = landmark[2].y;

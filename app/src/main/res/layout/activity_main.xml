@@ -55,7 +55,7 @@
         android:layout_below="@id/camera_btn"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="60dp"
-        android:text="V3.0"
+        android:text="V1.1 with particle system"
         android:textSize="20sp"/>
 
     <ImageView
