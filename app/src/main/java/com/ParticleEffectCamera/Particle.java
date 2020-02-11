@@ -8,11 +8,10 @@ import static org.opencv.imgproc.Imgproc.circle;
 public class Particle {
 
     int pNo;//粒子序号
-    int x,y;//粒子的二维坐标
-    double vel;//实际速度
-    int v ;//展现速度
+    double x,y;//粒子的二维坐标
+    double v ;//速度
     int[] col = new int[3];//颜色
-    int[] direction = new int[2];//四向方向，上右下左
+    double[] direction = new double[2];//四向方向，上右下左
     int size;//粒子大小
     int lifetime;//粒子生命周期
     boolean life;//粒子是否存活
@@ -31,7 +30,6 @@ public class Particle {
         life = false;
         size = 3;
         v = 1;
-        vel = 1;
         col[0] = 20+2*groupNo;
         col[1] = 120+2*groupNo;
         col[2] = 120+2*groupNo;
@@ -42,6 +40,9 @@ public class Particle {
     public void update(int time){
         if(groupNo <= time){
             life = true;
+        }
+        if(lifetime >= 60){
+            reactivate();
         }
         if(life){
             lifetime ++;
@@ -63,21 +64,17 @@ public class Particle {
                     direction[1] = -1;
                     break;
             }
-            x = x + v * direction[0] * 1;
-            y = y - v * direction[1] * 1;
-            vel = vel + 0.5;
-            v = (new Double(Math.floor(vel))).intValue();
+            x = x + v * direction[0];
+            y = y - v * direction[1];
+            v = v + 0.5;
             color = new Scalar(col[0],col[1],col[2]);
-            if(lifetime > 60){
-                reactivate();
-            }
         }
     }
 
     public void draw(Mat frame,int x0,int y0){
         if(life){
-            int xp = x + x0;
-            int yp = y + y0;
+            int xp = new Double(Math.floor(x + x0)).intValue();
+            int yp = new Double(Math.floor(y + y0)).intValue();
             circle(frame,new Point(xp,yp),size,color,-1);
         }
     }

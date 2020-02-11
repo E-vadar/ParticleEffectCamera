@@ -31,7 +31,6 @@ public class ParticleSystem {
             ptc.lifetime = 0;
             ptc.size = 3;
             ptc.v = 1;
-            ptc.vel = 1;
             ptc.col[0] = 20+2*ptc.getGroupNo();
             ptc.col[1] = 120+2*ptc.getGroupNo();
             ptc.col[2] = 120+2*ptc.getGroupNo();
