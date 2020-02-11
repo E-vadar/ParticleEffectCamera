@@ -83,7 +83,7 @@ public class Process {
     public static void particleProcess(Mat frame,Vector<Box> boxes,int t){
         try {
             for (int i=0;i<boxes.size();i++) {
-                Mat effect = Particle.drawParticle(frame,t);
+                Mat effect = ParticleDraw.drawParticle(frame,t);
                 frame = Blend.blendwhitebg(effect,frame);
                 if(t>=30){
                     CameraViewActivity.t=0;

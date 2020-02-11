@@ -5,7 +5,7 @@ import org.opencv.core.Point;
 import org.opencv.core.Scalar;
 import static org.opencv.imgproc.Imgproc.circle;
 
-public class Particle {
+public class ParticleDraw {
 
     public static Mat drawParticle(Mat background,int t) {
         //width=400,height=500
