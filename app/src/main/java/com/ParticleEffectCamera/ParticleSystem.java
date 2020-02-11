@@ -6,7 +6,8 @@ import org.opencv.core.Mat;
 
 public class ParticleSystem {
 
-    static int initial_size = 240;
+    static int initial_size = 120;
+    static int duration = 30;
     static ArrayDeque<Particle> ptcspool = new ArrayDeque<>();
 
     //生成粒子池
@@ -22,8 +23,8 @@ public class ParticleSystem {
             Particle ptc = ptcspool.removeFirst();
             //粒子编号
             ptc.pNo = z;
-            ptc.groupNo = z % 60;
-            ptc.group = (new Double(Math.floor(z/60))).intValue();
+            ptc.groupNo = z % duration;
+            ptc.group = (new Double(Math.floor(z/duration))).intValue();
             //粒子属性
             ptc.x = 0;
             ptc.y = 0;
@@ -32,10 +33,11 @@ public class ParticleSystem {
             ptc.size = 3;
             ptc.v = 1;
             ptc.col[0] = 20+2*ptc.getGroupNo();
-            ptc.col[1] = 120+2*ptc.getGroupNo();
-            ptc.col[2] = 120+2*ptc.getGroupNo();
+            ptc.col[1] = 20+2*ptc.getGroupNo();
+            ptc.col[2] = 20+2*ptc.getGroupNo();
             ptc.direction[0] = 1;
             ptc.direction[1] = 1;
+            ptc.duration = duration;
             ptcspool.addLast(ptc);
         }
     }
@@ -44,7 +46,7 @@ public class ParticleSystem {
     public static void runSystem(Mat frame, Point[] landmark, int t){
         int x = landmark[2].x;
         int y = landmark[2].y;
-        int time = t % 60;//周期时间10内
+        int time = t % duration;//周期时间内
 
         for (int i = 0; i < ptcspool.size(); i++) {
             Particle ptc = ptcspool.removeFirst();

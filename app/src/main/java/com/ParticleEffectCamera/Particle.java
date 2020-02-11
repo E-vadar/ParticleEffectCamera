@@ -18,6 +18,7 @@ public class Particle {
     Scalar color = new Scalar(0,0,0);//粒子颜色
     int group;//粒子组别
     int groupNo;//粒子组内编号
+    int duration;
 
     public Particle() {
        super();
@@ -31,21 +32,22 @@ public class Particle {
         size = 3;
         v = 1;
         col[0] = 20+2*groupNo;
-        col[1] = 120+2*groupNo;
-        col[2] = 120+2*groupNo;
+        col[1] = 20+2*groupNo;
+        col[2] = 20+2*groupNo;
         direction[0] = 1;
         direction[1] = 1;
+        //跟上前面粒子的步伐
+        update(0);
     }
 
     public void update(int time){
+        if(lifetime >= duration){
+            reactivate();
+        }
         if(groupNo <= time){
             life = true;
         }
-        if(lifetime >= 60){
-            reactivate();
-        }
         if(life){
-            lifetime ++;
             switch (group){
                 case 0:
                     direction[0] = 1;
@@ -66,8 +68,9 @@ public class Particle {
             }
             x = x + v * direction[0];
             y = y - v * direction[1];
-            v = v + 0.5;
+            v = v + 2;
             color = new Scalar(col[0],col[1],col[2]);
+            lifetime ++;
         }
     }
 
