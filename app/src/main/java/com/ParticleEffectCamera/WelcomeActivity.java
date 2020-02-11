@@ -22,7 +22,7 @@ public class WelcomeActivity extends AppCompatActivity {
     BitmapFactory.Options options = new BitmapFactory.Options();
     public static ArrayList<Bitmap> listeye = new ArrayList<Bitmap>();
     public static ArrayList<Bitmap> listmouth = new ArrayList<Bitmap>();
-    public static Bitmap glass,white;
+    public static Bitmap glass,white,localmap;
 
     private Handler handler = new Handler() {
         @Override
@@ -43,7 +43,7 @@ public class WelcomeActivity extends AppCompatActivity {
         //读取素材数据
         glass = BitmapFactory.decodeResource(getResources(),R.drawable.glass,options);
         white = BitmapFactory.decodeResource(getResources(),R.drawable.white,options);
-
+        localmap = BitmapFactory.decodeResource(getResources(),R.drawable.a36799,options);
         listeye.add(BitmapFactory.decodeResource(getResources(),R.drawable.f0));
         listeye.add(BitmapFactory.decodeResource(getResources(),R.drawable.f1));
         listeye.add(BitmapFactory.decodeResource(getResources(),R.drawable.f2));

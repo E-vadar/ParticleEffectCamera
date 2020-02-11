@@ -134,7 +134,7 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
 
     //处理帧图片逻辑
     private void process(Mat frame) {
-        Bitmap bitmap = BitmapFactory.decodeResource(this.getResources(),R.drawable.a36799,options);
+        Bitmap bitmap = WelcomeActivity.localmap;
         bitmap=Bitmap.createScaledBitmap(bitmap,frame.width(),frame.height(),true);
         Utils.matToBitmap(frame,bitmap);
         Vector<Box> boxes=mtcnn.detectFaces(bitmap,40);//mtcnn()的作用结果为生成一系列Box类（结构）
