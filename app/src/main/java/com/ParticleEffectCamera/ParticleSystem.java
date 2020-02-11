@@ -6,7 +6,7 @@ import org.opencv.core.Mat;
 
 public class ParticleSystem {
 
-    static int initial_size = 10;
+    static int initial_size = 40;
     static ArrayDeque<Particle> ptcspool = new ArrayDeque<>();
 
     public static void initialize(){
@@ -23,21 +23,25 @@ public class ParticleSystem {
             ptc.life = false;
             ptc.size = 1;
             ptc.v = 1;
-            ptc.col[0] = 20+10*i;
-            ptc.col[1] = 120+10*i;
-            ptc.col[2] = 120+10*i;
-            ptc.direction = 1;
+            int duration = i % 10;
+            ptc.col[0] = 20+10*duration;
+            ptc.col[1] = 120+10*duration;
+            ptc.col[2] = 120+10*duration;
+            ptc.direction[0] = 1;
+            ptc.direction[1] = 1;
             ptcspool.addLast(ptc);
         }
     }
-    public static void draw(Mat frame, Point[] landmark,int t){
+    public static void runSystem(Mat frame, Point[] landmark, int t){
         int x = landmark[2].x;
         int y = landmark[2].y;
         int time = t % 10;
         for (int i = 0; i < ptcspool.size(); i++) {
+            int duration = i % 10;
+            int group = (new Double(Math.floor(i/10))).intValue();
             Particle ptc = ptcspool.removeFirst();
-            ptc.update();
-            if(i <= time){
+            ptc.update(group);
+            if(duration <= time){
                 ptc.activate();
             }
             ptc.draw(frame,x,y);

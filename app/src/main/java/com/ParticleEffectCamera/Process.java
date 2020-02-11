@@ -99,7 +99,7 @@ public class Process {
     public static void particleSystemProcess(Mat frame,Bitmap bm,Vector<Box> boxes,int t){
         try {
             for (int i=0;i<boxes.size();i++) {
-                ParticleSystem.draw(frame,boxes.get(i).landmark,t);
+                ParticleSystem.runSystem(frame,boxes.get(i).landmark,t);
                 Log.i(TAG,"picture width"+ frame.height() + "picture height"+ frame.width());
                 Log.i(TAG,"Box Width"+ boxes.get(i).width()+"Box Height"+ boxes.get(i).height());
             }

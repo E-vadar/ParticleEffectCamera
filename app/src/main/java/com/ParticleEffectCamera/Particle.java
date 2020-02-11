@@ -10,8 +10,8 @@ public class Particle {
     int x,y;//粒子的二维坐标
     int v ;//速度
     int[] col = new int[3];//颜色
-    int direction;//四向方向，上右下左
-    int size;//粒子大小,实际大小为4 * size
+    int[] direction = new int[2];//四向方向，上右下左
+    int size;//粒子大小
     boolean life;
     Scalar color = new Scalar(col[0],col[1],col[2]);
 
@@ -23,15 +23,34 @@ public class Particle {
         life = true;
     }
 
-    public void update(){
+    public void update(int i){
         if(life){
-            x = x + v * direction * 1;
-            y = y - v * direction * 1;
+            switch (i){
+                case 0:
+                    direction[0] = 1;
+                    direction[1] = 1;
+                    break;
+                case 1:
+                    direction[0] = -1;
+                    direction[1] = 1;
+                    break;
+                case 2:
+                    direction[0] = -1;
+                    direction[1] = -1;
+                    break;
+                case 3:
+                    direction[0] = 1;
+                    direction[1] = -1;
+                    break;
+            }
+            x = x + v * direction[0] * 1;
+            y = y - v * direction[1] * 1;
             v = v+1;
             size = size + 1;
             color = new Scalar(col[0],col[1],col[2]);
         }
     }
+
     public void draw(Mat frame,int x0,int y0){
         if(life){
             int xp = x + x0;
