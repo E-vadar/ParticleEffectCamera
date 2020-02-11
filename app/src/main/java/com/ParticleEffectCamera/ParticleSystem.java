@@ -6,9 +6,8 @@ import org.opencv.core.Mat;
 
 public class ParticleSystem {
 
-    static int initial_size = 5;
+    static int initial_size = 10;
     static ArrayDeque<Particle> ptcspool = new ArrayDeque<>();
-    int t;
 
     public static void initialize(){
         for (int i = 0; i < initial_size; i++) {
@@ -22,8 +21,8 @@ public class ParticleSystem {
             ptc.x = 0;
             ptc.y = 0;
             ptc.life = false;
-            ptc.size = 2;
-            ptc.v = 2;
+            ptc.size = 1;
+            ptc.v = 1;
             ptc.col[0] = 20+10*i;
             ptc.col[1] = 120+10*i;
             ptc.col[2] = 120+10*i;
@@ -34,7 +33,7 @@ public class ParticleSystem {
     public static void draw(Mat frame, Point[] landmark,int t){
         int x = landmark[2].x;
         int y = landmark[2].y;
-        int time = t % 5;
+        int time = t % 10;
         for (int i = 0; i < ptcspool.size(); i++) {
             Particle ptc = ptcspool.removeFirst();
             ptc.update();

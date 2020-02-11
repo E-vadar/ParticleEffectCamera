@@ -15,16 +15,12 @@ public class Process {
     //渲染的具体操作过程+1
     public static void mouthProcess(Mat frame, Bitmap bm,Vector<Box> boxes,int t){//两张图片的内容一样，格式不一样
         try {
+            int time = t % 11;
             for (int i=0;i<boxes.size();i++) {//对于检测到的i张脸中的每一张脸分别戴上眼镜
                 int effectWidth=boxes.get(i).width()/2;
                 int effectHeight=boxes.get(i).height()/3;
-                Blend.draw(bm, WelcomeActivity.listmouth.get(t), boxes.get(i).landmark,effectWidth,effectHeight,3);
+                Blend.draw(bm, WelcomeActivity.listmouth.get(time), boxes.get(i).landmark,effectWidth,effectHeight,3);
                 Utils.bitmapToMat(bm, frame);
-            }
-            if(t>=11){
-                CameraViewActivity.t=0;
-            }else{
-                CameraViewActivity.t++;
             }
         }
         catch (Exception e){
@@ -33,16 +29,12 @@ public class Process {
 
     public static void eyeProcess(Mat frame,Bitmap bm,Vector<Box> boxes,int t){//两张图片的内容一样，格式不一样
         try {
+            int time = t % 20;
             for (int i=0;i<boxes.size();i++) {//对于检测到的i张脸中的每一张脸分别戴上眼镜
                 int effectWidth=boxes.get(i).width()/2;
                 int effectHeight=boxes.get(i).height()/3;
-                Blend.draw(bm,  WelcomeActivity.listeye.get(t), boxes.get(i).landmark,effectWidth,effectHeight,4);
+                Blend.draw(bm,  WelcomeActivity.listeye.get(time), boxes.get(i).landmark,effectWidth,effectHeight,4);
                 Utils.bitmapToMat(bm, frame);
-            }
-            if(t>=20){
-                CameraViewActivity.t=0;
-            }else{
-                CameraViewActivity.t++;
             }
         }
         catch (Exception e){
@@ -84,14 +76,10 @@ public class Process {
 
     public static void particleProcess(Mat frame,Vector<Box> boxes,int t){
         try {
+            int time = t % 30;
             for (int i=0;i<boxes.size();i++) {
                 Mat effect = ParticleDraw.drawParticle(frame,t);
                 frame = Blend.blendwhitebg(effect,frame);
-                if(t>=30){
-                    CameraViewActivity.t=0;
-                }else{
-                    CameraViewActivity.t++;
-                }
             }
         }
         catch (Exception e){
@@ -101,11 +89,6 @@ public class Process {
     public static void noneProcess(Mat frame,Bitmap bm,Vector<Box> boxes,int t){
         try {
             for (int i=0;i<boxes.size();i++) {
-                if(t>=30){
-                    CameraViewActivity.t=0;
-                }else{
-                    CameraViewActivity.t++;
-                }
                 Log.i(TAG,"picture width"+ frame.height() + "picture height"+ frame.width());
                 Log.i(TAG,"Box Width"+ boxes.get(i).width()+"Box Height"+ boxes.get(i).height());
             }
@@ -117,11 +100,6 @@ public class Process {
         try {
             for (int i=0;i<boxes.size();i++) {
                 ParticleSystem.draw(frame,boxes.get(i).landmark,t);
-                if(t>=30){
-                    CameraViewActivity.t=0;
-                }else{
-                    CameraViewActivity.t++;
-                }
                 Log.i(TAG,"picture width"+ frame.height() + "picture height"+ frame.width());
                 Log.i(TAG,"Box Width"+ boxes.get(i).width()+"Box Height"+ boxes.get(i).height());
             }

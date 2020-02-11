@@ -29,7 +29,7 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
     private JavaCameraView mcameraView;
     private static int cameraIndex = 0;//前置1，后置0
     int option = 0;
-    static int t = 0;
+    static int t = 0;//计数器，60一个循环
     static int resizefactor = 2;
     MTCNN mtcnn;
     BitmapFactory.Options options = new BitmapFactory.Options();
@@ -141,6 +141,11 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
         resize(clockFrame1,clockFrame, new Size(clockFrame1.height()* resizefactor, clockFrame1.width()* resizefactor),0,0, INTER_LINEAR);
         transpose(clockFrame, temp);
         flip(temp,frame,0);
+        if(t>=60){
+            t=0;
+        } else {
+            t++;
+        }
         return frame;
     }
 
