@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-<item android:id="@+id/glasses" android:title="@string/glasses"></item>
-<item android:id="@+id/circle" android:title="@string/circle"></item>
-<item android:id="@+id/mouth" android:title="@string/mouth"></item>
+    <item android:id="@+id/glasses" android:title="@string/glasses"></item>
+    <item android:id="@+id/circle" android:title="@string/circle"></item>
+    <item android:id="@+id/mouth" android:title="@string/mouth"></item>
     <item android:id="@+id/eye" android:title="@string/eye"></item>
+    <item android:id="@+id/test1" android:title="picture"></item>
+    <item android:id="@+id/test2" android:title="test2"></item>
+    <item android:id="@+id/test3" android:title="test3"></item>
+    <item android:id="@+id/test4" android:title="test4"></item>
 </menu>

@@ -1,6 +1,7 @@
 package com.ParticleEffectCamera;
 
 import android.graphics.Bitmap;
+import android.util.Log;
 import org.opencv.android.Utils;
 import org.opencv.core.Mat;
 import org.opencv.core.Size;
@@ -10,6 +11,7 @@ import static org.opencv.imgproc.Imgproc.resize;
 
 public class Process {
 
+    static String TAG="Process";
     //渲染的具体操作过程+1
     public static void mouthProcess(Mat frame, Bitmap bm,Vector<Box> boxes,int t){//两张图片的内容一样，格式不一样
         try {
@@ -93,6 +95,37 @@ public class Process {
             }
         }
         catch (Exception e){
+        }
+    }
+
+    public static void noneProcess(Mat frame,Bitmap bm,Vector<Box> boxes,int t){
+        try {
+            for (int i=0;i<boxes.size();i++) {
+                if(t>=30){
+                    CameraViewActivity.t=0;
+                }else{
+                    CameraViewActivity.t++;
+                }
+                Log.i(TAG,"picture width"+ frame.height() + "picture height"+ frame.width());
+                Log.i(TAG,"Box Width"+ boxes.get(i).width()+"Box Height"+ boxes.get(i).height());
+            }
+        }catch (Exception e){
+        }
+    }
+
+    public static void particleSystemProcess(Mat frame,Bitmap bm,Vector<Box> boxes,int t){
+        try {
+            for (int i=0;i<boxes.size();i++) {
+                ParticleSystem.draw(frame,boxes.get(i).landmark,t);
+                if(t>=30){
+                    CameraViewActivity.t=0;
+                }else{
+                    CameraViewActivity.t++;
+                }
+                Log.i(TAG,"picture width"+ frame.height() + "picture height"+ frame.width());
+                Log.i(TAG,"Box Width"+ boxes.get(i).width()+"Box Height"+ boxes.get(i).height());
+            }
+        }catch (Exception e){
         }
     }
 }

@@ -30,6 +30,7 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
     private static int cameraIndex = 0;//前置1，后置0
     int option = 0;
     static int t = 0;
+    static int resizefactor = 2;
     MTCNN mtcnn;
     BitmapFactory.Options options = new BitmapFactory.Options();
 
@@ -94,6 +95,17 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
                            option = 4;
                            t = 0;
                            break;
+                       case R.id.test1:
+                           option = 5;
+                           t = 0;
+                           break;
+                       case R.id.test2:
+                           option = 6;
+                           t = 0;
+                           //初始化粒子系统
+                           ParticleSystem.initialize();
+                           ParticleSystem.ptcConfig();
+                           break;
                        default:
                            option = 0;
                            t = 0;
@@ -124,9 +136,9 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
         }
         transpose(frame, temp);
         flip(temp,clockFrame,1);
-        resize(clockFrame,clockFrame1, new Size(clockFrame.height() / 2, clockFrame.width()/ 2),0,0, INTER_LINEAR);
+        resize(clockFrame,clockFrame1, new Size(clockFrame.height() / resizefactor, clockFrame.width()/ resizefactor),0,0, INTER_LINEAR);
         process(clockFrame1);
-        resize(clockFrame1,clockFrame, new Size(clockFrame1.height()* 2, clockFrame1.width()* 2),0,0, INTER_LINEAR);
+        resize(clockFrame1,clockFrame, new Size(clockFrame1.height()* resizefactor, clockFrame1.width()* resizefactor),0,0, INTER_LINEAR);
         transpose(clockFrame, temp);
         flip(temp,frame,0);
         return frame;
@@ -148,6 +160,10 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
             Process.mouthProcess(frame,bitmap,boxes,t);
         else if (option==4)
             Process.eyeProcess(frame,bitmap,boxes,t);
+        else if (option==5)
+            Process.noneProcess(frame,bitmap,boxes,t);
+        else if (option==6)
+            Process.particleSystemProcess(frame,bitmap,boxes,t);
     }
 
     public void onPause() {
