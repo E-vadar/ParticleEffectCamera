@@ -31,11 +31,11 @@ public class ParticleSystem {
             ptc.life = false;
             ptc.lifetime = 0;
             ptc.size = 3;
-            ptc.v = 1;
-            ptc.col[0] = 20+2*ptc.getGroupNo();
-            ptc.col[1] = 20+2*ptc.getGroupNo();
-            ptc.col[2] = 20+2*ptc.getGroupNo();
-            ptc.direction[0] = 1;
+            ptc.v = 1.5;
+            ptc.col[0] = 255;
+            ptc.col[1] = 0;
+            ptc.col[2] = 0;
+            ptc.direction[0] = 0;
             ptc.direction[1] = 1;
             ptc.duration = duration;
             ptcspool.addLast(ptc);

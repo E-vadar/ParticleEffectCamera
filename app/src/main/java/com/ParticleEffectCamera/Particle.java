@@ -10,7 +10,7 @@ public class Particle {
     int pNo;//粒子序号
     double x,y;//粒子的二维坐标
     double v ;//速度
-    int[] col = new int[3];//颜色
+    int[] col = new int[3];//颜色,red,green,blue
     double[] direction = new double[2];//四向方向，上右下左
     int size;//粒子大小
     int lifetime;//粒子生命周期
@@ -30,11 +30,11 @@ public class Particle {
         lifetime = 0;
         life = false;
         size = 3;
-        v = 1;
-        col[0] = 20+2*groupNo;
-        col[1] = 20+2*groupNo;
-        col[2] = 20+2*groupNo;
-        direction[0] = 1;
+        v = 1.5;
+        col[0] = 255;
+        col[1] = 0;
+        col[2] = 0;
+        direction[0] = 0;
         direction[1] = 1;
         //跟上前面粒子的步伐
         update(0);
@@ -50,25 +50,25 @@ public class Particle {
         if(life){
             switch (group){
                 case 0:
-                    direction[0] = 1;
+                    direction[0] = 0.2;
                     direction[1] = 1;
                     break;
                 case 1:
-                    direction[0] = -1;
+                    direction[0] = 0.1;
                     direction[1] = 1;
                     break;
                 case 2:
-                    direction[0] = -1;
-                    direction[1] = -1;
+                    direction[0] = -0.2;
+                    direction[1] = 1;
                     break;
                 case 3:
-                    direction[0] = 1;
-                    direction[1] = -1;
+                    direction[0] = -0.1;
+                    direction[1] = 1;
                     break;
             }
             x = x + v * direction[0];
             y = y - v * direction[1];
-            v = v + 2;
+            col[1] = 7*lifetime;
             color = new Scalar(col[0],col[1],col[2]);
             lifetime ++;
         }
