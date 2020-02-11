@@ -1,4 +1,4 @@
-package com.ParticleEffectCamera;
+package com.EffectSystem;
 
 import android.graphics.Bitmap;
 import android.graphics.Point;

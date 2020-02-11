@@ -1,7 +1,10 @@
-package com.ParticleEffectCamera;
+package com.EffectSystem;
 
 import android.graphics.Bitmap;
 import android.util.Log;
+import com.FaceDetection.Box;
+import com.ParticleEffectCamera.WelcomeActivity;
+import com.ParticleSystem.ParticleSystem;
 import org.opencv.android.Utils;
 import org.opencv.core.Mat;
 import org.opencv.core.Size;
@@ -13,7 +16,7 @@ public class Process {
 
     static String TAG="Process";
     //渲染的具体操作过程+1
-    public static void mouthProcess(Mat frame, Bitmap bm,Vector<Box> boxes,int t){//两张图片的内容一样，格式不一样
+    public static void mouthProcess(Mat frame, Bitmap bm, Vector<Box> boxes, int t){//两张图片的内容一样，格式不一样
         try {
             int time = t % 11;
             for (int i=0;i<boxes.size();i++) {//对于检测到的i张脸中的每一张脸分别戴上眼镜
@@ -44,8 +47,8 @@ public class Process {
     public static void pureProcess(Mat frame,Bitmap bm,Vector<Box> boxes){
         try {
             for (int i=0;i<boxes.size();i++){
-                com.ParticleEffectCamera.Utils.drawRect(bm,boxes.get(i).transform2Rect());
-                com.ParticleEffectCamera.Utils.drawPoints(bm,boxes.get(i).landmark);
+                com.FaceDetection.Utils.drawRect(bm,boxes.get(i).transform2Rect());
+                com.FaceDetection.Utils.drawPoints(bm,boxes.get(i).landmark);
             }
             Utils.bitmapToMat(bm,frame);
         }catch (Exception e){

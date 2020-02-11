@@ -1,4 +1,4 @@
-package com.ParticleEffectCamera;
+package com.FaceDetection;
 
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
@@ -30,7 +30,7 @@ public class MTCNN {
     private static final String TAG="MTCNN";
     private AssetManager assetManager;
     private TensorFlowInferenceInterface inferenceInterface;
-    MTCNN(AssetManager mgr){
+    public MTCNN(AssetManager mgr){
         assetManager=mgr;
         loadModel();
     }

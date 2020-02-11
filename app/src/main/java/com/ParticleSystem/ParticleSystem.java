@@ -1,4 +1,4 @@
-package com.ParticleEffectCamera;
+package com.ParticleSystem;
 
 import android.graphics.Point;
 import java.util.ArrayDeque;

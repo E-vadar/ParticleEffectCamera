@@ -1,4 +1,4 @@
-package com.ParticleEffectCamera;
+package com.EffectSystem;
 
 import org.opencv.core.Mat;
 import org.opencv.core.Point;
