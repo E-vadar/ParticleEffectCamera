@@ -1,21 +1,31 @@
 package com.ParticleSystem;
 
+import android.graphics.Camera;
 import android.graphics.Point;
+
+import com.ParticleEffectCamera.CameraViewActivity;
+
 import java.util.ArrayDeque;
 import org.opencv.core.Mat;
 
+import static com.ParticleEffectCamera.CameraViewActivity.option;
+
 public class ParticleSystem {
 
-    static int initial_size = 270;
-    static int duration = 30;
+    static int initial_size = 0;
+    static int duration = 0;
     static ArrayDeque<Particle> ptcspool = new ArrayDeque<>();
 
     //生成粒子池
-    public static void initialize(){
+    public static void initialize(int Initial_size, int Duration){
+        initial_size = Initial_size;
+        duration = Duration;
+        ptcspool.clear();
         for (int i = 0; i < initial_size; i++) {
             ptcspool.add(new Particle());
         }
     }
+
 
     //初始化粒子配置
     public static void ptcConfig(){
@@ -44,13 +54,24 @@ public class ParticleSystem {
 
     //加载粒子系统运动
     public static void runSystem(Mat frame, Point[] landmark, int t){
-        int x = landmark[2].x;
-        int y = landmark[2].y;
+        int x,y;
+        if(CameraViewActivity.option == 6){
+            x = landmark[2].x;
+            y = landmark[2].y;
+        } else {
+            x = (landmark[3].x + landmark[4].x)/2;
+            y = (landmark[3].y + landmark[4].y)/2;
+        }
+
         int time = t % duration;//周期时间内
 
         for (int i = 0; i < ptcspool.size(); i++) {
             Particle ptc = ptcspool.removeFirst();
-            ptc.update(time);
+            if(CameraViewActivity.option == 6){
+                    ptc.update(time);
+            } else {
+                ptc.update2(time);
+            }
             ptc.draw(frame,x,y);
             ptcspool.addLast(ptc);
         }

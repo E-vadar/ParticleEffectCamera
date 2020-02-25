@@ -100,6 +100,26 @@ public class Particle {
         }
     }
 
+    public void update2(int time){
+        if(lifetime >= duration){
+            reactivate();
+        }
+        if(groupNo <= time){
+            life = true;
+        }
+        if(life){
+            direction[0] = move(lifetime,group);
+            direction[1] = gravity(lifetime);
+            x = x + v * direction[0];
+            y = y + v * direction[1];
+            col[0] = group*5 + 2*lifetime;
+            col[1] = group*5 + 2*lifetime;
+            col[2] = group*5 + 4*lifetime;
+            color = new Scalar(col[0],col[1],col[2]);
+            lifetime ++;
+        }
+    }
+
     //在frame上呈现粒子
     public void draw(Mat frame,int x0,int y0){
         if(life){
@@ -107,5 +127,20 @@ public class Particle {
             int yp = new Double(Math.floor(y + y0)).intValue();
             circle(frame,new Point(xp,yp),new Double(Math.floor(size)).intValue(),color,-1);
         }
+    }
+
+    public double gravity(int lifetime){
+        double y_direction = 0;
+        y_direction = y_direction + 0.05*lifetime;
+        return y_direction;
+    }
+    public double move(int lifetime,int group){
+        double x_direction;
+        if(group>=0 && group <8){
+            x_direction = -0.8 + group*0.1 + lifetime*(0.025-group*0.003);
+        } else {
+            x_direction = 0.1 + (group-8)*0.1 - lifetime*(0.025-(16-group)*0.003);
+        }
+        return x_direction;
     }
 }

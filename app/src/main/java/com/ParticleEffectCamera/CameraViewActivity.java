@@ -32,7 +32,7 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
     String TAG="CameraViewActivity";
     private JavaCameraView mcameraView;
     private static int cameraIndex = 0;//前置1，后置0
-    int option = 0;
+    public static int option = 0;
     static int t = 0;//计数器，60一个循环
     static int resizefactor = 2;
     MTCNN mtcnn;
@@ -107,7 +107,14 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
                            option = 6;
                            t = 0;
                            //初始化粒子系统
-                           ParticleSystem.initialize();
+                           ParticleSystem.initialize(270,30);
+                           ParticleSystem.ptcConfig();
+                           break;
+                       case R.id.test3:
+                           option = 7;
+                           t = 0;
+                           //初始化粒子系统
+                           ParticleSystem.initialize(600,40);
                            ParticleSystem.ptcConfig();
                            break;
                        default:
@@ -150,6 +157,7 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
         } else {
             t++;
         }
+        mcameraView.enableFpsMeter();
         return frame;
     }
 
@@ -171,7 +179,7 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
             Process.eyeProcess(frame,bitmap,boxes,t);
         else if (option==5)
             Process.noneProcess(frame,bitmap,boxes,t);
-        else if (option==6)
+        else if (option==6 || option == 7)
             Process.particleSystemProcess(frame,bitmap,boxes,t);
     }
 

@@ -14,6 +14,7 @@ public class Blend {
             int x2 = landmark[1].x;
             int y2 = landmark[1].y;
             effect = Bitmap.createScaledBitmap(effect,effectwidth,effectheight,true);
+            //遍历要用于混合的素材图，并将由意义的像素点写到背景图上
             for (int i = 0; i < effect.getWidth(); i++) {
                 for (int j = 0; j < effect.getHeight(); j++) {
                     if(Color.green(effect.getPixel(i, j))>40){//effect中该像素点不为黑色
