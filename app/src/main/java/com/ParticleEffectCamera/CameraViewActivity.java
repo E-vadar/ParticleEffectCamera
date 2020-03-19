@@ -166,7 +166,7 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
         Bitmap bitmap = WelcomeActivity.localmap;
         bitmap=Bitmap.createScaledBitmap(bitmap,frame.width(),frame.height(),true);
         Utils.matToBitmap(frame,bitmap);
-        Vector<Box> boxes=mtcnn.detectFaces(bitmap,40);//mtcnn()的作用结果为生成一系列Box类（结构）
+        Vector<Box> boxes=mtcnn.detectFaces(bitmap,120);//mtcnn()的作用结果为生成一系列Box类（结构）
         if (option==0)
             Process.pureProcess(frame,bitmap,boxes);
         else if (option==1)

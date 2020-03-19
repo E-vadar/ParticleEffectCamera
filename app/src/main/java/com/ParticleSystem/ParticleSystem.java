@@ -62,9 +62,7 @@ public class ParticleSystem {
             x = (landmark[3].x + landmark[4].x)/2;
             y = (landmark[3].y + landmark[4].y)/2;
         }
-
         int time = t % duration;//周期时间内
-
         for (int i = 0; i < ptcspool.size(); i++) {
             Particle ptc = ptcspool.removeFirst();
             if(CameraViewActivity.option == 6){

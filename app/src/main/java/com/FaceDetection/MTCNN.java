@@ -93,12 +93,12 @@ public class MTCNN {
         inferenceInterface.fetch(PNetOutName[0],PNetOutP);
         inferenceInterface.fetch(PNetOutName[1],PNetOutB);
         //【写法一】先翻转，后转为2/3维数组
-        Utils.flip_diag(PNetOutP,PNetOutSizeW,PNetOutSizeH,2);
-        Utils.flip_diag(PNetOutB,PNetOutSizeW,PNetOutSizeH,4);
-        Utils.expand(PNetOutB,PNetOutBias);
-        Utils.expandProb(PNetOutP,PNetOutProb);
-        /*
-        *【写法二】这个比较快，快了3ms。意义不大，用上面的方法比较直观
+//        Utils.flip_diag(PNetOutP,PNetOutSizeW,PNetOutSizeH,2);
+//        Utils.flip_diag(PNetOutB,PNetOutSizeW,PNetOutSizeH,4);
+//        Utils.expand(PNetOutB,PNetOutBias);
+//        Utils.expandProb(PNetOutP,PNetOutProb);
+
+        //【写法二】这个比较快，快了3ms。意义不大，用上面的方法比较直观
         for (int y=0;y<PNetOutSizeH;y++)
             for (int x=0;x<PNetOutSizeW;x++){
                int idx=PNetOutSizeH*x+y;
@@ -106,7 +106,7 @@ public class MTCNN {
                for(int i=0;i<4;i++)
                    PNetOutBias[y][x][i]=PNetOutB[idx*4+i];
             }
-        */
+
         return 0;
     }
     //Non-Maximum Suppression

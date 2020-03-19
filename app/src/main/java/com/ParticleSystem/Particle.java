@@ -137,9 +137,11 @@ public class Particle {
     public double move(int lifetime,int group){
         double x_direction;
         if(group>=0 && group <8){
-            x_direction = -0.8 + group*0.1 + lifetime*(0.025-group*0.003);
+            x_direction = -0.8 + group*0.1
+                    + lifetime*(0.025-group*0.003);
         } else {
-            x_direction = 0.1 + (group-8)*0.1 - lifetime*(0.025-(16-group)*0.003);
+            x_direction = 0.1 + (group-8)*0.1
+                    - lifetime*(0.025-(16-group)*0.003);
         }
         return x_direction;
     }
