@@ -52,10 +52,10 @@
     </RadioGroup>
 
     <org.opencv.android.JavaCameraView
+        android:id="@+id/cv_camera_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/radioGroup"
-        android:visibility="gone"
-        android:id="@+id/cv_camera_id"/>
+        android:visibility="gone" />
 
 </RelativeLayout>

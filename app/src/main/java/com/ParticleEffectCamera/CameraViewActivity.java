@@ -39,6 +39,7 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
     //static int resizefactor = 2;
     MTCNN mtcnn;
     BitmapFactory.Options options = new BitmapFactory.Options();
+    public static boolean recordpermission;
 
 
     @Override
@@ -221,6 +222,8 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
             cameraIndex = 1;
         } else if(id == R.id.backCameraOption) {
             cameraIndex = 0;
+        } else if(id == R.id.record_btn) {
+            recordpermission = true;
         }
         mcameraView.setCameraIndex(cameraIndex);
         if(mcameraView != null) {
