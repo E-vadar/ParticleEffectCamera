@@ -163,10 +163,11 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
 
     //处理帧图片逻辑
     private void process(Mat frame) {
+        long t_start = System.currentTimeMillis();
         Bitmap bitmap = WelcomeActivity.localmap;
         bitmap=Bitmap.createScaledBitmap(bitmap,frame.width(),frame.height(),true);
         Utils.matToBitmap(frame,bitmap);
-        Vector<Box> boxes=mtcnn.detectFaces(bitmap,120);//mtcnn()的作用结果为生成一系列Box类（结构）
+        Vector<Box> boxes=mtcnn.detectFaces(bitmap,150);//mtcnn()的作用结果为生成一系列Box类（结构）
         if (option==0)
             Process.pureProcess(frame,bitmap,boxes);
         else if (option==1)
@@ -181,6 +182,7 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
             Process.noneProcess(frame,bitmap,boxes,t);
         else if (option==6 || option == 7)
             Process.particleSystemProcess(frame,bitmap,boxes,t);
+        Log.i(TAG,"[*]Whole Processing Time:"+(System.currentTimeMillis()-t_start));
     }
 
     public void onPause() {
