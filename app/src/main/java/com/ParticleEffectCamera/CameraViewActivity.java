@@ -36,7 +36,7 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
     private static int cameraIndex = 0;//前置1，后置0
     public static int option = 0;
     static int t = 0;//计数器，60一个循环
-    static int resizefactor = 1;
+    //static int resizefactor = 2;
     MTCNN mtcnn;
     BitmapFactory.Options options = new BitmapFactory.Options();
 
@@ -59,6 +59,7 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
         mcameraView.setCvCameraViewListener(this); // setup frame listener
         mcameraView.setCameraIndex(0);
         mcameraView.enableView();
+        mcameraView.enableFpsMeter();
 
         //前置、后置摄像头按钮初始化
         RadioButton backOption = findViewById(R.id.backCameraOption);
@@ -145,33 +146,22 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
 
     @Override
     public Mat onCameraFrame(CameraBridgeViewBase.CvCameraViewFrame inputFrame) {
-        long t_start = System.currentTimeMillis();//记录一帧开始的时间
         Mat frame = inputFrame.rgba();
-        Mat temp = new Mat();
-        Mat clockFrame=new Mat();
         if(cameraIndex == 1) { // 前置摄像头
-            flip(frame, frame, 1);//Y轴翻转
+            flip(frame,frame, 1);//Y轴翻转
         }
-        transpose(frame, temp);
-        flip(temp,clockFrame,1);//Y轴翻转
+        transpose(frame,frame);//转置
+//        方案一：缩放处理帧大小提升检测效率—— 前置FPS：25，后置FPS：30 方案二：无缩放保证图片质量—— 前置FPS：21，后置FPS：27
+//        resize(frame,frame, new Size(frame.height() / resizefactor, frame.width()/ resizefactor),0,0, INTER_LINEAR);
+        process(frame);
+//        resize(frame,frame, new Size(frame.height()* resizefactor, frame.width()* resizefactor),0,0, INTER_LINEAR);
+        transpose(frame,frame);//转置
 
-        //缩放大小调整检测效率
-        //resize(clockFrame,clockFrame1, new Size(clockFrame.height() / resizefactor, clockFrame.width()/ resizefactor),0,0, INTER_LINEAR);
-
-        process(clockFrame);
-
-        //缩放大小调整检测效率
-        //resize(clockFrame1,clockFrame, new Size(clockFrame1.height()* resizefactor, clockFrame1.width()* resizefactor),0,0, INTER_LINEAR);
-
-        transpose(clockFrame, temp);
-        flip(temp,frame,0);//X轴翻转
         if(t>=60){
             t=0;
         } else {
             t++;
         }
-        mcameraView.enableFpsMeter();
-        Log.i(TAG,"[*]Whole showing time:"+(System.currentTimeMillis()-t_start));//记录一帧结束的时间
         return frame;
     }
 
