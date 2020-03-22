@@ -28,15 +28,18 @@ import static org.opencv.core.Core.transpose;
 import static org.opencv.imgproc.Imgproc.INTER_LINEAR;
 import static org.opencv.imgproc.Imgproc.resize;
 
+
+
 public class CameraViewActivity extends AppCompatActivity implements CameraBridgeViewBase.CvCameraViewListener2, View.OnClickListener{
     String TAG="CameraViewActivity";
     private JavaCameraView mcameraView;
     private static int cameraIndex = 0;//前置1，后置0
     public static int option = 0;
     static int t = 0;//计数器，60一个循环
-    static int resizefactor = 2;
+    static int resizefactor = 1;
     MTCNN mtcnn;
     BitmapFactory.Options options = new BitmapFactory.Options();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,19 +106,23 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
                            option = 5;
                            t = 0;
                            break;
-                       case R.id.test2:
+                       case R.id.particlefire:
                            option = 6;
                            t = 0;
                            //初始化粒子系统
                            ParticleSystem.initialize(270,30);
                            ParticleSystem.ptcConfig();
                            break;
-                       case R.id.test3:
+                       case R.id.particlemouth:
                            option = 7;
                            t = 0;
                            //初始化粒子系统
                            ParticleSystem.initialize(600,40);
                            ParticleSystem.ptcConfig();
+                           break;
+                       case R.id.raw:
+                           option = 8;
+                           t = 0;
                            break;
                        default:
                            option = 0;
@@ -164,25 +171,29 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
     //处理帧图片逻辑
     private void process(Mat frame) {
         long t_start = System.currentTimeMillis();
-        Bitmap bitmap = WelcomeActivity.localmap;
-        bitmap=Bitmap.createScaledBitmap(bitmap,frame.width(),frame.height(),true);
-        Utils.matToBitmap(frame,bitmap);
-        Vector<Box> boxes=mtcnn.detectFaces(bitmap,150);//mtcnn()的作用结果为生成一系列Box类（结构）
-        if (option==0)
-            Process.pureProcess(frame,bitmap,boxes);
-        else if (option==1)
-            Process.glassProcess(frame,boxes);
-        else if (option==2)
-            Process.particleProcess(frame,boxes,t);
-        else if (option==3)
-            Process.mouthProcess(frame,bitmap,boxes,t);
-        else if (option==4)
-            Process.eyeProcess(frame,bitmap,boxes,t);
-        else if (option==5)
-            Process.noneProcess(frame,bitmap,boxes,t);
-        else if (option==6 || option == 7)
-            Process.particleSystemProcess(frame,bitmap,boxes,t);
-        Log.i(TAG,"[*]Whole Processing Time:"+(System.currentTimeMillis()-t_start));
+        if(option == 8){
+            Log.i(TAG,"[*]Whole Processing Time:"+(System.currentTimeMillis()-t_start));
+        } else {
+            Bitmap bitmap = WelcomeActivity.localmap;
+            bitmap=Bitmap.createScaledBitmap(bitmap,frame.width(),frame.height(),true);
+            Utils.matToBitmap(frame,bitmap);
+            Vector<Box> boxes=mtcnn.detectFaces(bitmap,150);//mtcnn()的作用结果为生成一系列Box类（结构）
+            if (option==0)
+                Process.pureProcess(frame,bitmap,boxes);
+            else if (option==1)
+                Process.glassProcess(frame,boxes);
+            else if (option==2)
+                Process.particleProcess(frame,boxes,t);
+            else if (option==3)
+                Process.mouthProcess(frame,bitmap,boxes,t);
+            else if (option==4)
+                Process.eyeProcess(frame,bitmap,boxes,t);
+            else if (option==5)
+                Process.noneProcess(frame,bitmap,boxes,t);
+            else if (option==6 || option == 7)
+                Process.particleSystemProcess(frame,bitmap,boxes,t);
+            Log.i(TAG,"[*]Whole Processing Time:"+(System.currentTimeMillis()-t_start));
+        }
     }
 
     public void onPause() {
