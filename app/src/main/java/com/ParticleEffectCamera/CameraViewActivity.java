@@ -67,6 +67,7 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
         frontOption.setOnClickListener(this);
         backOption.setSelected(true);
         options.inPreferredConfig = Bitmap.Config.ARGB_8888;
+        mtcnn=new MTCNN(getAssets());
     }
 
     private void initLoadOpenCVLibs() {
@@ -144,35 +145,40 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
 
     @Override
     public Mat onCameraFrame(CameraBridgeViewBase.CvCameraViewFrame inputFrame) {
-        mtcnn=new MTCNN(getAssets());
+        long t_start = System.currentTimeMillis();//记录一帧开始的时间
         Mat frame = inputFrame.rgba();
         Mat temp = new Mat();
         Mat clockFrame=new Mat();
-        Mat clockFrame1=new Mat();
         if(cameraIndex == 1) { // 前置摄像头
-            flip(frame, frame, 1);
+            flip(frame, frame, 1);//Y轴翻转
         }
         transpose(frame, temp);
-        flip(temp,clockFrame,1);
-        resize(clockFrame,clockFrame1, new Size(clockFrame.height() / resizefactor, clockFrame.width()/ resizefactor),0,0, INTER_LINEAR);
-        process(clockFrame1);
-        resize(clockFrame1,clockFrame, new Size(clockFrame1.height()* resizefactor, clockFrame1.width()* resizefactor),0,0, INTER_LINEAR);
+        flip(temp,clockFrame,1);//Y轴翻转
+
+        //缩放大小调整检测效率
+        //resize(clockFrame,clockFrame1, new Size(clockFrame.height() / resizefactor, clockFrame.width()/ resizefactor),0,0, INTER_LINEAR);
+
+        process(clockFrame);
+
+        //缩放大小调整检测效率
+        //resize(clockFrame1,clockFrame, new Size(clockFrame1.height()* resizefactor, clockFrame1.width()* resizefactor),0,0, INTER_LINEAR);
+
         transpose(clockFrame, temp);
-        flip(temp,frame,0);
+        flip(temp,frame,0);//X轴翻转
         if(t>=60){
             t=0;
         } else {
             t++;
         }
         mcameraView.enableFpsMeter();
+        Log.i(TAG,"[*]Whole showing time:"+(System.currentTimeMillis()-t_start));//记录一帧结束的时间
         return frame;
     }
 
     //处理帧图片逻辑
     private void process(Mat frame) {
-        long t_start = System.currentTimeMillis();
         if(option == 8){
-            Log.i(TAG,"[*]Whole Processing Time:"+(System.currentTimeMillis()-t_start));
+
         } else {
             Bitmap bitmap = WelcomeActivity.localmap;
             bitmap=Bitmap.createScaledBitmap(bitmap,frame.width(),frame.height(),true);
@@ -192,7 +198,6 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
                 Process.noneProcess(frame,bitmap,boxes,t);
             else if (option==6 || option == 7)
                 Process.particleSystemProcess(frame,bitmap,boxes,t);
-            Log.i(TAG,"[*]Whole Processing Time:"+(System.currentTimeMillis()-t_start));
         }
     }
 
