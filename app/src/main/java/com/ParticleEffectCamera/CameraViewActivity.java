@@ -18,6 +18,7 @@ import org.opencv.android.Utils;
 import org.opencv.core.Mat;
 import org.opencv.core.Size;
 import android.util.Log;
+import com.EffectSystem.Record;
 import com.FaceDetection.Box;
 import com.FaceDetection.MTCNN;
 import com.EffectSystem.Process;
@@ -27,8 +28,6 @@ import static org.opencv.core.Core.flip;
 import static org.opencv.core.Core.transpose;
 import static org.opencv.imgproc.Imgproc.INTER_LINEAR;
 import static org.opencv.imgproc.Imgproc.resize;
-
-
 
 public class CameraViewActivity extends AppCompatActivity implements CameraBridgeViewBase.CvCameraViewListener2, View.OnClickListener{
     String TAG="CameraViewActivity";
@@ -41,7 +40,6 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
     BitmapFactory.Options options = new BitmapFactory.Options();
     public static boolean recordpermission;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,7 +49,6 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
         StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
         StrictMode.setVmPolicy(builder.build());
         builder.detectFileUriExposure();
-
         //全屏
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
@@ -61,7 +58,6 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
         mcameraView.setCameraIndex(0);
         mcameraView.enableView();
         mcameraView.enableFpsMeter();
-
         //前置、后置摄像头按钮初始化
         RadioButton backOption = findViewById(R.id.backCameraOption);
         RadioButton frontOption = findViewById(R.id.frontCameraOption);
@@ -69,6 +65,7 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
         frontOption.setOnClickListener(this);
         backOption.setSelected(true);
         options.inPreferredConfig = Bitmap.Config.ARGB_8888;
+        //初始化MTCNN
         mtcnn=new MTCNN(getAssets());
     }
 
@@ -105,9 +102,12 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
                            option = 4;
                            t = 0;
                            break;
-                       case R.id.test1:
+                       case R.id.particlefirework:
                            option = 5;
                            t = 0;
+                           //初始化粒子系统
+                           ParticleSystem.initialize(480,60);
+                           ParticleSystem.ptcConfig();
                            break;
                        case R.id.particlefire:
                            option = 6;
@@ -185,9 +185,7 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
                 Process.mouthProcess(frame,bitmap,boxes,t);
             else if (option==4)
                 Process.eyeProcess(frame,bitmap,boxes,t);
-            else if (option==5)
-                Process.noneProcess(frame,bitmap,boxes,t);
-            else if (option==6 || option == 7)
+            else if (option==5 || option==6 || option == 7)
                 Process.particleSystemProcess(frame,bitmap,boxes,t);
         }
     }
@@ -224,6 +222,11 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
             cameraIndex = 0;
         } else if(id == R.id.record_btn) {
             recordpermission = true;
+            try {
+                Record.imageToMp4();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
         mcameraView.setCameraIndex(cameraIndex);
         if(mcameraView != null) {

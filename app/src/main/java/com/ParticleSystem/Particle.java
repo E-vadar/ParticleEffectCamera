@@ -32,7 +32,7 @@ public class Particle {
         lifetime = 0;
         life = false;
         size = 2;
-        v = 2;
+        v = 3;
         col[0] = 255;
         col[1] = 0;
         col[2] = 0;
@@ -41,7 +41,7 @@ public class Particle {
     }
 
     //更新粒子状态
-    public void update(int time){
+    public void updateFire(int time){
         if(lifetime >= duration){
             reactivate();
         }
@@ -100,7 +100,7 @@ public class Particle {
         }
     }
 
-    public void update2(int time){
+    public void updateWaterfall(int time){
         if(lifetime >= duration){
             reactivate();
         }
@@ -120,6 +120,26 @@ public class Particle {
         }
     }
 
+    public void updateFirework(int time){
+        if(lifetime >= duration){
+            reactivate();
+        }
+        if(groupNo <= time){
+            life = true;
+        }
+        if(life){
+            direction[0] = moveRandomly(group);
+            direction[1] = gravityRandomly(lifetime);
+            x = x + v * direction[0];
+            y = y + v * direction[1];
+            col[0] = ColorRandomly()/2+150;
+            col[1] = ColorRandomly()+group * 20;
+            col[2] = ColorRandomly()+group * 20;
+            color = new Scalar(col[0],col[1],col[2]);
+            lifetime ++;
+        }
+    }
+
     //在frame上呈现粒子
     public void draw(Mat frame,int x0,int y0){
         if(life){
@@ -131,7 +151,7 @@ public class Particle {
 
     public double gravity(int lifetime){
         double y_direction = 0;
-        y_direction = y_direction + 0.05*lifetime;
+        y_direction = y_direction + 0.03*lifetime;
         return y_direction;
     }
     public double move(int lifetime,int group){
@@ -144,5 +164,23 @@ public class Particle {
                     - lifetime*(0.025-(16-group)*0.003);
         }
         return x_direction;
+    }
+
+    public double moveRandomly(int group){
+        double x_direction;
+            x_direction = 3 * (Math.random()-0.5)+0.2*(group-4);
+        return x_direction;
+    }
+
+    public double gravityRandomly(int lifetime){
+        double y_direction = 0;
+        y_direction = 0.07*lifetime*((new Double(Math.random())).intValue()-0.5);
+        return y_direction;
+    }
+
+
+    public int ColorRandomly(){
+        int color = (new Double(Math.random())).intValue()*50;
+        return color;
     }
 }

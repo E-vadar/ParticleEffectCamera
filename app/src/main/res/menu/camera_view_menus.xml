@@ -4,7 +4,7 @@
     <item android:id="@+id/circle" android:title="@string/circle"></item>
     <item android:id="@+id/mouth" android:title="@string/mouth"></item>
     <item android:id="@+id/eye" android:title="@string/eye"></item>
-    <item android:id="@+id/test1" android:title="picture"></item>
+    <item android:id="@+id/particlefirework" android:title="particle firework on nose"></item>
     <item android:id="@+id/particlefire" android:title="particle fire on nose"></item>
     <item android:id="@+id/particlemouth" android:title="particle mouth"></item>
     <item android:id="@+id/raw" android:title="raw"></item>

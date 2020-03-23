@@ -54,21 +54,39 @@ public class ParticleSystem {
 
     //加载粒子系统运动
     public static void runSystem(Mat frame, Point[] landmark, int t){
-        int x,y;
-        if(CameraViewActivity.option == 6){
-            x = landmark[2].x;
-            y = landmark[2].y;
-        } else {
-            x = (landmark[3].x + landmark[4].x)/2;
-            y = (landmark[3].y + landmark[4].y)/2;
+        int x = 0;
+        int y = 0;
+        switch(CameraViewActivity.option){
+            case 5:
+                x = landmark[2].x;
+                y = landmark[2].y;
+                break;
+            case 6:
+                x = landmark[2].x;
+                y = landmark[2].y;
+                break;
+            case 7:
+                x = (landmark[3].x + landmark[4].x)/2;
+                y = (landmark[3].y + landmark[4].y)/2;
+                break;
+            default:
+                break;
         }
         int time = t % duration;//周期时间内
         for (int i = 0; i < ptcspool.size(); i++) {
             Particle ptc = ptcspool.removeFirst();
-            if(CameraViewActivity.option == 6){
-                    ptc.update(time);
-            } else {
-                ptc.update2(time);
+            switch(CameraViewActivity.option){
+                case 5:
+                    ptc.updateFirework(time);
+                    break;
+                case 6:
+                    ptc.updateFire(time);
+                    break;
+                case 7:
+                    ptc.updateWaterfall(time);
+                    break;
+                default:
+                    break;
             }
             ptc.draw(frame,x,y);
             ptcspool.addLast(ptc);

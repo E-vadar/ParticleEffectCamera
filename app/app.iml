@@ -101,6 +101,8 @@
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.test:runner:1.2.0@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.test:monitor:1.2.0@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.test.espresso:espresso-idling-resource:3.2.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: __local_aars__:F.\Android\workspace\ParticleEffectCameraV3\app\libs\javacpp.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="Gradle: __local_aars__:F.\Android\workspace\ParticleEffectCameraV3\app\libs\javacv.jar:unspecified@jar" level="project" />
     <orderEntry type="library" name="Gradle: __local_aars__:F.\Android\workspace\ParticleEffectCameraV3\app\build\native-libs\native-libs.jar:unspecified@jar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.collection:collection:1.1.0@jar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-common:2.1.0@jar" level="project" />
@@ -134,6 +136,7 @@
     <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-livedata-core:2.0.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.arch.core:core-runtime:2.0.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: org.tensorflow:tensorflow-android:1.13.1@aar" level="project" />
+    <orderEntry type="module" module-name="openCVLibrary340" />
     <orderEntry type="module" module-name="openCVLibrary340" />
   </component>
 </module>
