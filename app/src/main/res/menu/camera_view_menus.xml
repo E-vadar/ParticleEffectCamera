@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/p1" android:title="test"></item>
-    <item android:id="@+id/p2" android:title="nosefire"></item>
-    <item android:id="@+id/p3" android:title="mouthwater"></item>
-    <item android:id="@+id/p4" android:title="nosefirework"></item>
+    <item android:id="@+id/p1" android:title="Fountain"></item>
+    <item android:id="@+id/p2" android:title="Firework"></item>
+    <item android:id="@+id/p3" android:title="Coral reef"></item>
+    <item android:id="@+id/p4" android:title="Rainbow glass"></item>
     <item android:id="@+id/p5" android:title="5"></item>
     <item android:id="@+id/p6" android:title="6"></item>
     <item android:id="@+id/p7" android:title="7"></item>

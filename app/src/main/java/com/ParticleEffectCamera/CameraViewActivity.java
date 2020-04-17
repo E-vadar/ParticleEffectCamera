@@ -39,8 +39,10 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
     MTCNN mtcnn;
     BitmapFactory.Options options = new BitmapFactory.Options();
     public static boolean recordpermission;
-    public static int[] config = new int[4];
+    public static int[] config = new int[5];
     public static int[] configGroup = new int[10];
+    public static int[] TrajectoryColor = new int[3];
+    public static int[] HaloColor = new int[3];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,20 +93,23 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
                    switch (id) {
                        case R.id.p1:
                            option = 1;
-                           effecttype(3,0,1,0);
-                           ParticleSystem.Configuration(200,60,5,2,true,6,true,config,configGroup);
+                           effecttype(3,0,1,2, 10,0,80,220,0,125,150);
+                           ParticleSystem.Configuration(120,60,5,3, 2,true,4,TrajectoryColor,true, HaloColor,config,configGroup);
                            break;
                        case R.id.p2:
                            option = 2;
-                           ParticleSystem.ptcConfig(270,30);
+                           effecttype(3,0,1,1, 10,220,220,220,255,255,255);
+                           ParticleSystem.Configuration(120,120,5,3, 2,true,4,TrajectoryColor,true, HaloColor,config,configGroup);
                            break;
                        case R.id.p3:
                            option = 3;
-                           ParticleSystem.ptcConfig(600,40);
+                           effecttype(0,1,2,2, 20,255,255,255,255,255,255);
+                           ParticleSystem.Configuration(300,60,10,2, 3,true,10, TrajectoryColor,false, HaloColor,config,configGroup);
                            break;
                        case R.id.p4:
                            option = 4;
-                           ParticleSystem.ptcConfig(480,60);
+                           effecttype(2,0,1,0,4,255,255,255,255,255,255);
+                           ParticleSystem.Configuration(600,60,10,2, 10,false,5, TrajectoryColor,false, HaloColor,config,configGroup);
                            break;
                        case R.id.p5:
                            option = 5;
@@ -162,16 +167,23 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
         return frame;
     }
 
-    private void effecttype(int shape,int velocity,int color,int key_position){
+    private void effecttype(int shape,int velocity,int color_type,int key_position,int vibration, int color1,int color2,int color3,int color4 ,int color5, int color6){
         config[0] = shape;
         config[1] = velocity;
-        config[2] = color;
+        config[2] = color_type;
         config[3] = key_position;
+        config[4] = vibration;
         configGroup[0] = 0;
         configGroup[1] = 1;
         configGroup[2] = 0;
         configGroup[3] = 1;
         configGroup[4] = 0;
+        TrajectoryColor[0] = color1;
+        TrajectoryColor[1] = color2;
+        TrajectoryColor[2] = color3;
+        HaloColor[0] = color4;
+        HaloColor[1] = color5;
+        HaloColor[2] = color6;
     }
     //处理帧图片逻辑
     private void process(Mat frame) {

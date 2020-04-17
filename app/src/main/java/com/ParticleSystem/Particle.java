@@ -3,32 +3,36 @@ package com.ParticleSystem;
 import org.opencv.core.Point;
 import org.opencv.core.Scalar;
 import org.opencv.core.Mat;
+
+import static org.opencv.imgproc.Imgproc.LINE_AA;
 import static org.opencv.imgproc.Imgproc.circle;
+import static org.opencv.imgproc.Imgproc.line;
 
 public class Particle {
 
-    int pNo;//粒子序号
-    double x,y;//粒子的二维坐标
+    int pNo;
+    double x,y;
     double v ;//速度
-    int[] col = new int[3];//颜色,red,green,blue
-    double[] direction = new double[2];//四向方向，上右下左
-    double size;//粒子大小
-    int lifetime;//粒子生命周期
-    boolean life;//粒子是否存活
+    int[] col = new int[3];
+    double[] direction = new double[2];
+    double size;
+    int lifetime;
+    boolean life;
     Scalar color = new Scalar(0,0,0);//粒子颜色
     int group;//粒子组别
     int groupNo;//粒子组内编号
     int groupValue;
     int duration;//运动周期
-    double cre = 0.2;//方向增量
     boolean trajectory;
     int trajectoryLength;
-    boolean Halo;
+    int[] trajectoryColor = new int[3];
+    boolean halo;
+    int[] haloColor = new int[3];
     double[] xt = new double[10];
     double[] yt = new double[10];
     int[] stateOfColor = new int[3];
     double[] stateOfShape = new double[2];
-    int[] config = new int[3];
+    int[] config = new int[5];
     int[] configGroup = new int[10];
 
     public Particle() {
@@ -54,24 +58,28 @@ public class Particle {
         if(groupNo<=time-5){
             life = true;
         }
+        if(lifetime >= duration){
+            life = false;
+        }
         if(life){
-            TrackRecord(x,y,xt,yt,lifetime,trajectoryLength);
+            if(trajectory)
+                TrackRecord();
             Shape(config[0]);
             Velocity(config[1]);
-            Vibration(config[1]);
+            Vibration(config[4]);
             Move();
             Color(config[2]);
             lifetime ++;
         }
-        if(lifetime == duration){
+        if(lifetime >= duration){
             reactivate();
         }
     }
 
     public void Vibration(int option){
-        v = v + groupNo/groupValue*2;
-        direction[0] = direction[0]+Math.random()-0.5;
-        direction[0] = direction[0]+Math.random()-0.5;
+        v = v + groupNo/groupValue*2*0.1*option;
+        direction[0] = direction[0] + (Math.random()-0.5)*0.1*option;
+        direction[0] = direction[0] + (Math.random()-0.5)*0.1*option;
     }
 
     public void Color(int option){
@@ -82,6 +90,9 @@ public class Particle {
             case 1:
                 color_random();
                 break;
+            case 2:
+                color_gradual();
+                break;
         }
     }
 
@@ -91,7 +102,10 @@ public class Particle {
 
     public void color_random(){
         color = new Scalar((new Double(Math.random()*10)).intValue()*25,(new Double(Math.random()*10)).intValue()*25,(new Double(Math.random()*10)).intValue()*25);
+    }
 
+    public void color_gradual(){
+        color = new Scalar(col[0]-(new Double(Math.random()*5)).intValue()*5,col[1]+(new Double(Math.random()*5)).intValue()*5,col[2]+(new Double(Math.random()*5)).intValue()*5);
     }
 
     public void Velocity(int option){
@@ -133,7 +147,6 @@ public class Particle {
                 shape_firework();
                 break;
         }
-
     }
 
     public void shape_snake(){
@@ -158,6 +171,8 @@ public class Particle {
                 direction[1] = 1 - 0.1*mark;
                 break;
         }
+        direction[0] = direction[0] * (group-group/2)* 0.3;
+        direction[1] = direction[1] * (group-group/2+1)* 0.3;
     }
 
     public void shape_circle(){
@@ -181,6 +196,9 @@ public class Particle {
                 direction[0] =  -0.066*mark;
                 direction[1] =  -1 + 0.066*mark;
                 break;
+        }
+        if(lifetime == 0){
+            y = y + 75;
         }
     }
 
@@ -214,110 +232,9 @@ public class Particle {
                 direction[1] = 6-0.2*mark;
                 break;
             case 1:
-                direction[0] = Math.random()*10-5;
-                direction[1] = Math.random()*5-2.5-0.2*mark;
+                direction[0] = Math.random()*15-7.5;
+                direction[1] = Math.random()*5-2.5-0.1*mark;
                 break;
-        }
-    }
-
-    //更新粒子状态
-    public void updateFire(int time){
-        if(lifetime >= duration){
-            reactivate();
-        }
-        if(groupNo <= time){
-            life = true;
-        }
-        if(life){
-            if(lifetime%3 == 2){
-                cre = -cre;
-            }
-            switch (group){
-                case 0:
-                    direction[0] = 0.4+2*cre;
-                    direction[1] = 0.03*lifetime-0.12;
-                    break;
-                case 1:
-                    direction[0] = 0.3+1.5*cre;
-                    direction[1] = 0.03*lifetime-0.08;
-                    break;
-                case 2:
-                    direction[0] = 0.2+cre;
-                    direction[1] = 0.03*lifetime-0.04;
-                    break;
-                case 3:
-                    direction[0] = 0.1+0.5*cre;
-                    direction[1] = 0.03*lifetime;
-                    break;
-                case 4:
-                    direction[0] = -0.1-0.5*cre;
-                    direction[1] = 0.03*lifetime;
-                    break;
-                case 5:
-                    direction[0] = -0.2-cre;
-                    direction[1] = 0.03*lifetime-0.04;
-                    break;
-                case 6:
-                    direction[0] = -0.3-1.5*cre;
-                    direction[1] = 0.03*lifetime-0.08;
-                    break;
-                case 7:
-                    direction[0] = -0.4-2*cre;
-                    direction[1] = 0.03*lifetime-0.12;
-                    break;
-                case 8:
-                    direction[0] = 0+0.5*cre;
-                    direction[1] = 0.03*lifetime;
-                    break;
-            }
-            x = x + v * direction[0];
-            y = y - v * direction[1];
-            col[1] = 8*lifetime;
-            size = size + 0.006*lifetime ;
-            v = 2 + 0.02*lifetime;
-            color = new Scalar(col[0],col[1],col[2]);
-            lifetime ++;
-        }
-    }
-
-    public void updateWaterfall(int time){
-        if(lifetime >= duration){
-            reactivate();
-        }
-        if(groupNo <= time){
-            life = true;
-        }
-        if(life){
-            direction[0] = move(lifetime,group);
-            direction[1] = gravity(lifetime);
-            x = x + v * direction[0];
-            y = y + v * direction[1];
-            col[0] = group*5 + 2*lifetime;
-            col[1] = group*5 + 2*lifetime;
-            col[2] = group*5 + 4*lifetime;
-            color = new Scalar(col[0],col[1],col[2]);
-            lifetime ++;
-        }
-    }
-
-    public void updateFirework(int time){
-        if(lifetime >= duration){
-            reactivate();
-        }
-        if(groupNo <= time){
-            life = true;
-        }
-        if(life){
-            direction[0] = moveRandomly(group);
-            direction[1] = gravityRandomly(lifetime);
-            TrackRecord(x,y,xt,yt,lifetime,trajectoryLength);
-            x = x + v * direction[0];
-            y = y + v * direction[1];
-            col[0] = ColorRandomly()/2+150;
-            col[1] = ColorRandomly()+group * 20;
-            col[2] = ColorRandomly()+group * 20;
-            color = new Scalar(col[0],col[1],col[2]);
-            lifetime ++;
         }
     }
 
@@ -343,6 +260,7 @@ public class Particle {
         }
     }
 
+    //Draw particle's own on frame image;
     public void draw(Mat frame,int x0,int y0){
         if(life){
             int xp = new Double(Math.floor(x + x0)).intValue();
@@ -353,64 +271,30 @@ public class Particle {
 
     //Draw particles' trajectory on frame image;
     public void drawTrajectory(Mat frame,int x0,int y0){
-        if(life || trajectory){
+        if(trajectory){
+            int xp,yp;
             for(int i=0;i<trajectoryLength;i++){
-                int xp = new Double(Math.floor(xt[i] + x0)).intValue();
-                int yp = new Double(Math.floor(yt[i] + y0)).intValue();
-                circle(frame,new Point(xp,yp),new Double(Math.floor(size/2)).intValue(),new Scalar(255,255,255),-1);
+                xp = new Double(Math.floor(xt[i] + x0)).intValue();
+                yp = new Double(Math.floor(yt[i] + y0)).intValue();
+                circle(frame,new Point(xp,yp),new Double(Math.floor(size/2)).intValue(),new Scalar(trajectoryColor[0],trajectoryColor[1],trajectoryColor[2]),-1);
+                //line(frame,new Point(xp, yp),new Point(xp0,yp0),new Scalar(trajectoryColor[0],trajectoryColor[1],trajectoryColor[2]),new Double(Math.floor(size/2)).intValue());
             }
         }
     }
 
     public void drawHalo(Mat frame,int x0,int y0){
-        if(life || Halo){
-            for(int i=0;i<trajectoryLength;i++){
-                int xp = new Double(Math.floor(x + x0)).intValue();
-                int yp = new Double(Math.floor(y + y0)).intValue();
-                circle(frame,new Point(xp,yp),new Double(Math.floor(size*1.5)).intValue(),new Scalar(255,255,255),0);
-            }
+        if(halo){
+            int xp = new Double(Math.floor(x + x0)).intValue();
+            int yp = new Double(Math.floor(y + y0)).intValue();
+            circle(frame,new Point(xp,yp),new Double(Math.floor(size*1.5)).intValue(),new Scalar(haloColor[0],haloColor[1],haloColor[2]),0);
         }
-    }
-
-    public double gravity(int lifetime){
-        double y_direction = 0;
-        y_direction = y_direction + 0.03*lifetime;
-        return y_direction;
-    }
-    public double move(int lifetime,int group){
-        double x_direction;
-        if(group>=0 && group <8){
-            x_direction = -0.8 + group*0.1
-                    + lifetime*(0.025-group*0.003);
-        } else {
-            x_direction = 0.1 + (group-8)*0.1
-                    - lifetime*(0.025-(16-group)*0.003);
-        }
-        return x_direction;
-    }
-
-    public double moveRandomly(int group){
-        double x_direction;
-            x_direction = 3 * (Math.random()-0.5)+0.2*(group-4);
-        return x_direction;
-    }
-
-    public double gravityRandomly(int lifetime){
-        double y_direction = 0;
-        y_direction = 0.07*lifetime*((new Double(Math.random())).intValue()-0.5);
-        return y_direction;
-    }
-
-    public int ColorRandomly(){
-        int color = (new Double(Math.random())).intValue()*50;
-        return color;
     }
 
     //Record the trajectory of particles
-    public void TrackRecord(double tempx,double tempy,double[] tempxt,double[] tempyt,int lifetime,int trajectoryLength){
+    public void TrackRecord(){
         int locus = lifetime % (trajectoryLength);
-        tempxt[locus] = tempx;
-        tempyt[locus] = tempy;
+        xt[locus] = x;
+        yt[locus] = y;
     }
 
 }
