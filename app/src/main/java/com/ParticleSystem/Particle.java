@@ -44,6 +44,27 @@ public class Particle {
         direction[1] = 0;
     }
 
+    public void update(int time){
+        if(lifetime >= duration){
+            reactivate();
+        }
+        if(groupNo <= time){
+            life = true;
+        }
+        if(life){
+            direction[0] = moveRandomly(group);
+            direction[1] = gravityRandomly(lifetime);
+            TrackRecord(x,y,xt,yt,lifetime,trajectoryLength);
+            x = x + v * direction[0];
+            y = y + v * direction[1];
+            col[0] = ColorRandomly()/2+150;
+            col[1] = ColorRandomly()+group * 20;
+            col[2] = ColorRandomly()+group * 20;
+            color = new Scalar(col[0],col[1],col[2]);
+            lifetime ++;
+        }
+    }
+
     //更新粒子状态
     public void updateFire(int time){
         if(lifetime >= duration){

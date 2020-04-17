@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/glasses" android:title="@string/glasses"></item>
-    <item android:id="@+id/circle" android:title="@string/circle"></item>
-    <item android:id="@+id/mouth" android:title="@string/mouth"></item>
-    <item android:id="@+id/eye" android:title="@string/eye"></item>
-    <item android:id="@+id/particlefirework" android:title="particle firework on nose"></item>
-    <item android:id="@+id/particlefire" android:title="particle fire on nose"></item>
-    <item android:id="@+id/particlemouth" android:title="particle mouth"></item>
-    <item android:id="@+id/raw" android:title="raw"></item>
+    <item android:id="@+id/p1" android:title="test"></item>
+    <item android:id="@+id/p2" android:title="nosefire"></item>
+    <item android:id="@+id/p3" android:title="mouthwater"></item>
+    <item android:id="@+id/p4" android:title="nosefirework"></item>
+    <item android:id="@+id/p5" android:title="5"></item>
+    <item android:id="@+id/p6" android:title="6"></item>
+    <item android:id="@+id/p7" android:title="7"></item>
+    <item android:id="@+id/p8" android:title="8"></item>
+    <item android:id="@+id/p9" android:title="9"></item>
+    <item android:id="@+id/p10" android:title="raw"></item>
 </menu>

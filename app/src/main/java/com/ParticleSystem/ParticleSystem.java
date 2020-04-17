@@ -59,17 +59,21 @@ public class ParticleSystem {
         int x = 0;
         int y = 0;
         switch(CameraViewActivity.option){
-            case 5:
+            case 1:
                 x = landmark[2].x;
                 y = landmark[2].y;
                 break;
-            case 6:
+            case 2:
                 x = landmark[2].x;
                 y = landmark[2].y;
                 break;
-            case 7:
+            case 3:
                 x = (landmark[3].x + landmark[4].x)/2;
                 y = (landmark[3].y + landmark[4].y)/2;
+                break;
+            case 4:
+                x = landmark[2].x;
+                y = landmark[2].y;
                 break;
             default:
                 break;
@@ -78,14 +82,17 @@ public class ParticleSystem {
         for (int i = 0; i < ptcspool.size(); i++) {
             Particle ptc = ptcspool.removeFirst();
             switch(CameraViewActivity.option){
-                case 5:
-                    ptc.updateFirework(time);
+                case 1:
+                    ptc.update(time);
                     break;
-                case 6:
+                case 2:
                     ptc.updateFire(time);
                     break;
-                case 7:
+                case 3:
                     ptc.updateWaterfall(time);
+                    break;
+                case 4:
+                    ptc.updateFirework(time);
                     break;
                 default:
                     break;

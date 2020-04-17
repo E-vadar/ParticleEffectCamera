@@ -85,51 +85,48 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
                    int id = item.getItemId();
+                   t = 0;
                    switch (id) {
-                       case R.id.glasses:
+                       case R.id.p1:
                            option = 1;
-                           t = 0;
-                           break;
-                       case R.id.circle:
-                           option = 2;
-                           t = 0;
-                           break;
-                       case R.id.mouth:
-                           option = 3;
-                           t = 0;
-                           break;
-                       case R.id.eye:
-                           option = 4;
-                           t = 0;
-                           break;
-                       case R.id.particlefirework:
-                           option = 5;
-                           t = 0;
-                           //初始化粒子系统
                            ParticleSystem.initialize(480,60);
                            ParticleSystem.ptcConfig();
                            break;
-                       case R.id.particlefire:
-                           option = 6;
-                           t = 0;
-                           //初始化粒子系统
+                       case R.id.p2:
+                           option = 2;
                            ParticleSystem.initialize(270,30);
                            ParticleSystem.ptcConfig();
                            break;
-                       case R.id.particlemouth:
-                           option = 7;
-                           t = 0;
-                           //初始化粒子系统
+                       case R.id.p3:
+                           option = 3;
                            ParticleSystem.initialize(600,40);
                            ParticleSystem.ptcConfig();
                            break;
-                       case R.id.raw:
+                       case R.id.p4:
+                           option = 4;
+                           ParticleSystem.initialize(480,60);
+                           ParticleSystem.ptcConfig();
+                           break;
+                       case R.id.p5:
+                           option = 5;
+                           break;
+                       case R.id.p6:
+                           option = 6;
+                           break;
+                       case R.id.p7:
+                           option = 7;
+                           break;
+                       case R.id.p8:
                            option = 8;
-                           t = 0;
+                           break;
+                       case R.id.p9:
+                           option = 9;
+                           break;
+                       case R.id.p10:
+                           option = 9;
                            break;
                        default:
                            option = 0;
-                           t = 0;
                            break;
                    }
         return super.onOptionsItemSelected(item);
@@ -168,25 +165,13 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
 
     //处理帧图片逻辑
     private void process(Mat frame) {
-        if(option == 8){
-
+        if(option == 10){
         } else {
             Bitmap bitmap = WelcomeActivity.localmap;
             bitmap=Bitmap.createScaledBitmap(bitmap,frame.width(),frame.height(),true);
             Utils.matToBitmap(frame,bitmap);
             Vector<Box> boxes=mtcnn.detectFaces(bitmap,150);//mtcnn()的作用结果为生成一系列Box类（结构）
-            if (option==0)
-                Process.pureProcess(frame,bitmap,boxes);
-            else if (option==1)
-                Process.glassProcess(frame,boxes);
-            else if (option==2)
-                Process.particleProcess(frame,boxes,t);
-            else if (option==3)
-                Process.mouthProcess(frame,bitmap,boxes,t);
-            else if (option==4)
-                Process.eyeProcess(frame,bitmap,boxes,t);
-            else if (option==5 || option==6 || option == 7)
-                Process.particleSystemProcess(frame,bitmap,boxes,t);
+            Process.particleSystemProcess(frame,bitmap,boxes,t);
         }
     }
 
