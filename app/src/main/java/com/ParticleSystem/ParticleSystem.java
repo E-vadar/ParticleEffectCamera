@@ -48,6 +48,8 @@ public class ParticleSystem {
             ptc.direction[0] = 0;
             ptc.direction[1] = 0;
             ptc.duration = duration;
+            ptc.trajectory = true;
+            ptc.trajectoryLength = 9;
             ptcspool.addLast(ptc);
         }
     }
@@ -89,6 +91,7 @@ public class ParticleSystem {
                     break;
             }
             ptc.draw(frame,x,y);
+            ptc.drawTrajectory(frame,x,y);
             ptcspool.addLast(ptc);
         }
     }

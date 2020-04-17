@@ -20,6 +20,10 @@ public class Particle {
     int groupNo;//粒子组内编号
     int duration;//运动周期
     double cre = 0.2;//方向增量
+    boolean trajectory;
+    int trajectoryLength;
+    double[] xt = new double[10];
+    double[] yt = new double[10];
 
     public Particle() {
        super();
@@ -130,6 +134,7 @@ public class Particle {
         if(life){
             direction[0] = moveRandomly(group);
             direction[1] = gravityRandomly(lifetime);
+            TrackRecord(x,y,xt,yt,lifetime,trajectoryLength);
             x = x + v * direction[0];
             y = y + v * direction[1];
             col[0] = ColorRandomly()/2+150;
@@ -140,7 +145,7 @@ public class Particle {
         }
     }
 
-    //在frame上呈现粒子
+    //Draw particles on frame image;
     public void draw(Mat frame,int x0,int y0){
         if(life){
             int xp = new Double(Math.floor(x + x0)).intValue();
@@ -148,6 +153,18 @@ public class Particle {
             circle(frame,new Point(xp,yp),new Double(Math.floor(size)).intValue(),color,-1);
         }
     }
+
+    //Draw particles' trajectory on frame image;
+    public void drawTrajectory(Mat frame,int x0,int y0){
+        if(life || trajectory){
+            for(int i=0;i<=trajectoryLength;i++){
+                int xp = new Double(Math.floor(xt[i] + x0)).intValue();
+                int yp = new Double(Math.floor(yt[i] + y0)).intValue();
+                circle(frame,new Point(xp,yp),new Double(Math.floor(size/2)).intValue(),new Scalar(0,0,0),-1);
+            }
+        }
+    }
+
 
     public double gravity(int lifetime){
         double y_direction = 0;
@@ -178,9 +195,16 @@ public class Particle {
         return y_direction;
     }
 
-
     public int ColorRandomly(){
         int color = (new Double(Math.random())).intValue()*50;
         return color;
     }
+
+    //Record the trajectory of particles
+    public void TrackRecord(double tempx,double tempy,double[] tempxt,double[] tempyt,int lifetime,int trajectoryLength){
+        int locus = lifetime % (trajectoryLength+1);
+        tempxt[locus] = tempx;
+        tempyt[locus] = tempy;
+    }
+
 }
