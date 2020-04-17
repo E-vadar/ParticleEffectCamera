@@ -89,23 +89,19 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
                    switch (id) {
                        case R.id.p1:
                            option = 1;
-                           ParticleSystem.initialize(480,60);
-                           ParticleSystem.ptcConfig();
+                           ParticleSystem.ptcConfig(480,60);
                            break;
                        case R.id.p2:
                            option = 2;
-                           ParticleSystem.initialize(270,30);
-                           ParticleSystem.ptcConfig();
+                           ParticleSystem.ptcConfig(270,30);
                            break;
                        case R.id.p3:
                            option = 3;
-                           ParticleSystem.initialize(600,40);
-                           ParticleSystem.ptcConfig();
+                           ParticleSystem.ptcConfig(600,40);
                            break;
                        case R.id.p4:
                            option = 4;
-                           ParticleSystem.initialize(480,60);
-                           ParticleSystem.ptcConfig();
+                           ParticleSystem.ptcConfig(480,60);
                            break;
                        case R.id.p5:
                            option = 5;
@@ -123,7 +119,7 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
                            option = 9;
                            break;
                        case R.id.p10:
-                           option = 9;
+                           option = 10;
                            break;
                        default:
                            option = 0;
@@ -171,6 +167,9 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
             bitmap=Bitmap.createScaledBitmap(bitmap,frame.width(),frame.height(),true);
             Utils.matToBitmap(frame,bitmap);
             Vector<Box> boxes=mtcnn.detectFaces(bitmap,150);//mtcnn()的作用结果为生成一系列Box类（结构）
+            if(option == 0){
+                Process.pureProcess(frame,bitmap,boxes);
+            }
             Process.particleSystemProcess(frame,bitmap,boxes,t);
         }
     }

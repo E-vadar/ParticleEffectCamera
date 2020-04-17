@@ -16,19 +16,14 @@ public class ParticleSystem {
     static int duration = 0;
     static ArrayDeque<Particle> ptcspool = new ArrayDeque<>();
 
-    //生成粒子池
-    public static void initialize(int Initial_size, int Duration){
+    //初始化粒子配置
+    public static void ptcConfig(int Initial_size,int Duration){
         initial_size = Initial_size;
         duration = Duration;
         ptcspool.clear();
         for (int i = 0; i < initial_size; i++) {
             ptcspool.add(new Particle());
         }
-    }
-
-
-    //初始化粒子配置
-    public static void ptcConfig(){
         for (int z = 0; z < ptcspool.size(); z++) {
             Particle ptc = ptcspool.removeFirst();
             //粒子编号
