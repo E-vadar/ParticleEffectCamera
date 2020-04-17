@@ -39,6 +39,8 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
     MTCNN mtcnn;
     BitmapFactory.Options options = new BitmapFactory.Options();
     public static boolean recordpermission;
+    public static int[] config = new int[4];
+    public static int[] configGroup = new int[10];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,7 +91,8 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
                    switch (id) {
                        case R.id.p1:
                            option = 1;
-                           ParticleSystem.ptcConfig(480,60);
+                           effecttype(3,0,1,0);
+                           ParticleSystem.Configuration(200,60,5,2,true,6,true,config,configGroup);
                            break;
                        case R.id.p2:
                            option = 2;
@@ -159,6 +162,17 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
         return frame;
     }
 
+    private void effecttype(int shape,int velocity,int color,int key_position){
+        config[0] = shape;
+        config[1] = velocity;
+        config[2] = color;
+        config[3] = key_position;
+        configGroup[0] = 0;
+        configGroup[1] = 1;
+        configGroup[2] = 0;
+        configGroup[3] = 1;
+        configGroup[4] = 0;
+    }
     //处理帧图片逻辑
     private void process(Mat frame) {
         if(option == 10){
