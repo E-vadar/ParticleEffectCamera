@@ -22,6 +22,7 @@ import com.EffectSystem.Record;
 import com.FaceDetection.Box;
 import com.FaceDetection.MTCNN;
 import com.EffectSystem.Process;
+import com.ParticleSystem.Particle;
 import com.ParticleSystem.ParticleSystem;
 import java.util.Vector;
 import static org.opencv.core.Core.flip;
@@ -39,10 +40,8 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
     MTCNN mtcnn;
     BitmapFactory.Options options = new BitmapFactory.Options();
     public static boolean recordpermission;
-    public static int[] config = new int[5];
-    public static int[] configGroup = new int[10];
-    public static int[] TrajectoryColor = new int[3];
-    public static int[] HaloColor = new int[3];
+    //Test particle effect template
+    public static int[][] config = new int[10][23];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,31 +89,74 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
     public boolean onOptionsItemSelected(MenuItem item) {
                    int id = item.getItemId();
                    t = 0;
+                   for(int i = 0; i <10; i++){
+                       config[i][22] = 0;
+                   }
                    switch (id) {
                        case R.id.p1:
                            option = 1;
-                           effecttype(3,0,1,2, 10,0,80,220,0,125,150);
-                           ParticleSystem.Configuration(120,60,5,3, 2,true,4,TrajectoryColor,true, HaloColor,config,configGroup);
+                           effecttype(0,3,0,1,2, 10,
+                                   60,45,2,2,1,8,1,1,
+                                   255,0,0,0,80,220,0,125,150);
+                           effecttype(1,3,0,1,2, 7,
+                                   60,45,2,1,1,4,1,1,
+                                   50,170,50,100,80,120,70,200,200);
+                           effecttype(2,3,0,1,2, 4,
+                                   60,45,1,1,1,4,1,1,
+                                   50,170,50,100,80,120,70,200,200);
+                           effecttype(3,3,0,1,2, 10,
+                                   60,45,2,2,1,8,1,1,
+                                   255,0,0,0,80,220,0,170,190);
+                           ParticleSystem.Configuration(config,2);
                            break;
                        case R.id.p2:
                            option = 2;
-                           effecttype(3,0,1,1, 10,220,220,220,255,255,255);
-                           ParticleSystem.Configuration(120,120,5,3, 2,true,4,TrajectoryColor,true, HaloColor,config,configGroup);
+                           effecttype(0,3,0,1,1, 10,
+                                   60,120,3,2,1,4,1,1,
+                                   255,0,0,220,220,220,255,255,255);
+                           ParticleSystem.Configuration(config,4);
                            break;
                        case R.id.p3:
                            option = 3;
-                           effecttype(0,1,2,2, 20,255,255,255,255,255,255);
-                           ParticleSystem.Configuration(300,60,10,2, 3,true,10, TrajectoryColor,false, HaloColor,config,configGroup);
+                           effecttype(0,0,1,2,2, 20,
+                                   120,60,2,3,1,10,0,0,
+                                   255,0,0,255,255,255,255,255,255);
+                           ParticleSystem.Configuration(config,2);
                            break;
                        case R.id.p4:
                            option = 4;
-                           effecttype(2,0,1,0,4,255,255,255,255,255,255);
-                           ParticleSystem.Configuration(600,60,10,2, 10,false,5, TrajectoryColor,false, HaloColor,config,configGroup);
+                           effecttype(0,2,0,1,0,4,
+                                   120,60,2,10,0,5,0,0,
+                                   255,255,0,255,255,255,255,255,255);
+                           ParticleSystem.Configuration(config,2);
                            break;
                        case R.id.p5:
                            option = 5;
+                           effecttype(0,4,2,1,2,8,
+                                   120,30,2,20,1,8,1,2,
+                                   255,255,0,255,255,255,255,255,255);
+                           effecttype(1,4,2,1,2,8,
+                                   120,30,2,25,1,8,1,2,
+                                   255,255,255,0,0,0,30,20,80);
+                           effecttype(2,4,2,0,2,8,
+                                   120,30,2,15,1,8,1,2,
+                                   255,255,255,170,30,180,60,120,90);
+                           effecttype(3,4,2,1,2,16,
+                                   120,30,2,15,1,8,1,2,
+                                   0,50,50,230,190,100,233,199,90);
+                           ParticleSystem.Configuration(config,1);
                            break;
                        case R.id.p6:
+                           effecttype(0,5,2,1,2,100,
+                                   120,120,2,0,1,8,1,2,
+                                   0,50,50,230,190,100,233,199,90);
+                           effecttype(1,5,2,1,2,200,
+                                   120,120,2,0,1,8,1,2,
+                                   0,50,50,230,190,100,233,199,90);
+                           effecttype(2,5,2,2,2,400,
+                                   120,120,2,1,1,8,1,2,
+                                   0,50,50,230,190,100,233,199,90);
+                           ParticleSystem.Configuration(config,4);
                            option = 6;
                            break;
                        case R.id.p7:
@@ -167,23 +209,40 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
         return frame;
     }
 
-    private void effecttype(int shape,int velocity,int color_type,int key_position,int vibration, int color1,int color2,int color3,int color4 ,int color5, int color6){
-        config[0] = shape;
-        config[1] = velocity;
-        config[2] = color_type;
-        config[3] = key_position;
-        config[4] = vibration;
-        configGroup[0] = 0;
-        configGroup[1] = 1;
-        configGroup[2] = 0;
-        configGroup[3] = 1;
-        configGroup[4] = 0;
-        TrajectoryColor[0] = color1;
-        TrajectoryColor[1] = color2;
-        TrajectoryColor[2] = color3;
-        HaloColor[0] = color4;
-        HaloColor[1] = color5;
-        HaloColor[2] = color6;
+    private void effecttype(int groupNo,int shape_type,int velocity_type,int color_type,int keyposition_type,int vibration_type,
+                            int initial_size,int duration,int particle_size,int velocity,int trajectory,int trajectory_length,int halo,int halo_size,
+                            int particlecolor0,int particlecolor1, int particlecolor2,int trajectorycolor0,int trajectorycolor1,int trajectorycolor2,int halocolor0,int halocolor1,int halocolor2){
+        //remove the last operation's data
+
+            //Motion config
+            config[groupNo][0] = shape_type;
+            config[groupNo][1] = velocity_type;
+            config[groupNo][2] = color_type;
+            config[groupNo][3] = keyposition_type;
+            config[groupNo][4] = vibration_type;
+            //Particle config
+            config[groupNo][5] = initial_size;
+            config[groupNo][6] = duration;
+            config[groupNo][7] = particle_size;
+            config[groupNo][8] = velocity;
+            config[groupNo][9] = trajectory;
+            config[groupNo][10] = trajectory_length;
+            config[groupNo][11] = halo;
+            config[groupNo][12] = halo_size;
+            //Particle color
+            config[groupNo][13] = particlecolor0;
+            config[groupNo][14] = particlecolor1;
+            config[groupNo][15] = particlecolor2;
+            //Trajectory color
+            config[groupNo][16] = trajectorycolor0;
+            config[groupNo][17] = trajectorycolor1;
+            config[groupNo][18] = trajectorycolor2;
+            //Halo color
+            config[groupNo][19] = halocolor0;
+            config[groupNo][20] = halocolor1;
+            config[groupNo][21] = halocolor2;
+            //Whether activated group?
+            config[groupNo][22] = 1;
     }
     //处理帧图片逻辑
     private void process(Mat frame) {

@@ -4,8 +4,8 @@
     <item android:id="@+id/p2" android:title="Firework"></item>
     <item android:id="@+id/p3" android:title="Coral reef"></item>
     <item android:id="@+id/p4" android:title="Rainbow glass"></item>
-    <item android:id="@+id/p5" android:title="5"></item>
-    <item android:id="@+id/p6" android:title="6"></item>
+    <item android:id="@+id/p5" android:title="Gathering"></item>
+    <item android:id="@+id/p6" android:title="Explosive"></item>
     <item android:id="@+id/p7" android:title="7"></item>
     <item android:id="@+id/p8" android:title="8"></item>
     <item android:id="@+id/p9" android:title="9"></item>
