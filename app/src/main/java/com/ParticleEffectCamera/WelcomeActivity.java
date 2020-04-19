@@ -90,7 +90,8 @@ public class WelcomeActivity extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= 23) {
             //版本判断
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE,
-                    Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.CAMERA}, 1);
+                    Manifest.permission.WRITE_EXTERNAL_STORAGE,Manifest.permission.RECORD_AUDIO,
+                    Manifest.permission.CAMERA}, 1);
         }
         initLoadOpenCVLibs();//调用opencv库
         //延迟发送信息2000Ms即2秒

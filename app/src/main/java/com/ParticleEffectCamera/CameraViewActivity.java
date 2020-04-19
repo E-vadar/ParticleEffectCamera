@@ -33,7 +33,7 @@ import static org.opencv.imgproc.Imgproc.resize;
 public class CameraViewActivity extends AppCompatActivity implements CameraBridgeViewBase.CvCameraViewListener2, View.OnClickListener{
     String TAG="CameraViewActivity";
     private JavaCameraView mcameraView;
-    private static int cameraIndex = 0;//前置1，后置0
+    private static int cameraIndex = 1;//前置1，后置0
     public static int option = 0;
     static int t = 0;//计数器，60一个循环
     //static int resizefactor = 2;
