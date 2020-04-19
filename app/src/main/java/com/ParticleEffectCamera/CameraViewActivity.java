@@ -16,18 +16,16 @@ import org.opencv.android.JavaCameraView;
 import org.opencv.android.OpenCVLoader;
 import org.opencv.android.Utils;
 import org.opencv.core.Mat;
-import org.opencv.core.Size;
+
 import android.util.Log;
-import com.EffectSystem.Record;
+
 import com.FaceDetection.Box;
 import com.FaceDetection.MTCNN;
 import com.EffectSystem.Process;
-import com.ParticleSystem.Particle;
 import com.ParticleSystem.ParticleSystem;
 import java.util.Vector;
 import static org.opencv.core.Core.flip;
 import static org.opencv.core.Core.transpose;
-import static org.opencv.imgproc.Imgproc.INTER_LINEAR;
 import static org.opencv.imgproc.Imgproc.resize;
 
 public class CameraViewActivity extends AppCompatActivity implements CameraBridgeViewBase.CvCameraViewListener2, View.OnClickListener{
@@ -291,11 +289,7 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
             cameraIndex = 0;
         } else if(id == R.id.record_btn) {
             recordpermission = true;
-            try {
-                Record.imageToMp4();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+
         }
         mcameraView.setCameraIndex(cameraIndex);
         if(mcameraView != null) {
