@@ -24,7 +24,6 @@ import com.ParticleSystem.ParticleSystem;
 import java.util.Vector;
 import static org.opencv.core.Core.flip;
 import static org.opencv.core.Core.transpose;
-import static org.opencv.imgproc.Imgproc.resize;
 
 
 public class CameraViewActivity extends AppCompatActivity implements CameraBridgeViewBase.CvCameraViewListener2, View.OnClickListener{
@@ -33,7 +32,6 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
     private static int cameraIndex = 1;//前置1，后置0
     public static int option = 0;
     static int t = 0;//计数器，60一个循环
-    //static int resizefactor = 2;
     MTCNN mtcnn;
     BitmapFactory.Options options = new BitmapFactory.Options();
     public static boolean recordpermission;
@@ -194,12 +192,8 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
             flip(frame,frame, 1);//Y轴翻转
         }
         transpose(frame,frame);//转置
-//        方案一：缩放处理帧大小提升检测效率—— 前置FPS：25，后置FPS：30 方案二：无缩放保证图片质量—— 前置FPS：21，后置FPS：27
-//        resize(frame,frame, new Size(frame.height() / resizefactor, frame.width()/ resizefactor),0,0, INTER_LINEAR);
         process(frame);
-//        resize(frame,frame, new Size(frame.height()* resizefactor, frame.width()* resizefactor),0,0, INTER_LINEAR);
         transpose(frame,frame);//转置
-
         if(t>=60){
             t=0;
         } else {
