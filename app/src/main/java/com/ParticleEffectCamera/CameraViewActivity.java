@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.StrictMode;
+import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.SurfaceView;
@@ -38,6 +39,9 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
     //Test particle effect template
     public static int[][] config = new int[10][23];
     Bitmap bitmap = WelcomeActivity.localmap;
+    public static int width;
+    public static int height;
+    public static int DPI;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,6 +71,12 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
         bitmap=Bitmap.createScaledBitmap(bitmap,720,960,true);
         //初始化MTCNN
         mtcnn=new MTCNN(getAssets());
+        //获取机型数据
+        DisplayMetrics display = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(display);
+        width = display.widthPixels;
+        height = display.heightPixels;
+        DPI = display.densityDpi;
     }
 
     private void initLoadOpenCVLibs() {
