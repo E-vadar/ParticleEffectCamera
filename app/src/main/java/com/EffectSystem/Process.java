@@ -99,7 +99,7 @@ public class Process {
         }
     }
 
-    public static void particleSystemProcess(Mat frame,Bitmap bm,Vector<Box> boxes,int t){
+    public static void particleSystemProcess(Mat frame,Vector<Box> boxes,int t){
         try {
             for (int i=0;i<boxes.size();i++) {
                 ParticleSystem.runSystem(frame,boxes.get(i).landmark,t);

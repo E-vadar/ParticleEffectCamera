@@ -4,7 +4,7 @@ android {
     compileSdkVersion 28
     defaultConfig {
         applicationId 'com.ParticleEffectCamera'
-        minSdkVersion 18
+        minSdkVersion 21
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -56,11 +56,4 @@ task nativeLibsToJar(type: Jar, description: 'create a jar archive of the native
 }
 tasks.withType(JavaCompile) {
     compileTask -> compileTask.dependsOn(nativeLibsToJar)
-}
-
-dependencies {
-    implementation 'androidx.appcompat:appcompat:+'
-    implementation 'androidx.constraintlayout:constraintlayout:+'
-    //implementation files('libs\\javacpp.jar')
-    //implementation files('libs\\javacv.jar')
 }

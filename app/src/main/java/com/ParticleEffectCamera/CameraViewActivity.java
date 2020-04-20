@@ -16,9 +16,7 @@ import org.opencv.android.JavaCameraView;
 import org.opencv.android.OpenCVLoader;
 import org.opencv.android.Utils;
 import org.opencv.core.Mat;
-
 import android.util.Log;
-
 import com.FaceDetection.Box;
 import com.FaceDetection.MTCNN;
 import com.EffectSystem.Process;
@@ -27,6 +25,7 @@ import java.util.Vector;
 import static org.opencv.core.Core.flip;
 import static org.opencv.core.Core.transpose;
 import static org.opencv.imgproc.Imgproc.resize;
+
 
 public class CameraViewActivity extends AppCompatActivity implements CameraBridgeViewBase.CvCameraViewListener2, View.OnClickListener{
     String TAG="CameraViewActivity";
@@ -40,6 +39,7 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
     public static boolean recordpermission;
     //Test particle effect template
     public static int[][] config = new int[10][23];
+    Bitmap bitmap = WelcomeActivity.localmap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +66,7 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
         frontOption.setOnClickListener(this);
         backOption.setSelected(true);
         options.inPreferredConfig = Bitmap.Config.ARGB_8888;
+        bitmap=Bitmap.createScaledBitmap(bitmap,720,960,true);
         //初始化MTCNN
         mtcnn=new MTCNN(getAssets());
     }
@@ -246,14 +247,14 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
     private void process(Mat frame) {
         if(option == 10){
         } else {
-            Bitmap bitmap = WelcomeActivity.localmap;
-            bitmap=Bitmap.createScaledBitmap(bitmap,frame.width(),frame.height(),true);
+//            bitmap=Bitmap.createScaledBitmap(bitmap,frame.width(),frame.height(),true);
+//            Log.i(TAG,"Wwidth"+ frame.height() + "Height"+ frame.width());
             Utils.matToBitmap(frame,bitmap);
-            Vector<Box> boxes=mtcnn.detectFaces(bitmap,150);//mtcnn()的作用结果为生成一系列Box类（结构）
+            Vector<Box> boxes=mtcnn.detectFaces(bitmap,150+cameraIndex*150);//mtcnn()的作用结果为生成一系列Box类（结构）
             if(option == 0){
                 Process.pureProcess(frame,bitmap,boxes);
             }
-            Process.particleSystemProcess(frame,bitmap,boxes,t);
+            Process.particleSystemProcess(frame,boxes,t);
         }
     }
 
@@ -288,8 +289,11 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
         } else if(id == R.id.backCameraOption) {
             cameraIndex = 0;
         } else if(id == R.id.record_btn) {
-            recordpermission = true;
-
+            if(recordpermission){
+                recordpermission = false;
+            } else {
+                recordpermission = true;
+            }
         }
         mcameraView.setCameraIndex(cameraIndex);
         if(mcameraView != null) {
