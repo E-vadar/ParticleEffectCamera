@@ -12,8 +12,8 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TalScreenUtils {
-    private static TalScreenRecordService s_ScreenRecordService;
+public class RecordUtils {
+    private static RecordService s_ScreenRecordService;
     private static List<RecordListener> s_RecordListener = new ArrayList<>();
     private static List<OnPageRecordListener> s_PageRecordListener = new ArrayList<>();
     //true,录制结束的提示语正在显示
@@ -25,7 +25,7 @@ public class TalScreenUtils {
     public static boolean isScreenRecordEnable(){
         return Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP ;
     }
-    public static void setScreenService(TalScreenRecordService screenService){
+    public static void setScreenService(RecordService screenService){
         s_ScreenRecordService = screenService;
     }
     public static void clear(){

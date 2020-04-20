@@ -27,7 +27,7 @@
             </intent-filter>
         </activity>
 
-        <service android:name="com.EffectSystem.TalScreenRecordService"/>
+        <service android:name="com.EffectSystem.RecordService"/>
 
     </application>
 

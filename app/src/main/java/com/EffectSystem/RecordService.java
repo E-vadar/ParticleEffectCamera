@@ -23,9 +23,9 @@ import android.annotation.TargetApi;
 import com.ParticleEffectCamera.CameraViewActivity;
 
 //首先呢实现的是Handle.Callback接口 主要是做时间及计时时间回调的,会重新写HandleMessage方法,其实我个觉得跟在括号{} 里面重写没啥区别就是简洁页面
-public class TalScreenRecordService extends Service implements Handler.Callback {
+public class RecordService extends Service implements Handler.Callback {
     //这个就不解释了吧 log
-    private static final String TAG = "TalScreenRecordService";
+    private static final String TAG = "RecordService";
     //这个类是管理类拿到服务后会通过下面的类申请录屏,点击允许，
     //其中会回调两个参数,code码 和 data,都在ActivityForResult中进行判断code
     private MediaProjectionManager mProjectionManager;
@@ -134,7 +134,7 @@ public class TalScreenRecordService extends Service implements Handler.Callback 
         //开始录制
         mMediaRecorder.start();
         //稍后贴类 监听录制情况
-        TalScreenUtils.startRecord();
+        RecordUtils.startRecord();
         //最多录制三分钟
         mHandler.sendEmptyMessageDelayed(MSG_TYPE_COUNT_DOWN, 1000);
         //录制时为true
@@ -170,17 +170,17 @@ public class TalScreenRecordService extends Service implements Handler.Callback 
         //停止时移出这条消息what
         mHandler.removeMessages(MSG_TYPE_COUNT_DOWN);
         //停止的监听 tip 是处理一些突发情况 比如内存不足
-        TalScreenUtils.stopRecord(tip);
+        RecordUtils.stopRecord(tip);
         Log.i(TAG, "stopRecord: " + mRecordFilePath);
         //录制时间不到两秒就删除录制文件
         if (mRecordSeconds <= 2) {
-            TalFileUtils.deleteSDFile(mRecordFilePath);
+            RecordFileUtils.deleteSDFile(mRecordFilePath);
         } else {
             //录制的视频库,将数据添加到媒体库
             //这个算是应用程序之间共享数据,把自己应用的数据添加到手机的媒体库ContentResolver
             //举个例子,代码添加手机联系人到自己的联系人列表,或者代码添加图片到自己的图库，还有不懂得，贴个链接
             //https://blog.csdn.net/bzlj2912009596/article/details/80248272
-            TalFileUtils.fileScanVideo(this, mRecordFilePath, 1280, 720, mRecordSeconds);
+            RecordFileUtils.fileScanVideo(this, mRecordFilePath, 1280, 720, mRecordSeconds);
         }
 //    mRecordFilePath = null;
         mRecordSeconds = 0;
@@ -210,7 +210,7 @@ public class TalScreenRecordService extends Service implements Handler.Callback 
     //这个主要是路径,还有设置一些录制视频参数问题separator 为字节,占位用
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     private void setUpMediaRecorder() {
-        mRecordFilePath = getSaveDirectory() + File.separator + "Test Video_" + System.currentTimeMillis() + ".mp4";
+        mRecordFilePath = getSaveDirectory() + File.separator + "1 Test Video_" + System.currentTimeMillis() + ".mp4";
         Log.i(TAG, "setUpMediaRecorder: " + mRecordFilePath);
         if (mMediaRecorder == null) {
             mMediaRecorder = new MediaRecorder();
@@ -271,7 +271,7 @@ public class TalScreenRecordService extends Service implements Handler.Callback 
             case MSG_TYPE_COUNT_DOWN: {
                 String str = null;
                 //这是内存
-                boolean enough = TalFileUtils.getSDFreeMemory() / (1024 * 1024) < 4;
+                boolean enough = RecordFileUtils.getSDFreeMemory() / (1024 * 1024) < 4;
                 if (enough) {
                     //空间不足，停止录屏
                     str = "空间不足";
@@ -288,7 +288,7 @@ public class TalScreenRecordService extends Service implements Handler.Callback 
                 } else {
                     second = mRecordSeconds;
                 }
-                TalScreenUtils.onRecording("0" + minute + ":" + (second < 10 ? "0" + second : second + ""));
+                RecordUtils.onRecording("0" + minute + ":" + (second < 10 ? "0" + second : second + ""));
                 if (mRecordSeconds < 5 * 60) {
                     mHandler.sendEmptyMessageDelayed(MSG_TYPE_COUNT_DOWN, 1000);
                 } else if (mRecordSeconds == 5 * 60) {
@@ -302,8 +302,8 @@ public class TalScreenRecordService extends Service implements Handler.Callback 
         return true;
     }
     public class RecordBinder extends Binder {
-        public TalScreenRecordService getRecordService() {
-            return TalScreenRecordService.this;
+        public RecordService getRecordService() {
+            return RecordService.this;
         }
     }
 }

@@ -13,7 +13,7 @@ import android.text.TextUtils;
 import java.io.File;
 import android.content.Context;
 
-public class TalFileUtils {
+public class RecordFileUtils {
     /**
      * 删除SD卡中的文件或目录
      *

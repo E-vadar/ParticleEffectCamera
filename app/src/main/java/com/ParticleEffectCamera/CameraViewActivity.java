@@ -24,9 +24,9 @@ import org.opencv.android.Utils;
 import org.opencv.core.Mat;
 import android.util.Log;
 import android.widget.Toast;
-import com.EffectSystem.TalFileUtils;
-import com.EffectSystem.TalScreenRecordService;
-import com.EffectSystem.TalScreenUtils;
+import com.EffectSystem.RecordFileUtils;
+import com.EffectSystem.RecordService;
+import com.EffectSystem.RecordUtils;
 import com.FaceDetection.Box;
 import com.FaceDetection.MTCNN;
 import com.EffectSystem.Process;
@@ -57,10 +57,10 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
             //启动service
-            TalScreenRecordService.RecordBinder recordBinder = (TalScreenRecordService.RecordBinder) service;
-            TalScreenRecordService recordService = recordBinder.getRecordService();
+            RecordService.RecordBinder recordBinder = (RecordService.RecordBinder) service;
+            RecordService recordService = recordBinder.getRecordService();
             //这个其实是传值在使用的activity中拿到Service
-            TalScreenUtils.setScreenService(recordService);
+            RecordUtils.setScreenService(recordService);
         }
         @Override
         public void onServiceDisconnected(ComponentName name) {
@@ -106,7 +106,7 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
 
     //开启service,意图跳转到service,别忘了AndroidManifest里面需要注册这个service哦
     private void startService() {
-        Intent intent = new Intent(CameraViewActivity.this, TalScreenRecordService.class);
+        Intent intent = new Intent(CameraViewActivity.this, RecordService.class);
         bindService(intent, mConnection, BIND_AUTO_CREATE);
     }
 
@@ -116,9 +116,9 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
         if (requestCode == REQUEST_ALLOW && data != null) {
             try {
                 //设置数据，在用户允许后 调用了开始录屏的方法
-                TalScreenUtils.setUpData(resultCode, data);
+                RecordUtils.setUpData(resultCode, data);
                 //拿到路径
-                String screenRecordFilePath = TalScreenUtils.getScreenRecordFilePath();
+                String screenRecordFilePath = RecordUtils.getScreenRecordFilePath();
                 if (screenRecordFilePath == null) {
                     Toast.makeText(this, "空的", Toast.LENGTH_SHORT).show();
                 }
@@ -343,7 +343,7 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
     protected void onStop() {
         super.onStop();
         //在对用户可见不可交互的时候防止异常
-        TalScreenUtils.clear();
+        RecordUtils.clear();
     }
 
     @Override
@@ -355,16 +355,16 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
             cameraIndex = 0;
         } else if(id == R.id.record_btn) {
             if(recording){
-                TalScreenUtils.stopScreenRecord(CameraViewActivity.this);//停止
-                Log.i(TAG, "onClick: " + TalScreenUtils.getScreenRecordFilePath());
+                RecordUtils.stopScreenRecord(CameraViewActivity.this);//停止
+                Log.i(TAG, "onClick: " + RecordUtils.getScreenRecordFilePath());
                 recording = false;
             } else {
-                if (TalFileUtils.getFreeMem(CameraViewActivity.this) < 100) {
+                if (RecordFileUtils.getFreeMem(CameraViewActivity.this) < 100) {
                     Toast.makeText(CameraViewActivity.this, "手机内存不足,请清理后再进行录屏", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 //开始录屏录音
-                TalScreenUtils.startScreenRecord(CameraViewActivity.this, REQUEST_ALLOW);
+                RecordUtils.startScreenRecord(CameraViewActivity.this, REQUEST_ALLOW);
                 recording = true;
             }
         }
