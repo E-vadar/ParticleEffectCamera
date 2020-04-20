@@ -6,7 +6,7 @@
     <item android:id="@+id/p4" android:title="Rainbow glass"></item>
     <item android:id="@+id/p5" android:title="Gathering"></item>
     <item android:id="@+id/p6" android:title="Explosive"></item>
-    <item android:id="@+id/p7" android:title="7"></item>
+    <item android:id="@+id/p7" android:title="Download test"></item>
     <item android:id="@+id/p8" android:title="8"></item>
     <item android:id="@+id/p9" android:title="9"></item>
     <item android:id="@+id/p10" android:title="raw"></item>

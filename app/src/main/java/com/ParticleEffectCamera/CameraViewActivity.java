@@ -2,11 +2,14 @@ package com.ParticleEffectCamera;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.app.DownloadManager;
 import android.content.ComponentName;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.os.StrictMode;
@@ -220,6 +223,14 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
                            option = 6;
                            break;
                        case R.id.p7:
+//创建下载任务,downloadUrl就是下载链接
+                           DownloadManager.Request request = new DownloadManager.Request(Uri.parse("http://q91np8f4n.bkt.clouddn.com/template/t1.txt"));
+//指定下载路径和下载文件名
+                           request.setDestinationInExternalPublicDir("/download/", "t1.txt");
+//获取下载管理器
+                           DownloadManager downloadManager= (DownloadManager)getSystemService(CameraViewActivity.DOWNLOAD_SERVICE);
+//将下载任务加入下载队列，否则不会进行下载
+                           downloadManager.enqueue(request);
                            option = 7;
                            break;
                        case R.id.p8:
