@@ -14,7 +14,8 @@
         android:label="ParticleCamera v1.1 with Particle System"
         android:roundIcon="@drawable/icona"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:networkSecurityConfig="@xml/network_security_config">
         <activity android:name=".MainActivity"
             android:screenOrientation="portrait"></activity>
         <activity android:name=".CameraViewActivity"
