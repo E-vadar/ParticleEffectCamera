@@ -1,9 +1,14 @@
 package com.ParticleEffectCamera;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import android.content.ComponentName;
+import android.content.Intent;
+import android.content.ServiceConnection;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.os.IBinder;
 import android.os.StrictMode;
 import android.util.DisplayMetrics;
 import android.view.Menu;
@@ -18,6 +23,10 @@ import org.opencv.android.OpenCVLoader;
 import org.opencv.android.Utils;
 import org.opencv.core.Mat;
 import android.util.Log;
+import android.widget.Toast;
+import com.EffectSystem.TalFileUtils;
+import com.EffectSystem.TalScreenRecordService;
+import com.EffectSystem.TalScreenUtils;
 import com.FaceDetection.Box;
 import com.FaceDetection.MTCNN;
 import com.EffectSystem.Process;
@@ -25,7 +34,6 @@ import com.ParticleSystem.ParticleSystem;
 import java.util.Vector;
 import static org.opencv.core.Core.flip;
 import static org.opencv.core.Core.transpose;
-
 
 public class CameraViewActivity extends AppCompatActivity implements CameraBridgeViewBase.CvCameraViewListener2, View.OnClickListener{
     String TAG="CameraViewActivity";
@@ -35,13 +43,29 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
     static int t = 0;//计数器，60一个循环
     MTCNN mtcnn;
     BitmapFactory.Options options = new BitmapFactory.Options();
-    public static boolean recordpermission;
+    public static boolean recording;
     //Test particle effect template
     public static int[][] config = new int[10][23];
     Bitmap bitmap = WelcomeActivity.localmap;
     public static int width;
     public static int height;
     public static int DPI;
+
+    private final int REQUEST_ALLOW = 100;
+    //bindService需要创建连接
+    private ServiceConnection mConnection = new ServiceConnection() {
+        @Override
+        public void onServiceConnected(ComponentName name, IBinder service) {
+            //启动service
+            TalScreenRecordService.RecordBinder recordBinder = (TalScreenRecordService.RecordBinder) service;
+            TalScreenRecordService recordService = recordBinder.getRecordService();
+            //这个其实是传值在使用的activity中拿到Service
+            TalScreenUtils.setScreenService(recordService);
+        }
+        @Override
+        public void onServiceDisconnected(ComponentName name) {
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,6 +101,35 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
         width = display.widthPixels;
         height = display.heightPixels;
         DPI = display.densityDpi;
+        startService();
+    }
+
+    //开启service,意图跳转到service,别忘了AndroidManifest里面需要注册这个service哦
+    private void startService() {
+        Intent intent = new Intent(CameraViewActivity.this, TalScreenRecordService.class);
+        bindService(intent, mConnection, BIND_AUTO_CREATE);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == REQUEST_ALLOW && data != null) {
+            try {
+                //设置数据，在用户允许后 调用了开始录屏的方法
+                TalScreenUtils.setUpData(resultCode, data);
+                //拿到路径
+                String screenRecordFilePath = TalScreenUtils.getScreenRecordFilePath();
+                if (screenRecordFilePath == null) {
+                    Toast.makeText(this, "空的", Toast.LENGTH_SHORT).show();
+                }
+                Toast.makeText(CameraViewActivity.this, "" + screenRecordFilePath, Toast.LENGTH_SHORT).show();
+                Log.i("zlq", "onClick: " + screenRecordFilePath);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } else {
+            Toast.makeText(this, "禁止录屏", Toast.LENGTH_SHORT).show();
+        }
     }
 
     private void initLoadOpenCVLibs() {
@@ -274,6 +327,7 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
         if(mcameraView != null) {
             mcameraView.disableView();
         }
+        unbindService(mConnection);
     }
 
     public void onResume() {
@@ -286,6 +340,13 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
     }
 
     @Override
+    protected void onStop() {
+        super.onStop();
+        //在对用户可见不可交互的时候防止异常
+        TalScreenUtils.clear();
+    }
+
+    @Override
     public void onClick(View v) {
         int id = v.getId();
         if(id == R.id.frontCameraOption) {
@@ -293,10 +354,18 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
         } else if(id == R.id.backCameraOption) {
             cameraIndex = 0;
         } else if(id == R.id.record_btn) {
-            if(recordpermission){
-                recordpermission = false;
+            if(recording){
+                TalScreenUtils.stopScreenRecord(CameraViewActivity.this);//停止
+                Log.i(TAG, "onClick: " + TalScreenUtils.getScreenRecordFilePath());
+                recording = false;
             } else {
-                recordpermission = true;
+                if (TalFileUtils.getFreeMem(CameraViewActivity.this) < 100) {
+                    Toast.makeText(CameraViewActivity.this, "手机内存不足,请清理后再进行录屏", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                //开始录屏录音
+                TalScreenUtils.startScreenRecord(CameraViewActivity.this, REQUEST_ALLOW);
+                recording = true;
             }
         }
         mcameraView.setCameraIndex(cameraIndex);
