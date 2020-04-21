@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/p1" android:title="Fountain"></item>
-    <item android:id="@+id/p2" android:title="Firework"></item>
-    <item android:id="@+id/p3" android:title="Coral reef"></item>
-    <item android:id="@+id/p4" android:title="Rainbow glass"></item>
-    <item android:id="@+id/p5" android:title="Gathering"></item>
-    <item android:id="@+id/p6" android:title="Explosive"></item>
-    <item android:id="@+id/p7" android:title="Download test"></item>
-    <item android:id="@+id/p8" android:title="8"></item>
-    <item android:id="@+id/p9" android:title="9"></item>
-    <item android:id="@+id/p10" android:title="raw"></item>
+    <item android:id="@+id/p1" android:title="fountain"></item>
+    <item android:id="@+id/p2" android:title="firework"></item>
+    <item android:id="@+id/p3" android:title="coral reef"></item>
+    <item android:id="@+id/p4" android:title="rainbow glass"></item>
+    <item android:id="@+id/p5" android:title="gathering"></item>
+    <item android:id="@+id/p6" android:title="explosive"></item>
+    <item android:id="@+id/p7" android:title="Coming soon"></item>
+    <item android:id="@+id/p8" android:title="Coming soon"></item>
+    <item android:id="@+id/p9" android:title="Coming soon"></item>
+    <item android:id="@+id/PureCamera" android:title="Pure No Effect!"></item>
+    <item android:id="@+id/MTCNN" android:title="Pure Face ROI"></item>
 </menu>

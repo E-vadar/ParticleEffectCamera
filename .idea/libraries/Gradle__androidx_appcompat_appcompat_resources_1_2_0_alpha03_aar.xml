@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: androidx.appcompat:appcompat-resources:1.2.0-alpha03@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/483d2ce6aefd68e817eca88fdfc4aeba/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/483d2ce6aefd68e817eca88fdfc4aeba/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.appcompat/appcompat-resources/1.2.0-alpha03/9c8b428f65a329eeff4f6abe14a44931b12ef3f2/appcompat-resources-1.2.0-alpha03-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -11,6 +11,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.IBinder;
 import android.os.StrictMode;
 import android.util.DisplayMetrics;
@@ -30,10 +31,12 @@ import android.widget.Toast;
 import com.EffectSystem.RecordFileUtils;
 import com.EffectSystem.RecordService;
 import com.EffectSystem.RecordUtils;
+import com.EffectSystem.RepositoryUtil;
 import com.FaceDetection.Box;
 import com.FaceDetection.MTCNN;
 import com.EffectSystem.Process;
 import com.ParticleSystem.ParticleSystem;
+
 import java.util.Vector;
 import static org.opencv.core.Core.flip;
 import static org.opencv.core.Core.transpose;
@@ -47,15 +50,13 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
     MTCNN mtcnn;
     BitmapFactory.Options options = new BitmapFactory.Options();
     public static boolean recording;
-    //Test particle effect template
     public static int[][] config = new int[10][23];
+    public static int config_time;
     Bitmap bitmap = WelcomeActivity.localmap;
     public static int width;
     public static int height;
     public static int DPI;
-
     private final int REQUEST_ALLOW = 100;
-    //bindService需要创建连接
     private ServiceConnection mConnection = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
@@ -107,10 +108,97 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
         startService();
     }
 
-    //开启service,意图跳转到service,别忘了AndroidManifest里面需要注册这个service哦
+    //开启录制服务
     private void startService() {
         Intent intent = new Intent(CameraViewActivity.this, RecordService.class);
         bindService(intent, mConnection, BIND_AUTO_CREATE);
+    }
+
+    //装载openCV
+    private void initLoadOpenCVLibs() {
+        boolean success= OpenCVLoader.initDebug();
+        if(success) {
+            Log.i(TAG,"load library successfully");
+        }
+    }
+
+    //处理帧图片逻辑
+    private void process(Mat frame) {
+        if(option == 0){
+            //Pure
+        } else {
+            //Face detect
+            Utils.matToBitmap(frame,bitmap);
+            Vector<Box> boxes=mtcnn.detectFaces(bitmap,150+cameraIndex*150);//mtcnn()的作用结果为生成一系列Box类（结构）
+            if(option == 1){
+                //Draw Face ROI
+                Process.pureProcess(frame,bitmap,boxes);
+            } else {
+                //Draw Particle Effect
+                Process.particleSystemProcess(frame,boxes,t);
+            }
+        }
+    }
+
+    //获取特效模板
+    private void cacheEffect(String effectName){
+        if(effectName.startsWith("C")){
+            Toast.makeText(CameraViewActivity.this, "敬请期待！", Toast.LENGTH_SHORT).show();
+        } else {
+            String effectFullName = effectName + ".txt";
+            if(RepositoryUtil.fileIsExists(Environment.getExternalStorageDirectory()+"/download/" + effectFullName)){
+                loadEffect(RepositoryUtil.ReadTxtFile(Environment.getExternalStorageDirectory()+"/download/" + effectFullName));
+            } else {
+                DownloadManager.Request request = new DownloadManager.Request(Uri.parse("http://q91np8f4n.bkt.clouddn.com/template/" + effectFullName));
+                request.setDestinationInExternalPublicDir("/download/", effectFullName);
+                DownloadManager downloadManager= (DownloadManager)getSystemService(CameraViewActivity.DOWNLOAD_SERVICE);
+                downloadManager.enqueue(request);
+                Toast.makeText(CameraViewActivity.this, "开始下载:" + effectName + ",请再次点击启动模板", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
+    //装载特效模板
+    private void loadEffect(String content){
+//            Motion config
+//            config[groupNo][0] = shape_type;
+//            config[groupNo][1] = velocity_type;
+//            config[groupNo][2] = color_type;
+//            config[groupNo][3] = keyposition_type;
+//            config[groupNo][4] = vibration_type;
+//            Particle config
+//            config[groupNo][5] = initial_size;
+//            config[groupNo][6] = duration;
+//            config[groupNo][7] = particle_size;
+//            config[groupNo][8] = velocity;
+//            config[groupNo][9] = trajectory;
+//            config[groupNo][10] = trajectory_length;
+//            config[groupNo][11] = halo;
+//            config[groupNo][12] = halo_size;
+//            Particle color
+//            config[groupNo][13] = particlecolor0;
+//            config[groupNo][14] = particlecolor1;
+//            config[groupNo][15] = particlecolor2;
+//            Trajectory color
+//            config[groupNo][16] = trajectorycolor0;
+//            config[groupNo][17] = trajectorycolor1;
+//            config[groupNo][18] = trajectorycolor2;
+//            Halo color
+//            config[groupNo][19] = halocolor0;
+//            config[groupNo][20] = halocolor1;
+//            config[groupNo][21] = halocolor2;
+//            Whether activated group?
+//            config[groupNo][22] = 1;
+        config_time = Integer.parseInt(content.substring(0,1));
+        content = content.substring(2);
+        String[] column = content.split("\n");
+        for(int i = 0;i < column.length;i++){
+            String[] line = column[i].split(",");
+            for(int z = 0;z < line.length-1;z++){
+                config[i][z]= Integer.valueOf(line[z+1]);
+            }
+            config[i][22] = 1;
+        }
     }
 
     @Override
@@ -135,13 +223,6 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
         }
     }
 
-    private void initLoadOpenCVLibs() {
-        boolean success= OpenCVLoader.initDebug();
-        if(success) {
-            Log.i(TAG,"load library successfully");
-        }
-    }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.camera_view_menus, menu);
@@ -150,102 +231,22 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-                   int id = item.getItemId();
-                   t = 0;
-                   for(int i = 0; i <10; i++){
-                       config[i][22] = 0;
-                   }
-                   switch (id) {
-                       case R.id.p1:
-                           option = 1;
-                           effecttype(0,3,0,1,2, 10,
-                                   60,45,2,2,1,8,1,1,
-                                   255,0,0,0,80,220,0,125,150);
-                           effecttype(1,3,0,1,2, 7,
-                                   60,45,2,1,1,4,1,1,
-                                   50,170,50,100,80,120,70,200,200);
-                           effecttype(2,3,0,1,2, 4,
-                                   60,45,1,1,1,4,1,1,
-                                   50,170,50,100,80,120,70,200,200);
-                           effecttype(3,3,0,1,2, 10,
-                                   60,45,2,2,1,8,1,1,
-                                   255,0,0,0,80,220,0,170,190);
-                           ParticleSystem.Configuration(config,2);
-                           break;
-                       case R.id.p2:
-                           option = 2;
-                           effecttype(0,3,0,1,1, 10,
-                                   60,120,3,2,1,4,1,1,
-                                   255,0,0,220,220,220,255,255,255);
-                           ParticleSystem.Configuration(config,4);
-                           break;
-                       case R.id.p3:
-                           option = 3;
-                           effecttype(0,0,1,2,2, 20,
-                                   120,60,2,3,1,10,0,0,
-                                   255,0,0,255,255,255,255,255,255);
-                           ParticleSystem.Configuration(config,2);
-                           break;
-                       case R.id.p4:
-                           option = 4;
-                           effecttype(0,2,0,1,0,4,
-                                   120,60,2,10,0,5,0,0,
-                                   255,255,0,255,255,255,255,255,255);
-                           ParticleSystem.Configuration(config,2);
-                           break;
-                       case R.id.p5:
-                           option = 5;
-                           effecttype(0,4,2,1,2,8,
-                                   120,30,2,20,1,8,1,2,
-                                   255,255,0,255,255,255,255,255,255);
-                           effecttype(1,4,2,1,2,8,
-                                   120,30,2,25,1,8,1,2,
-                                   255,255,255,0,0,0,30,20,80);
-                           effecttype(2,4,2,0,2,8,
-                                   120,30,2,15,1,8,1,2,
-                                   255,255,255,170,30,180,60,120,90);
-                           effecttype(3,4,2,1,2,16,
-                                   120,30,2,15,1,8,1,2,
-                                   0,50,50,230,190,100,233,199,90);
-                           ParticleSystem.Configuration(config,1);
-                           break;
-                       case R.id.p6:
-                           effecttype(0,5,2,1,2,100,
-                                   120,120,2,0,1,8,1,2,
-                                   0,50,50,230,190,100,233,199,90);
-                           effecttype(1,5,2,1,2,200,
-                                   120,120,2,0,1,8,1,2,
-                                   0,50,50,230,190,100,233,199,90);
-                           effecttype(2,5,2,2,2,400,
-                                   120,120,2,1,1,8,1,2,
-                                   0,50,50,230,190,100,233,199,90);
-                           ParticleSystem.Configuration(config,4);
-                           option = 6;
-                           break;
-                       case R.id.p7:
-//创建下载任务,downloadUrl就是下载链接
-                           DownloadManager.Request request = new DownloadManager.Request(Uri.parse("http://q91np8f4n.bkt.clouddn.com/template/t1.txt"));
-//指定下载路径和下载文件名
-                           request.setDestinationInExternalPublicDir("/download/", "t1.txt");
-//获取下载管理器
-                           DownloadManager downloadManager= (DownloadManager)getSystemService(CameraViewActivity.DOWNLOAD_SERVICE);
-//将下载任务加入下载队列，否则不会进行下载
-                           downloadManager.enqueue(request);
-                           option = 7;
-                           break;
-                       case R.id.p8:
-                           option = 8;
-                           break;
-                       case R.id.p9:
-                           option = 9;
-                           break;
-                       case R.id.p10:
-                           option = 10;
-                           break;
-                       default:
-                           option = 0;
-                           break;
-                   }
+        int id = item.getItemId();
+        String title = item.getTitle().toString();
+        t = 0;
+        config_time = 0;
+        for(int i = 0; i <10; i++){
+            config[i][22] = 0;
+        }
+        if(id == R.id.PureCamera){
+            option = 0;
+        } else if (id == R.id.MTCNN) {
+            option = 1;
+        } else {
+            option = 2;
+            cacheEffect(title);
+            ParticleSystem.Configuration(config,config_time);
+        }
         return super.onOptionsItemSelected(item);
     }
 
@@ -276,54 +277,11 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
         return frame;
     }
 
-    private void effecttype(int groupNo,int shape_type,int velocity_type,int color_type,int keyposition_type,int vibration_type,
-                            int initial_size,int duration,int particle_size,int velocity,int trajectory,int trajectory_length,int halo,int halo_size,
-                            int particlecolor0,int particlecolor1, int particlecolor2,int trajectorycolor0,int trajectorycolor1,int trajectorycolor2,int halocolor0,int halocolor1,int halocolor2){
-        //remove the last operation's data
-
-            //Motion config
-            config[groupNo][0] = shape_type;
-            config[groupNo][1] = velocity_type;
-            config[groupNo][2] = color_type;
-            config[groupNo][3] = keyposition_type;
-            config[groupNo][4] = vibration_type;
-            //Particle config
-            config[groupNo][5] = initial_size;
-            config[groupNo][6] = duration;
-            config[groupNo][7] = particle_size;
-            config[groupNo][8] = velocity;
-            config[groupNo][9] = trajectory;
-            config[groupNo][10] = trajectory_length;
-            config[groupNo][11] = halo;
-            config[groupNo][12] = halo_size;
-            //Particle color
-            config[groupNo][13] = particlecolor0;
-            config[groupNo][14] = particlecolor1;
-            config[groupNo][15] = particlecolor2;
-            //Trajectory color
-            config[groupNo][16] = trajectorycolor0;
-            config[groupNo][17] = trajectorycolor1;
-            config[groupNo][18] = trajectorycolor2;
-            //Halo color
-            config[groupNo][19] = halocolor0;
-            config[groupNo][20] = halocolor1;
-            config[groupNo][21] = halocolor2;
-            //Whether activated group?
-            config[groupNo][22] = 1;
-    }
-    //处理帧图片逻辑
-    private void process(Mat frame) {
-        if(option == 10){
-        } else {
-//            bitmap=Bitmap.createScaledBitmap(bitmap,frame.width(),frame.height(),true);
-//            Log.i(TAG,"Wwidth"+ frame.height() + "Height"+ frame.width());
-            Utils.matToBitmap(frame,bitmap);
-            Vector<Box> boxes=mtcnn.detectFaces(bitmap,150+cameraIndex*150);//mtcnn()的作用结果为生成一系列Box类（结构）
-            if(option == 0){
-                Process.pureProcess(frame,bitmap,boxes);
-            }
-            Process.particleSystemProcess(frame,boxes,t);
-        }
+    @Override
+    protected void onStop() {
+        super.onStop();
+        //在对用户可见不可交互的时候防止异常
+        RecordUtils.clear();
     }
 
     public void onPause() {
@@ -348,13 +306,6 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
             mcameraView.enableFpsMeter();
             mcameraView.enableView();
         }
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        //在对用户可见不可交互的时候防止异常
-        RecordUtils.clear();
     }
 
     @Override

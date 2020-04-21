@@ -6,25 +6,34 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="markmark" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/CameraViewActivity.java" line="329" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="57e589d6-45b6-4dc5-af82-9d8156bffe02" name="Default Changelist" comment="a finish version of the">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="57e589d6-45b6-4dc5-af82-9d8156bffe02" name="Default Changelist" comment="Final draft version of Particle Effect Camera">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/RepositoryUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/CameraViewActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/CameraViewActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/camera_view_menus.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/camera_view_menus.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/generated/aidl_source_output_dir/release/compileReleaseAidl/out/org/opencv/engine/OpenCVEngineInterface.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/generated/source/buildConfig/androidTest/debug/org/opencv/test/BuildConfig.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/generated/source/buildConfig/release/org/opencv/BuildConfig.java" beforeDir="false" />
@@ -231,19 +240,149 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
-        <projects_view />
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="ParticleEffectCameraV3" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
       </state>
     </system>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ParticleSystem/Particle.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1783">
-              <caret line="30" column="12" lean-forward="true" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
+            <state relative-caret-position="532">
+              <caret line="28" column="19" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-manifest" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+          <provider editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/CameraViewActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="144" column="37" selection-start-line="144" selection-start-column="37" selection-end-line="144" selection-end-column="37" />
+              <folding>
+                <element signature="class#2064:2581" />
+                <element signature="method#onCreate#0;class#CameraViewActivity#0" />
+                <element signature="method#startService#0;class#CameraViewActivity#0" />
+                <element signature="method#initLoadOpenCVLibs#0;class#CameraViewActivity#0" />
+                <element signature="method#loadEffect#0;class#CameraViewActivity#0" />
+                <element signature="e#6224#6251#0" />
+                <element signature="method#onActivityResult#0;class#CameraViewActivity#0" />
+                <element signature="e#4726#5370#1" />
+                <element signature="method#onCreateOptionsMenu#0;class#CameraViewActivity#0" />
+                <element signature="method#onCameraViewStarted#0;class#CameraViewActivity#0" />
+                <element signature="method#onCameraViewStopped#0;class#CameraViewActivity#0" />
+                <element signature="method#onCameraFrame#0;class#CameraViewActivity#0" />
+                <element signature="method#onStop#0;class#CameraViewActivity#0" />
+                <element signature="method#onPause#0;class#CameraViewActivity#0" />
+                <element signature="method#onDestroy#0;class#CameraViewActivity#0" />
+                <element signature="method#onResume#0;class#CameraViewActivity#0" />
+                <element signature="method#onClick#0;class#CameraViewActivity#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_welcome.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+          <provider editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/MainActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="959">
+              <caret line="169" column="31" selection-start-line="169" selection-start-column="31" selection-end-line="169" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#onCreate#0;class#MainActivity#0" />
+                <element signature="method#initView#0;class#MainActivity#0" />
+                <element signature="method#initViewPagerData#0;class#MainActivity#0" />
+                <element signature="class#MyViewPager#0;class#MainActivity#0" />
+                <element signature="method#instantiateItem#0;class#MyViewPager#0;class#MainActivity#0" />
+                <element signature="method#destroyItem#0;class#MyViewPager#0;class#MainActivity#0" />
+                <element signature="method#onPageScrolled#0;class#MainActivity#0" />
+                <element signature="method#onPageSelected#0;class#MainActivity#0" />
+                <element signature="method#onPageScrollStateChanged#0;class#MainActivity#0" />
+                <element signature="method#onDestroy#0;class#MainActivity#0" />
+                <element signature="method#onClick#0;class#MainActivity#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_camera_view.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="18" column="56" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ParticleSystem/Particle.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+              <folding>
+                <element signature="e#1048#1379#0" />
+                <element signature="e#1385#1846#0" />
+                <element signature="e#1852#2070#0" />
+                <element signature="e#2076#2365#0" />
+                <element signature="e#2370#2454#0" />
+                <element signature="e#2459#2656#0" />
+                <element signature="e#2661#2874#0" />
+                <element signature="e#2880#3271#0" />
+                <element signature="e#3276#3334#0" />
+                <element signature="e#3339#3424#0" />
+                <element signature="e#3429#3573#0" />
+                <element signature="e#3578#3744#0" />
+                <element signature="e#3750#3843#0" />
+                <element signature="e#3849#4367#0" />
+                <element signature="e#4372#5244#0" />
+                <element signature="e#5249#6080#0" />
+                <element signature="e#6085#6710#0" />
+                <element signature="e#6715#7281#0" />
+                <element signature="e#7286#7697#0" />
+                <element signature="e#7702#8405#0" />
+                <element signature="e#8411#9500#0" />
+                <element signature="e#9505#9817#0" />
+                <element signature="e#9822#10477#0" />
+                <element signature="e#10482#10863#0" />
+                <element signature="e#10869#11039#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/RepositoryUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+              <folding>
+                <element signature="method#fileIsExists#0;class#Repository#0" />
+                <element signature="method#ReadTxtFile#0;class#Repository#0" />
               </folding>
             </state>
           </provider>
@@ -252,115 +391,25 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ParticleSystem/ParticleSystem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="30" column="35" lean-forward="true" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
+            <state relative-caret-position="228">
+              <caret line="12" column="78" selection-start-line="12" selection-start-column="78" selection-end-line="12" selection-end-column="78" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#Configuration#0;class#ParticleSystem#0" />
+                <element signature="method#runSystem#0;class#ParticleSystem#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/WelcomeActivity.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/camera_view_menus.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#776#784#0" expanded="true" />
-                <element signature="e#849#857#0" expanded="true" />
-                <element signature="e#939#1269#0" expanded="true" />
-                <element signature="e#1268#1269#0" expanded="true" />
-                <element signature="e#5200#5201#0" expanded="true" />
-                <element signature="e#5257#5258#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="152">
+              <caret line="8" column="46" lean-forward="true" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/Blend.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/ParticleDraw.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-143">
-              <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/MainActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2926">
-              <caret line="173" column="5" selection-start-line="173" selection-start-column="5" selection-end-line="173" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/FaceDetection/MTCNN.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="367" column="83" selection-start-line="367" selection-start-column="8" selection-end-line="367" selection-end-column="83" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/FaceDetection/Box.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="51" column="17" selection-start-line="51" selection-start-column="17" selection-end-line="51" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/Process.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/CameraViewActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="421">
-              <caret line="156" column="16" lean-forward="true" selection-start-line="156" selection-start-column="16" selection-end-line="156" selection-end-column="16" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
+          <provider editor-type-id="android-designer2" />
         </entry>
       </file>
     </leaf>
@@ -369,6 +418,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="resourceFile" />
         <option value="Class" />
       </list>
     </option>
@@ -383,6 +433,15 @@
       <find>detectFaces</find>
       <find>minFaceSize</find>
       <find>t_start</find>
+      <find>separator</find>
+      <find>Exter</find>
+      <find>E</find>
+      <find>getSaveDirectory()</find>
+      <find>intent</find>
+      <find>context</find>
+      <find>mcameraView</find>
+      <find>toast</find>
+      <find>config_time</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -401,49 +460,65 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_welcome.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/button_circle_shape.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/Box.java" />
-        <option value="$PROJECT_DIR$/app/.gitignore" />
-        <option value="$PROJECT_DIR$/app/app.iml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/MTCNN.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/Blend.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/Utils.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/MainActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/ParticleDraw.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/ParticleSystem/ColorMatrixFilterHelper.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/DroidParticle/ColorMatrixFilterHelper.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/ParticleSystem/ParticleSystemView.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/ParticleSystem.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/Particle.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/menu/camera_view_menus.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/Process.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/Blend.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/Process.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ParticleSystem/Particle.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ParticleSystem/ParticleSystem.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/FaceDetection/MTCNN.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/Processable.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/IProvider.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/Record.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/IProviderExpand.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/WelcomeActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_camera_view.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/Recorder.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/Recorder.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/Record.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ParticleSystem/Motion.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ParticleSystem/ParticleSystem.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ParticleSystem/Particle.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/TextureMovieEncoder.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/WelcomeActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/Qnuploadh.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/QnUploadHelper.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/VideoRecordManager.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/ScreenRecordService.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_camera_view.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/ScreenRecordService.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/Notifications.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/VideoEncoder.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/Encoder.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/BaseEncoder.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/AudioEncoder.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/Utils.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/ScreenRecorder.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/MicRecorder.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/RecordApplication.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/Recorder.java" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/TalScreenParams.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/TalFileUtils.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/TalScreenUtils.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/TalScreenRecordService.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/FileUtils.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/RecordUtils.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/RecordFileUtils.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/RecordService.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/Process.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/HttpDownload.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/xml/network_security_config.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/Repository.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/RepositoryUtil.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/menu/camera_view_menus.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/CameraViewActivity.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1912" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="338" />
+    <option name="y" value="257" />
+    <option name="width" value="1370" />
+    <option name="height" value="774" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -453,6 +528,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane" />
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
@@ -465,12 +541,6 @@
               <item name="ParticleEffectCameraV3" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="F:\Android\workspace\ParticleEffectCameraV3" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="ParticleEffectCameraV3" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="F:\Android\workspace\ParticleEffectCameraV3" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="libs" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="ParticleEffectCameraV3" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
@@ -520,16 +590,6 @@
               <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="FaceDetection" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="ParticleEffectCameraV3" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="F:\Android\workspace\ParticleEffectCameraV3" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="ParticleEffectCamera" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
@@ -542,11 +602,50 @@
               <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="ParticleSystem" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
+            <path>
+              <item name="ParticleEffectCameraV3" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="F:\Android\workspace\ParticleEffectCameraV3" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="res" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="ParticleEffectCameraV3" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="F:\Android\workspace\ParticleEffectCameraV3" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="res" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="layout" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="ParticleEffectCameraV3" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="F:\Android\workspace\ParticleEffectCameraV3" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="res" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="menu" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="ParticleEffectCameraV3" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="F:\Android\workspace\ParticleEffectCameraV3" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="res" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="xml" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="ParticleEffectCameraV3" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="F:\Android\workspace\ParticleEffectCameraV3" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="gradle" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -555,11 +654,16 @@
     <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-02-25T08:57:01.636Z" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$PROJECT_DIR$/../../android-sdk" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/libs/javacpp.jar" />
-    <property name="project.structure.last.edited" value="Dependencies" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ScreenRecorder-master" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.other" />
+    <property name="settings.editor.selected.configurable" value="preferences.updates" />
+  </component>
+  <component name="PsdUISettings">
+    <option name="MODULE_TAB" value="Properties" />
+    <option name="LAST_EDITED_SIGNING_CONFIG" value="debug" />
+    <option name="LAST_EDITED_BUILD_TYPE" value="release" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -569,9 +673,11 @@
       <recent name="com.ParticleSystem" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.ParticleEffectCamera" />
       <recent name="com.EffectSystem" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Android\workspace\ParticleEffectCameraV3\app\src\main\java\com\EffectSystem" />
       <recent name="F:\Android\workspace\ParticleEffectCameraV3\app\src\main\java\com\ParticleEffectCamera\ParticleSystem" />
       <recent name="F:\Android\workspace\ParticleEffectCameraV3\app\src\main\java\com\ParticleEffectCamera\DroidParticle" />
       <recent name="F:\Android\workspace\ParticleEffectCameraV3\app\src\main\res\drawable" />
@@ -816,7 +922,175 @@
       <option name="project" value="LOCAL" />
       <updated>1584607582424</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="processing time add">
+      <created>1584872421563</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1584872421563</updated>
+    </task>
+    <task id="LOCAL-00024" summary="a finish version of the">
+      <created>1584876112737</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1584876112738</updated>
+    </task>
+    <task id="LOCAL-00025" summary="better performance of FPS">
+      <created>1584877606910</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1584877606910</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Best two ways to optimize FPS in OnCameraView()">
+      <created>1584879240386</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1584879240387</updated>
+    </task>
+    <task id="LOCAL-00027" summary="a finish version of the">
+      <created>1584881810585</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1584881810585</updated>
+    </task>
+    <task id="LOCAL-00028" summary="25fps with 3 effects">
+      <created>1584963162809</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1584963162809</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Change a bit of UI">
+      <created>1586677476387</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1586677476387</updated>
+    </task>
+    <task id="LOCAL-00030" summary="add a new effect method called trajectory">
+      <created>1587112037324</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1587112037324</updated>
+    </task>
+    <task id="LOCAL-00031" summary="rebuild particle effect selecting">
+      <created>1587113313854</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1587113313854</updated>
+    </task>
+    <task id="LOCAL-00032" summary="rebuild particle effect selecting">
+      <created>1587113676296</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1587113676296</updated>
+    </task>
+    <task id="LOCAL-00033" summary="rebuild particle effect module">
+      <created>1587134737312</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1587134737312</updated>
+    </task>
+    <task id="LOCAL-00034" summary="rebuild particle effect module with 4 kinds of new effects, fountain, firework, coral leaf and glass">
+      <created>1587142128826</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1587142128826</updated>
+    </task>
+    <task id="LOCAL-00035" summary="add two new particle effects and optimize the particle effect module">
+      <created>1587236263194</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1587236263194</updated>
+    </task>
+    <task id="LOCAL-00036" summary="test">
+      <created>1587289534125</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1587289534125</updated>
+    </task>
+    <task id="LOCAL-00037" summary="test">
+      <created>1587289653544</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1587289653544</updated>
+    </task>
+    <task id="LOCAL-00038" summary="trying...">
+      <created>1587319264416</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1587319264416</updated>
+    </task>
+    <task id="LOCAL-00039" summary="optimize FPS to 29 with front camera and 23 with back camera(long distance)">
+      <created>1587361910488</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1587361910489</updated>
+    </task>
+    <task id="LOCAL-00040" summary="optimize FPS to 29 with front camera and 23 with back camera(long distance)/2">
+      <created>1587362894545</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1587362894545</updated>
+    </task>
+    <task id="LOCAL-00041" summary="test1">
+      <created>1587379381512</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1587379381512</updated>
+    </task>
+    <task id="LOCAL-00042" summary="New function of record">
+      <created>1587388126447</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1587388126447</updated>
+    </task>
+    <task id="LOCAL-00043" summary="New function of record_repair">
+      <created>1587389615844</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1587389615844</updated>
+    </task>
+    <task id="LOCAL-00044" summary="All rebuild and next Internet">
+      <created>1587389826726</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1587389826726</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Android 9 access non-http url">
+      <created>1587391668926</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1587391668926</updated>
+    </task>
+    <task id="LOCAL-00046" summary="rebuild particle effect selecting1">
+      <created>1587398175690</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1587398175690</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TodoView">
@@ -829,12 +1103,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="1" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.49833888" visible="true" weight="0.28997868" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.49833888" visible="true" weight="0.1673774" />
       <window_info id="Structure" order="3" sideWeight="0.5016611" side_tool="true" weight="0.32995737" />
       <window_info id="Build Variants" order="4" side_tool="true" />
       <window_info id="Image Layers" order="5" />
@@ -842,52 +1116,24 @@
       <window_info id="Resources Explorer" order="7" />
       <window_info id="Favorites" order="8" side_tool="true" />
       <window_info id="simpleUML" order="9" weight="0.7107496" />
-      <window_info anchor="bottom" id="Run" order="0" weight="0.32825485" />
+      <window_info anchor="bottom" id="Run" order="0" weight="0.32739422" />
       <window_info anchor="bottom" id="TODO" order="1" weight="0.32825485" />
       <window_info anchor="bottom" id="Android Profiler" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" />
       <window_info anchor="bottom" id="Terminal" order="4" weight="0.32962137" />
-      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.50053304" side_tool="true" weight="0.54231626" />
+      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.5026652" side_tool="true" weight="0.596882" />
       <window_info anchor="bottom" id="Version Control" order="6" weight="0.32925472" />
-      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49946696" weight="0.54231626" />
-      <window_info anchor="bottom" id="Logcat" order="8" sideWeight="0.4978678" visible="true" weight="0.32405347" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49946696" weight="0.38864142" />
+      <window_info anchor="bottom" id="Logcat" order="8" sideWeight="0.49733475" weight="0.7817372" />
       <window_info anchor="bottom" id="Messages" order="9" weight="0.32962137" />
-      <window_info anchor="bottom" id="Find" order="10" sideWeight="0.49946696" weight="0.32962137" />
+      <window_info anchor="bottom" id="Find" order="10" sideWeight="0.49946696" weight="0.32739422" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
-      <window_info anchor="right" id="Gradle" order="1" />
-      <window_info anchor="right" id="Theme Preview" order="2" />
-      <window_info anchor="right" id="Preview" order="3" />
-      <window_info anchor="right" id="Palette&#9;" order="4" />
-      <window_info anchor="right" id="Device File Explorer" order="5" side_tool="true" weight="0.32995737" />
+      <window_info anchor="right" id="Theme Preview" order="1" />
+      <window_info anchor="right" id="Preview" order="2" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info anchor="right" id="Device File Explorer" order="4" side_tool="true" weight="0.32995737" />
+      <window_info anchor="right" id="Gradle" order="5" weight="0.32995737" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="1" />
-      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.49833888" visible="true" weight="0.23347548" />
-      <window_info id="Structure" order="3" sideWeight="0.5016611" side_tool="true" weight="0.32995737" />
-      <window_info id="Build Variants" order="4" side_tool="true" />
-      <window_info id="Image Layers" order="5" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info id="Resources Explorer" order="7" />
-      <window_info id="Favorites" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="0" weight="0.32962137" />
-      <window_info anchor="bottom" id="TODO" order="1" weight="0.32962137" />
-      <window_info anchor="bottom" id="Android Profiler" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" />
-      <window_info anchor="bottom" id="Terminal" order="4" weight="0.32962137" />
-      <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" weight="0.32962137" />
-      <window_info anchor="bottom" id="Version Control" order="6" weight="0.32925472" />
-      <window_info anchor="bottom" id="Build" order="7" weight="0.32962137" />
-      <window_info active="true" anchor="bottom" id="Logcat" order="8" visible="true" weight="0.32962137" />
-      <window_info anchor="bottom" id="Messages" order="9" weight="0.32962137" />
-      <window_info anchor="bottom" id="Find" order="10" weight="0.32962137" />
-      <window_info anchor="right" id="Capture Analysis" order="0" />
-      <window_info anchor="right" id="Gradle" order="1" />
-      <window_info anchor="right" id="Theme Preview" order="2" />
-      <window_info anchor="right" id="Preview" order="3" />
-      <window_info anchor="right" id="Palette&#9;" order="4" />
-      <window_info anchor="right" id="Device File Explorer" order="5" side_tool="true" weight="0.32995737" />
-    </layout-to-restore>
   </component>
   <component name="Vcs.Log.History.Properties">
     <option name="COLUMN_ORDER">
@@ -942,306 +1188,48 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="YES" />
-    <MESSAGE value="change list add to welcome activity" />
-    <MESSAGE value="modular the process part and improve the effiency to&#10;picture process fps_8&#10;particle effect process fps_4.5&#10;pure process fps_8.5" />
-    <MESSAGE value="a small test" />
-    <MESSAGE value="a small test11" />
-    <MESSAGE value="improve read local picture" />
-    <MESSAGE value="rename of Particle class" />
-    <MESSAGE value="add sunty's particle system class but not do sth" />
-    <MESSAGE value="Add a particle system with one bigger and bigger dot line" />
-    <MESSAGE value="perfect simple particle system" />
-    <MESSAGE value="a small improve for particle system" />
-    <MESSAGE value="a small test333" />
     <MESSAGE value="a finish version of the simple particle effect system" />
     <MESSAGE value="change the location which makes it more structurly right" />
     <MESSAGE value="a new particle effect" />
     <MESSAGE value="minfacesize to 120" />
-    <option name="LAST_COMMIT_MESSAGE" value="minfacesize to 120" />
+    <MESSAGE value="processing time add" />
+    <MESSAGE value="better performance of FPS" />
+    <MESSAGE value="Best two ways to optimize FPS in OnCameraView()" />
+    <MESSAGE value="a finish version of the" />
+    <MESSAGE value="25fps with 3 effects" />
+    <MESSAGE value="Change a bit of UI" />
+    <MESSAGE value="add a new effect method called trajectory" />
+    <MESSAGE value="rebuild particle effect selecting" />
+    <MESSAGE value="rebuild particle effect module" />
+    <MESSAGE value="rebuild particle effect module with 4 kinds of new effects, fountain, firework, coral leaf and glass" />
+    <MESSAGE value="add two new particle effects and optimize the particle effect module" />
+    <MESSAGE value="test" />
+    <MESSAGE value="trying..." />
+    <MESSAGE value="optimize FPS to 29 with front camera and 23 with back camera(long distance)" />
+    <MESSAGE value="optimize FPS to 29 with front camera and 23 with back camera(long distance)/2" />
+    <MESSAGE value="test1" />
+    <MESSAGE value="New function of record" />
+    <MESSAGE value="New function of record_repair" />
+    <MESSAGE value="All rebuild and next Internet" />
+    <MESSAGE value="Android 9 access non-http url" />
+    <MESSAGE value="rebuild particle effect selecting1" />
+    <option name="LAST_COMMIT_MESSAGE" value="rebuild particle effect selecting1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/button_circle_shape.xml" />
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-646">
-          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="7" selection-start-column="7" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/openCVLibrary340/src/main/java/org/opencv/core/Range.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1216">
-          <caret line="78" column="18" selection-start-line="78" selection-start-column="18" selection-end-line="78" selection-end-column="18" />
-          <folding>
-            <element signature="e#1103#1104#0" expanded="true" />
-            <element signature="e#1147#1148#0" expanded="true" />
-            <element signature="e#1791#1792#0" expanded="true" />
-            <element signature="e#1844#1845#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/openCVLibrary340/src/main/java/org/opencv/core/Scalar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/TEST.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="45" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gradlew">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gradle.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/DroidParticle/Particle.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/DroidParticle/ColorMatrixFilterHelper.java" />
-    <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-106" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/ParticleSystem/Particle.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/ParticleSystem/ColorMatrixFilterHelper.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/ParticleSystem/ParticlePool.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/ParticleSystem/ParticleSystemView.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/ParticleSystem/ParticleSystem.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/ParticleSystem/ParticleSystemConfig.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="12" column="64" lean-forward="true" selection-start-line="12" selection-start-column="64" selection-end-line="12" selection-end-column="64" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/button_circle_shape.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/camera_view_menus.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/FaceDetection/Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/assets/mtcnn_freezed_model.pb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../android-sdk/sources/android-28/android/os/Handler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="90" column="44" lean-forward="true" selection-start-line="90" selection-start-column="44" selection-end-line="90" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/AvcEncoder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="37" lean-forward="true" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/Processable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="32" lean-forward="true" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/IProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="19" lean-forward="true" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/IProviderExpand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/jniLibs/armeabi/libopencv_core.a">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="43" column="44" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_welcome.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="52" selection-start-line="13" selection-start-column="52" selection-end-line="13" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_camera_view.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="12" column="15" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="63" column="1" selection-start-line="63" selection-start-column="1" selection-end-line="63" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$PROJECT_DIR$/app/libs/qiniu-android-sdk-7.5.2.jar!/com/qiniu/android/http/MultipartBody.class" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/QnUploadHelper.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/VideoRecordManager.java" />
     <entry file="file://$PROJECT_DIR$/app/app.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="134" column="63" selection-start-line="134" selection-start-column="63" selection-end-line="134" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/Recorder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#530#531#0" expanded="true" />
-            <element signature="e#552#553#0" expanded="true" />
-            <element signature="e#758#2747#0" expanded="true" />
-            <element signature="e#2746#2747#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/Blend.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/Process.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/ParticleDraw.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-143">
-          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ParticleSystem/ParticleSystem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="30" column="35" lean-forward="true" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ParticleSystem/Particle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1783">
-          <caret line="30" column="12" lean-forward="true" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2926">
-          <caret line="173" column="5" selection-start-line="173" selection-start-column="5" selection-end-line="173" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/WelcomeActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#776#784#0" expanded="true" />
-            <element signature="e#849#857#0" expanded="true" />
-            <element signature="e#939#1269#0" expanded="true" />
-            <element signature="e#1268#1269#0" expanded="true" />
-            <element signature="e#5200#5201#0" expanded="true" />
-            <element signature="e#5257#5258#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="2527">
+          <caret line="133" column="63" selection-start-line="133" selection-start-column="63" selection-end-line="133" selection-end-column="63" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/FaceDetection/Box.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="51" column="17" selection-start-line="51" selection-start-column="17" selection-end-line="51" selection-end-column="17" />
+        <state relative-caret-position="152">
+          <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1250,20 +1238,253 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/FaceDetection/MTCNN.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="367" column="83" selection-start-line="367" selection-start-column="8" selection-end-line="367" selection-end-column="83" />
+        <state relative-caret-position="2660">
+          <caret line="140" column="32" selection-start-line="140" selection-start-column="32" selection-end-line="140" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/CameraViewActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/proguard-rules.pro">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/ScreenRecordService.java" />
+    <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="156" column="16" lean-forward="true" selection-start-line="156" selection-start-column="16" selection-end-line="156" selection-end-column="16" />
+        <state relative-caret-position="114">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradlew.bat">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradlew">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradle.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/ScreenRecordService.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/AudioEncoder.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/Utils.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/ScreenRecorder.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/VideoEncoder.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/BaseEncoder.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/Encoder.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/MicRecorder.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/Notifications.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/VideoEncodeConfig.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/ScreenRecorder.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/RecordApplication.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/RecordApplication.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/Recorder.java" />
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/TalScreenParams.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/FileUtils.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/ParticleDraw.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/Blend.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/HttpDownload.java" />
+    <entry file="file://$PROJECT_DIR$/app/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/RecordService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3458">
+          <caret line="212" column="45" selection-start-line="212" selection-start-column="45" selection-end-line="212" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/RecordFileUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="26" column="7" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/xml/network_security_config.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/RecordUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="191" column="13" selection-start-line="191" selection-start-column="13" selection-end-line="191" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/Process.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="28" column="72" lean-forward="true" selection-start-line="28" selection-start-column="72" selection-end-line="28" selection-end-column="72" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/WelcomeActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="19" column="32" lean-forward="true" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/RepositoryUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+          <folding>
+            <element signature="method#fileIsExists#0;class#Repository#0" />
+            <element signature="method#ReadTxtFile#0;class#Repository#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ParticleSystem/Particle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="e#1048#1379#0" />
+            <element signature="e#1385#1846#0" />
+            <element signature="e#1852#2070#0" />
+            <element signature="e#2076#2365#0" />
+            <element signature="e#2370#2454#0" />
+            <element signature="e#2459#2656#0" />
+            <element signature="e#2661#2874#0" />
+            <element signature="e#2880#3271#0" />
+            <element signature="e#3276#3334#0" />
+            <element signature="e#3339#3424#0" />
+            <element signature="e#3429#3573#0" />
+            <element signature="e#3578#3744#0" />
+            <element signature="e#3750#3843#0" />
+            <element signature="e#3849#4367#0" />
+            <element signature="e#4372#5244#0" />
+            <element signature="e#5249#6080#0" />
+            <element signature="e#6085#6710#0" />
+            <element signature="e#6715#7281#0" />
+            <element signature="e#7286#7697#0" />
+            <element signature="e#7702#8405#0" />
+            <element signature="e#8411#9500#0" />
+            <element signature="e#9505#9817#0" />
+            <element signature="e#9822#10477#0" />
+            <element signature="e#10482#10863#0" />
+            <element signature="e#10869#11039#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ParticleSystem/ParticleSystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="78" selection-start-line="12" selection-start-column="78" selection-end-line="12" selection-end-column="78" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#Configuration#0;class#ParticleSystem#0" />
+            <element signature="method#runSystem#0;class#ParticleSystem#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="959">
+          <caret line="169" column="31" selection-start-line="169" selection-start-column="31" selection-end-line="169" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#onCreate#0;class#MainActivity#0" />
+            <element signature="method#initView#0;class#MainActivity#0" />
+            <element signature="method#initViewPagerData#0;class#MainActivity#0" />
+            <element signature="class#MyViewPager#0;class#MainActivity#0" />
+            <element signature="method#instantiateItem#0;class#MyViewPager#0;class#MainActivity#0" />
+            <element signature="method#destroyItem#0;class#MyViewPager#0;class#MainActivity#0" />
+            <element signature="method#onPageScrolled#0;class#MainActivity#0" />
+            <element signature="method#onPageSelected#0;class#MainActivity#0" />
+            <element signature="method#onPageScrollStateChanged#0;class#MainActivity#0" />
+            <element signature="method#onDestroy#0;class#MainActivity#0" />
+            <element signature="method#onClick#0;class#MainActivity#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_welcome.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_camera_view.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" column="56" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/camera_view_menus.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="46" lean-forward="true" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="28" column="19" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-manifest" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/CameraViewActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="144" column="37" selection-start-line="144" selection-start-column="37" selection-end-line="144" selection-end-column="37" />
+          <folding>
+            <element signature="class#2064:2581" />
+            <element signature="method#onCreate#0;class#CameraViewActivity#0" />
+            <element signature="method#startService#0;class#CameraViewActivity#0" />
+            <element signature="method#initLoadOpenCVLibs#0;class#CameraViewActivity#0" />
+            <element signature="method#loadEffect#0;class#CameraViewActivity#0" />
+            <element signature="e#6224#6251#0" />
+            <element signature="method#onActivityResult#0;class#CameraViewActivity#0" />
+            <element signature="e#4726#5370#1" />
+            <element signature="method#onCreateOptionsMenu#0;class#CameraViewActivity#0" />
+            <element signature="method#onCameraViewStarted#0;class#CameraViewActivity#0" />
+            <element signature="method#onCameraViewStopped#0;class#CameraViewActivity#0" />
+            <element signature="method#onCameraFrame#0;class#CameraViewActivity#0" />
+            <element signature="method#onStop#0;class#CameraViewActivity#0" />
+            <element signature="method#onPause#0;class#CameraViewActivity#0" />
+            <element signature="method#onDestroy#0;class#CameraViewActivity#0" />
+            <element signature="method#onResume#0;class#CameraViewActivity#0" />
+            <element signature="method#onClick#0;class#CameraViewActivity#0" />
           </folding>
         </state>
       </provider>

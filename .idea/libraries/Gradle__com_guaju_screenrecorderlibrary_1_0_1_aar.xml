@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.guaju:screenrecorderlibrary:1.0.1@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/aba3514bd06c262106d83c89ba51ed29/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/aba3514bd06c262106d83c89ba51ed29/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.guaju/screenrecorderlibrary/1.0.1/20eaeb19a79e7246799cbc56fbd983b4a91d7dda/screenrecorderlibrary-1.0.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

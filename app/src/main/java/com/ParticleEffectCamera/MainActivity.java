@@ -61,6 +61,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn.setOnClickListener(this);
         initView();
     }
+
     private void initView() {
         initViewPagerData();
         viewPager.setAdapter(new MyViewPager());
@@ -89,7 +90,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void initViewPagerData() {
-        imageDescArrs = new String[]{"趣味贴纸", "人脸识别", "精确定位", "实时渲染"};
+        imageDescArrs = new String[]{"粒子特效", "人脸识别", "精确定位", "实时渲染"};
         imageList = new ArrayList<ImageView>();
 
         ImageView im;
@@ -117,6 +118,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             dotGroup.addView(dotView);
         }
     }
+
     private class MyViewPager extends PagerAdapter {
         @Override
         public int getCount() {
@@ -142,9 +144,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             container.removeView((View) object);
         }
     }
+
     @Override
     public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
     }
+
     @Override
     public void onPageSelected(int position) {
         int newPostion = position % imageList.size();
@@ -155,9 +160,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         title.setText(imageDescArrs[newPostion]);
         previousPosition = newPostion;
     }
+
     @Override
     public void onPageScrollStateChanged(int state) {
+
     }
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
