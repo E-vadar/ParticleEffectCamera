@@ -158,6 +158,38 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
         }
     }
 
+    private void effectLoad(int groupNo,int size){
+            //Motion config
+            config[groupNo][0] = 6;
+            config[groupNo][1] = 0;
+            config[groupNo][2] = 0;
+            config[groupNo][3] = 2;
+            config[groupNo][4] = 4;
+            //Particle config
+            config[groupNo][5] = 60;
+            config[groupNo][6] = 55;
+            config[groupNo][7] = 2;
+            config[groupNo][8] = size;
+            config[groupNo][9] = 1;
+            config[groupNo][10] = 8;
+            config[groupNo][11] = 1;
+            config[groupNo][12] = 2;
+            //Particle color
+            config[groupNo][13] = 255-size*15;
+            config[groupNo][14] = 192-size*15;
+            config[groupNo][15] = 203-size*15;
+            //Trajectory color
+            config[groupNo][16] = 220-size*15;
+            config[groupNo][17] = 140-size*15;
+            config[groupNo][18] = 130-size*15;
+            //Halo color
+            config[groupNo][19] = 0;
+            config[groupNo][20] = 0;
+            config[groupNo][21] = 0;
+            //Whether activated group?
+            config[groupNo][22] = 1;
+            config_time = 2;
+    }
     //装载特效模板
     private void loadEffect(String content){
 //            Motion config
@@ -242,6 +274,13 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
             option = 0;
         } else if (id == R.id.MTCNN) {
             option = 1;
+        } else if (id == R.id.Test){
+            option = 2;
+            effectLoad(0,1);
+            effectLoad(1,2);
+            effectLoad(2,3);
+            effectLoad(3,4);
+            ParticleSystem.Configuration(config,config_time);
         } else {
             option = 2;
             cacheEffect(title);

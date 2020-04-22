@@ -174,6 +174,9 @@ public class Particle {
             case 5:
                 shape_explosive();
                 break;
+            case 6:
+                shape_love();
+                break;
         }
     }
     public void shape_snake(){
@@ -299,7 +302,51 @@ public class Particle {
                 break;
         }
     }
-
+    public void shape_love(){
+        int smallDuration = duration/6;
+        int mark = lifetime%smallDuration;
+        int period = new Double(Math.floor(lifetime/smallDuration)).intValue()%6;
+        switch(period){
+            case 0:
+                direction[0] = 0.05*mark;
+                direction[1] = 1 - 0.05*mark;
+                break;
+            case 1:
+                direction[0] = 1 - 0.05*mark;
+                direction[1] =  -0.05*mark;
+                break;
+            case 2:
+                if(mark == 0){
+                    direction[1] = -2.5;
+                }
+                direction[0] = -0.1*mark;
+                if(mark <10){
+                    direction[1] = -2.5 + 0.075*mark;
+                } else {
+                    direction[1] = -1.75  + 0.1*(mark-10);
+                }
+                break;
+            case 3:
+                direction[0] =-2 + 0.1*mark;
+                if(mark <10){
+                    direction[1] = 0.75 + 0.1*mark;
+                } else {
+                    direction[1] = 1.75+ 0.075*(mark-10);
+                }
+                break;
+            case 4:
+                if(mark == 0){
+                    direction[1] = 1;
+                }
+                direction[0] = 0.05*mark;
+                direction[1] = 1 - 0.05*mark;
+                break;
+            case 5:
+                direction[0] = 1 - 0.05*mark;
+                direction[1] = -0.05*mark;
+                break;
+        }
+    }
     //Draw particles on frame image;
     public void Render(Mat frame,int[][] key_position){
         int x0,y0,x1,y1;
