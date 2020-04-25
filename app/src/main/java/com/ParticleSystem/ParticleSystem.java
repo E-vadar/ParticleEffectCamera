@@ -71,8 +71,8 @@ public class ParticleSystem {
                     ptc.haloColor[1] = config[groupNo][20];
                     ptc.haloColor[2] = config[groupNo][21];
                     //Save the initial state of the particle
-                    ptc.stateOfShape[0] = ptc.size;
-                    ptc.stateOfShape[1] = ptc.v;
+                    ptc.stateOfSize = ptc.size;
+                    ptc.stateOfVelocity = ptc.v;
                     ptc.stateOfColor[0] = ptc.col[0];
                     ptc.stateOfColor[1] = ptc.col[1];
                     ptc.stateOfColor[2] = ptc.col[2];
@@ -84,18 +84,22 @@ public class ParticleSystem {
         }
     }
 
-    //加载粒子系统运动
+    //Run particles in pool every frame.
     public static void runSystem(Mat frame, Point[] landmark, int t){
+        //input key position of human face(android.graphics.Point) and saved in array.
         int[][] key_position = new int[4][2];
-        key_position[0][0] = landmark[0].x;
+        key_position[0][0] = landmark[0].x;//Eye left
         key_position[0][1] = landmark[0].y;
-        key_position[1][0] = landmark[1].x;
+        key_position[1][0] = landmark[1].x;//Eye right
         key_position[1][1] = landmark[1].y;
-        key_position[2][0] = landmark[2].x;
+        key_position[2][0] = landmark[2].x;//Nose
         key_position[2][1] = landmark[2].y;
-        key_position[3][0] = (landmark[3].x + landmark[4].x)/2;
+        key_position[3][0] = (landmark[3].x + landmark[4].x)/2;//Mouth
         key_position[3][1] = (landmark[3].y + landmark[4].y)/2;
-        int time = t % total_duration;//周期时间内
+
+        int time = t % total_duration;//Transfer frame period to particle effect period
+
+        //Update every particles in pool and draw them on frame image
         for (int i = 0; i < ptcspool.size(); i++) {
             Particle ptc = ptcspool.removeFirst();
             ptc.update(time);
@@ -103,4 +107,5 @@ public class ParticleSystem {
             ptcspool.addLast(ptc);
         }
     }
+
 }

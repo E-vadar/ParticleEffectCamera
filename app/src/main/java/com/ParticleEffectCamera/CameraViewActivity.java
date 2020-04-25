@@ -140,7 +140,7 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
         }
     }
 
-    //获取特效模板
+    //Download particle effect templates from web server
     private void cacheEffect(String effectName){
         if(effectName.startsWith("C")){
             Toast.makeText(CameraViewActivity.this, "敬请期待！", Toast.LENGTH_SHORT).show();
@@ -189,10 +189,8 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
             //Whether activated group?
             config[groupNo][22] = 1;
             config_time = 2;
-    }
-    //装载特效模板
-    private void loadEffect(String content){
-//            Motion config
+
+        //            Motion config
 //            config[groupNo][0] = shape_type;
 //            config[groupNo][1] = velocity_type;
 //            config[groupNo][2] = color_type;
@@ -221,6 +219,18 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
 //            config[groupNo][21] = halocolor2;
 //            Whether activated group?
 //            config[groupNo][22] = 1;
+    }
+
+    private void loadEffect(String content){
+
+        //Delete former effect template data
+        t = 0;
+        config_time = 0;
+        for(int i = 0; i <10; i++){
+            config[i][22] = 0;
+        }
+
+        //Set effect template data
         config_time = Integer.parseInt(content.substring(0,1));
         content = content.substring(2);
         String[] column = content.split("\n");
@@ -231,6 +241,9 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
             }
             config[i][22] = 1;
         }
+
+        //Configure particle system
+        ParticleSystem.Configuration(config,config_time);
     }
 
     @Override
@@ -265,16 +278,16 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         String title = item.getTitle().toString();
-        t = 0;
-        config_time = 0;
-        for(int i = 0; i <10; i++){
-            config[i][22] = 0;
-        }
         if(id == R.id.PureCamera){
             option = 0;
         } else if (id == R.id.MTCNN) {
             option = 1;
         } else if (id == R.id.Test){
+            t = 0;
+            config_time = 0;
+            for(int i = 0; i <10; i++){
+                config[i][22] = 0;
+            }
             option = 2;
             effectLoad(0,1);
             effectLoad(1,2);
@@ -284,7 +297,6 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
         } else {
             option = 2;
             cacheEffect(title);
-            ParticleSystem.Configuration(config,config_time);
         }
         return super.onOptionsItemSelected(item);
     }

@@ -3,49 +3,53 @@ package com.ParticleSystem;
 import org.opencv.core.Point;
 import org.opencv.core.Scalar;
 import org.opencv.core.Mat;
-
-import static org.opencv.imgproc.Imgproc.LINE_AA;
 import static org.opencv.imgproc.Imgproc.circle;
-import static org.opencv.imgproc.Imgproc.line;
+//import static org.opencv.imgproc.Imgproc.LINE_AA;
+//import static org.opencv.imgproc.Imgproc.line;
 
 public class Particle {
 
-    int pNo;
-    double x,y;
-    double v ;
-    int[] col = new int[3];
-    double[] direction = new double[2];
-    double size;
-    int lifetime;
-    boolean life;
-    Scalar color = new Scalar(0,0,0);
-    int group;//粒子组别
-    int groupNo;//粒子组内编号
-    int groupValue;//组数
-    int duration;//运动周期
+    int pNo;//Mark for particles
+    double x,y;//x and y position
+    double v ;//Velocity
+    int[] col = new int[3];//RGB color of particles
+    double[] direction = new double[2];//x and y direction
+    double size;//Size of particles
+    int lifetime;//Lifetime of particles,0 = start and (lifetime = duration) = end
+    boolean life;//Whether live or die
+    Scalar color = new Scalar(0,0,0);//OpenCV color data type,can be replaced by other color data type
+
+    //Complex group movements
+    int group;//Which group
+    int groupNo;//Mark in one group
+    int groupValue;//Total group number
+    int duration;//The period of one particle effect
+
     //Trajectory function
-    boolean trajectory;
-    int trajectoryLength;
-    int[] trajectoryColor = new int[3];
-    double[] xt = new double[10];
-    double[] yt = new double[10];
+    boolean trajectory;//Whether use this trajectory function
+    int trajectoryLength;//Length of trajectory
+    int[] trajectoryColor = new int[3];//RGB color of trajectory
+    double[] xt = new double[10];//x position of particles' in past
+    double[] yt = new double[10];//y position of particles' in past
+
     //Halo function
-    boolean halo;
-    int HaloSize;
-    int[] haloColor = new int[3];
+    boolean halo;//Whether use this halo function
+    int HaloSize;//Size of halo
+    int[] haloColor = new int[3];//RGB color of halo
+
     //State and config
-    int[] stateOfColor = new int[3];
-    double[] stateOfShape = new double[2];
-    int[] config = new int[5];
+    int[] stateOfColor = new int[3];//Store particles' initial RGB color
+    double stateOfSize,stateOfVelocity;//Store particles' initial size and velocity
+    int[] config = new int[5];//Store the configuration of particles' movements
 
     public Particle() {
        super();
     }
 
-    //重新激活粒子生命
+    //Set the particles back to initial state
     public void reactivate(){
-        size = stateOfShape[0];
-        v = stateOfShape[1];
+        size = stateOfSize;
+        v = stateOfVelocity;
         col[0] = stateOfColor[0];
         col[1] = stateOfColor[1];
         col[2] = stateOfColor[2];
@@ -57,6 +61,7 @@ public class Particle {
         direction[1] = 0;
     }
 
+    //Update particles position every frame
     public void update(int time){
         if(groupNo<=time-5){
             life = true;
@@ -79,12 +84,14 @@ public class Particle {
         }
     }
 
+    //Give particles a small disturbance in velocity and direction
     public void Vibration(){
         v = v + groupNo*0.0003*config[4];
         direction[0] = direction[0] + (Math.random()-0.5)*0.1*config[4];
         direction[0] = direction[0] + (Math.random()-0.5)*0.1*config[4];
     }
 
+    //Set the color change type
     public void Color(){
         switch(config[2]){
             case 0:
@@ -109,6 +116,7 @@ public class Particle {
         color = new Scalar(col[0]-(new Double(Math.random()*5)).intValue()*5,col[1]+(new Double(Math.random()*5)).intValue()*5,col[2]+(new Double(Math.random()*5)).intValue()*5);
     }
 
+    //Set the velocity change type
     public void Velocity(){
         switch(config[1]){
             case 0:
@@ -149,11 +157,13 @@ public class Particle {
         }
     }
 
+    //Run particles and update x and y position through velocity and direction
     public void Move(){
         x = x - v * direction[0];
         y = y - v * direction[1];
     }
 
+    //Set the moving shape
     public void Shape(){
         switch(config[0]){
             case 0:
@@ -347,7 +357,8 @@ public class Particle {
                 break;
         }
     }
-    //Draw particles on frame image;
+
+    //Draw particles on frame image, using OpenCV's paint in Mat
     public void Render(Mat frame,int[][] key_position){
         int x0,y0,x1,y1;
         switch(config[3]){
