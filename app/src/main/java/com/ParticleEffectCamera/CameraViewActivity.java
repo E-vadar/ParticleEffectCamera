@@ -33,7 +33,6 @@ import com.EffectSystem.RecordUtils;
 import com.EffectSystem.RepositoryUtil;
 import com.FaceDetection.Box;
 import com.FaceDetection.MTCNN;
-import com.EffectSystem.Process;
 import com.ParticleSystem.ParticleSystem;
 import java.util.Vector;
 import static org.opencv.core.Core.flip;
@@ -153,11 +152,11 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
             Vector<Box> boxes=mtcnn.detectFaces(bitmap,150+cameraIndex*150);//mtcnn()的作用结果为生成一系列Box类（结构）
             if(option == 1){
                 //Draw Face ROI
-                Process.pureProcess(frame,bitmap,boxes);
+                pureProcess(frame,bitmap,boxes);
             } else {
                 //Draw Particle Effect
-                circle(frame,new Point(300,300),1000,new Scalar(255,255,255),-1);
-                Process.particleSystemProcess(frame,boxes,t);
+                //circle(frame,new Point(300,300),1000,new Scalar(255,255,255),-1);
+                particleSystemProcess(frame,boxes,t);
             }
         }
     }
@@ -266,6 +265,28 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
 
         //Configure particle system
         ParticleSystem.Configuration(config,config_time);
+    }
+
+    private void pureProcess(Mat frame,Bitmap bm,Vector<Box> boxes){
+        try {
+            for (int i=0;i<boxes.size();i++){
+                com.FaceDetection.Utils.drawRect(bm,boxes.get(i).transform2Rect());
+                com.FaceDetection.Utils.drawPoints(bm,boxes.get(i).landmark);
+            }
+            Utils.bitmapToMat(bm,frame);
+        }catch (Exception e){
+        }
+    }
+
+    private void particleSystemProcess(Mat frame,Vector<Box> boxes,int t){
+        try {
+            for (int i=0;i<boxes.size();i++) {
+                ParticleSystem.runSystem(frame,boxes.get(i).landmark,t);
+                Log.v(TAG,"picture width"+ frame.height() + "picture height"+ frame.width());
+                Log.v(TAG,"Box Width"+ boxes.get(i).width()+"Box Height"+ boxes.get(i).height());
+            }
+        }catch (Exception e){
+        }
     }
 
     @Override

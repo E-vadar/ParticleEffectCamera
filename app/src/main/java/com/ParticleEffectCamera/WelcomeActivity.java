@@ -23,7 +23,6 @@ import java.util.ArrayList;
 
 public class WelcomeActivity extends AppCompatActivity {
     @SuppressLint("HandlerLeak")
-    //初始化加载一些常用素材资源
     BitmapFactory.Options options = new BitmapFactory.Options();
     public static Bitmap localmap;
     public static ArrayList<String> effectList = new ArrayList<>();
@@ -35,8 +34,8 @@ public class WelcomeActivity extends AppCompatActivity {
             initEffectList();
             //界面转载
             Intent intent = new Intent(WelcomeActivity.this,MainActivity.class);
-            startActivities(new Intent[]{intent});  //start跳转
-            finish();//结束欢迎界面活动
+            startActivities(new Intent[]{intent});
+            finish();
         }
     };
 
@@ -51,17 +50,14 @@ public class WelcomeActivity extends AppCompatActivity {
         }
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN
                 , WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        //获取相机拍摄读写权限
         if (Build.VERSION.SDK_INT >= 23) {
-            //版本判断
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE,
                     Manifest.permission.WRITE_EXTERNAL_STORAGE,Manifest.permission.RECORD_AUDIO,
                     Manifest.permission.CAMERA}, 1);
         }
-        initLoadOpenCVLibs();//调用opencv库
+        initLoadOpenCVLibs();
         initEffectList();
-        //延迟发送信息2000Ms即2秒
-        handler.sendMessageDelayed(Message.obtain(), 2500);
+        handler.sendMessageDelayed(Message.obtain(),2500);
     }
     private void initLoadOpenCVLibs() {
         boolean success= OpenCVLoader.initDebug();
