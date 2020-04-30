@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.content.ServiceConnection;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -60,6 +61,7 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
     public static int height;
     public static int DPI;
     private final int REQUEST_ALLOW = 100;
+    Button effectbtn[] = new Button[15];
     private ServiceConnection mConnection = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
@@ -79,6 +81,7 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camera_view);
         initLoadOpenCVLibs();//调用opencv库
+        setEffectMenu();
         //三行 摄像头权限相关
         StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
         StrictMode.setVmPolicy(builder.build());
@@ -109,23 +112,26 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
         height = display.heightPixels;
         DPI = display.densityDpi;
         startService();
-        LinearLayout linear=(LinearLayout) findViewById(R.id.scroll);
-        Button button1 = new Button(this);
-        button1.setText(WelcomeActivity.effectList.get(0));
-        Button button2 = new Button(this);
-        button2.setText(WelcomeActivity.effectList.get(1));
-        Button button3 = new Button(this);
-        button3.setText(WelcomeActivity.effectList.get(2));
-        Button button4 = new Button(this);
-        button4.setText(WelcomeActivity.effectList.get(3));
-        Button button5 = new Button(this);
-        button5.setText(WelcomeActivity.effectList.get(4));
-        linear.addView(button1);
-        linear.addView(button2);
-        linear.addView(button3);
-        linear.addView(button4);
-        linear.addView(button5);
+    }
+
+    private void setEffectMenu(){
         Log.v(TAG,"mark1"+WelcomeActivity.effectList);
+        int effectsize = WelcomeActivity.effectList.size();
+        LinearLayout linear = (LinearLayout)findViewById(R.id.scroll);
+        for(int i=0;i<effectsize;i++){
+            Button btn = new Button(this);
+            effectbtn[i] = btn;
+            btn.setText(WelcomeActivity.effectList.get(i));
+            Drawable drawable = Drawable.createFromPath(Environment.getExternalStorageDirectory()+"/download/" + WelcomeActivity.effectList.get(i) + ".png");
+            btn.setBackground(drawable);
+            btn.setOnClickListener(new Button.OnClickListener() {
+                public void onClick(View v) {
+                    option = 2;
+                    cacheEffect(btn.getText().toString());
+                }
+            });
+            linear.addView(btn);
+        }
     }
 
     //开启录制服务
