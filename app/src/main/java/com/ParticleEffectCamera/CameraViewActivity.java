@@ -2,7 +2,6 @@ package com.ParticleEffectCamera;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.DownloadManager;
 import android.content.ComponentName;
 import android.content.Intent;
@@ -36,10 +35,15 @@ import com.FaceDetection.Box;
 import com.FaceDetection.MTCNN;
 import com.EffectSystem.Process;
 import com.ParticleSystem.ParticleSystem;
-
 import java.util.Vector;
 import static org.opencv.core.Core.flip;
 import static org.opencv.core.Core.transpose;
+
+import static org.opencv.imgproc.Imgproc.circle;
+import org.opencv.core.Point;
+import org.opencv.core.Scalar;
+import android.widget.Button;
+import android.widget.LinearLayout;
 
 public class CameraViewActivity extends AppCompatActivity implements CameraBridgeViewBase.CvCameraViewListener2, View.OnClickListener{
     String TAG="CameraViewActivity";
@@ -106,6 +110,23 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
         height = display.heightPixels;
         DPI = display.densityDpi;
         startService();
+        LinearLayout linear=(LinearLayout) findViewById(R.id.scroll);
+        Button button1 = new Button(this);
+        button1.setText(WelcomeActivity.effectList.get(0));
+        Button button2 = new Button(this);
+        button2.setText(WelcomeActivity.effectList.get(1));
+        Button button3 = new Button(this);
+        button3.setText(WelcomeActivity.effectList.get(2));
+        Button button4 = new Button(this);
+        button4.setText(WelcomeActivity.effectList.get(3));
+        Button button5 = new Button(this);
+        button5.setText(WelcomeActivity.effectList.get(4));
+        linear.addView(button1);
+        linear.addView(button2);
+        linear.addView(button3);
+        linear.addView(button4);
+        linear.addView(button5);
+        Log.v(TAG,"mark1"+WelcomeActivity.effectList);
     }
 
     //开启录制服务
@@ -135,6 +156,7 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
                 Process.pureProcess(frame,bitmap,boxes);
             } else {
                 //Draw Particle Effect
+                circle(frame,new Point(300,300),1000,new Scalar(255,255,255),-1);
                 Process.particleSystemProcess(frame,boxes,t);
             }
         }
