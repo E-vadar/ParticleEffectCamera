@@ -121,13 +121,17 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
         for(int i=0;i<effectsize;i++){
             Button btn = new Button(this);
             effectbtn[i] = btn;
-            btn.setText(WelcomeActivity.effectList.get(i));
+            btn.setId(i);
             Drawable drawable = Drawable.createFromPath(Environment.getExternalStorageDirectory()+"/download/" + WelcomeActivity.effectList.get(i) + ".png");
             btn.setBackground(drawable);
+            btn.setHeight(250);
+            btn.setWidth(100);
+            btn.setText(WelcomeActivity.effectList.get(i));
+            btn.setTextSize(12);
             btn.setOnClickListener(new Button.OnClickListener() {
                 public void onClick(View v) {
                     option = 2;
-                    cacheEffect(btn.getText().toString());
+                    cacheEffect(WelcomeActivity.effectList.get(btn.getId()));
                 }
             });
             linear.addView(btn);

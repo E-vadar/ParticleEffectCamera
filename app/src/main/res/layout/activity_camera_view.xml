@@ -12,14 +12,14 @@
 
     <Button
         android:id="@+id/record_btn"
-        android:layout_width="105dp"
-        android:layout_height="105dp"
-        android:layout_marginLeft="125dp"
-        android:layout_marginTop="600dp"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="580dp"
         android:background="@drawable/button_circle_shape"
         android:onClick="onClick"
         android:text="录制"
-        android:textSize="20sp" />
+        android:textSize="15sp" />
 
 
     <org.opencv.android.JavaCameraView
