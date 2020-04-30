@@ -2,8 +2,8 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/p1" android:title="fountain"></item>
     <item android:id="@+id/p2" android:title="firework"></item>
-    <item android:id="@+id/p3" android:title="coral reef"></item>
-    <item android:id="@+id/p4" android:title="rainbow glass"></item>
+    <item android:id="@+id/p3" android:title="coralreef"></item>
+    <item android:id="@+id/p4" android:title="rainbowglass"></item>
     <item android:id="@+id/p5" android:title="gathering"></item>
     <item android:id="@+id/p6" android:title="explosive"></item>
     <item android:id="@+id/p7" android:title="love"></item>
