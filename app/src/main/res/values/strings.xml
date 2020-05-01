@@ -1,9 +1,4 @@
 <resources>
     <string name="app_name">ParticleCamera</string>
-    <string name="glasses">glasses</string>
-    <string name="circle">circle</string>
-    <string name="mouth">mouth</string>
-    <string name="eye">eye</string>
-
 
 </resources>

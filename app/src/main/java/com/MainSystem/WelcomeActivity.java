@@ -1,6 +1,5 @@
 package com.MainSystem;
 
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import android.Manifest;
@@ -13,7 +12,6 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
-import android.view.WindowManager;
 import android.widget.Toast;
 import com.ProcessModule.RepositoryUtil;
 import org.opencv.android.OpenCVLoader;
@@ -42,12 +40,6 @@ public class WelcomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_welcome);
         initEffectList();
         localmap = BitmapFactory.decodeResource(getResources(),R.drawable.a36799,options);
-        ActionBar actionBar = getSupportActionBar();     //取消标题头actionbar
-        if (actionBar != null) {
-            actionBar.hide();
-        }
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN
-                , WindowManager.LayoutParams.FLAG_FULLSCREEN);
         if (Build.VERSION.SDK_INT >= 23) {
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE,
                     Manifest.permission.WRITE_EXTERNAL_STORAGE,Manifest.permission.RECORD_AUDIO,

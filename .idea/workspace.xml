@@ -6,226 +6,70 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="markmark" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/CameraViewActivity.java" line="329" />
+    <bookmark url="file://$PROJECT_DIR$/app/src/main/java/com/MainSystem/CameraViewActivity.java" line="422" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="57e589d6-45b6-4dc5-af82-9d8156bffe02" name="Default Changelist" comment="Final draft version of Particle Effect Camera">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/RepositoryUtil.java" afterDir="false" />
+    <list default="true" id="57e589d6-45b6-4dc5-af82-9d8156bffe02" name="Default Changelist" comment="comlete download method in Util class">
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/CameraViewActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/CameraViewActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/camera_view_menus.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/camera_view_menus.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/generated/aidl_source_output_dir/release/compileReleaseAidl/out/org/opencv/engine/OpenCVEngineInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/generated/source/buildConfig/androidTest/debug/org/opencv/test/BuildConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/generated/source/buildConfig/release/org/opencv/BuildConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/aapt_friendly_merged_manifests/release/aapt/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/aapt_friendly_merged_manifests/release/aapt/output.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/annotation_processor_list/release/annotationProcessors.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/compile_library_classes/release/classes.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/compile_only_not_namespaced_r_class_jar/debug/generateDebugRFile/R.jar" beforeDir="false" afterPath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/compile_only_not_namespaced_r_class_jar/debug/generateDebugRFile/R.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/compile_only_not_namespaced_r_class_jar/release/generateReleaseRFile/R.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/full_jar/release/createFullJarRelease/full.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/incremental/debug-mergeJavaRes/merge-state" beforeDir="false" afterPath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/incremental/debug-mergeJavaRes/merge-state" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/incremental/mergeReleaseJniLibFolders/merger.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/incremental/mergeReleaseShaders/merger.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/incremental/packageReleaseAssets/merger.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/incremental/packageReleaseResources/compile-file-map.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/incremental/packageReleaseResources/merged.dir/values/values.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/incremental/packageReleaseResources/merger.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/incremental/release-mergeJniLibs/merge-state" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/BuildConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/android/AsyncServiceHelper$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/android/AsyncServiceHelper$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/android/AsyncServiceHelper$3$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/android/AsyncServiceHelper$3$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/android/AsyncServiceHelper$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/android/AsyncServiceHelper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/android/BaseLoaderCallback$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/android/BaseLoaderCallback$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/android/BaseLoaderCallback$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/android/BaseLoaderCallback$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/android/BaseLoaderCallback$5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/android/BaseLoaderCallback$6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/android/BaseLoaderCallback$7.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/android/BaseLoaderCallback.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/android/Camera2Renderer$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/android/Camera2Renderer$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/android/Camera2Renderer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/android/CameraBridgeViewBase$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/android/CameraBridgeViewBase$CvCameraViewFrame.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/android/CameraBridgeViewBase$CvCameraViewListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/android/CameraBridgeViewBase$CvCameraViewListener2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/android/CameraBridgeViewBase$CvCameraViewListenerAdapter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/android/CameraBridgeViewBase$ListItemAccessor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/android/CameraBridgeViewBase.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/android/CameraGLRendererBase.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/android/CameraGLSurfaceView$CameraTextureListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/android/CameraGLSurfaceView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/android/CameraRenderer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/android/FpsMeter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/android/InstallCallbackInterface.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/android/JavaCameraView$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/android/JavaCameraView$CameraWorker.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/android/JavaCameraView$JavaCameraFrame.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/android/JavaCameraView$JavaCameraSizeAccessor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/android/JavaCameraView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/android/LoaderCallbackInterface.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/android/OpenCVLoader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/android/StaticHelper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/android/Utils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/calib3d/Calib3d.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/calib3d/StereoBM.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/calib3d/StereoMatcher.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/calib3d/StereoSGBM.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/core/Algorithm.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/core/Core$MinMaxLocResult.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/core/Core.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/core/CvException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/core/CvType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/core/DMatch.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/core/KeyPoint.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/core/Mat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/core/MatOfByte.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/core/MatOfDMatch.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/core/MatOfDouble.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/core/MatOfFloat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/core/MatOfFloat4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/core/MatOfFloat6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/core/MatOfInt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/core/MatOfInt4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/core/MatOfKeyPoint.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/core/MatOfPoint.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/core/MatOfPoint2f.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/core/MatOfPoint3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/core/MatOfPoint3f.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/core/MatOfRect.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/core/MatOfRect2d.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/core/Point.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/core/Point3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/core/Range.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/core/Rect.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/core/Rect2d.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/core/RotatedRect.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/core/Scalar.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/core/Size.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/core/TermCriteria.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/core/TickMeter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/dnn/DictValue.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/dnn/Dnn.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/dnn/Layer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/dnn/Net.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/engine/OpenCVEngineInterface$Stub$Proxy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/engine/OpenCVEngineInterface$Stub.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/engine/OpenCVEngineInterface.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/features2d/AKAZE.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/features2d/AgastFeatureDetector.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/features2d/BFMatcher.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/features2d/BOWImgDescriptorExtractor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/features2d/BOWKMeansTrainer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/features2d/BOWTrainer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/features2d/BRISK.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/features2d/DescriptorExtractor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/features2d/DescriptorMatcher.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/features2d/FastFeatureDetector.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/features2d/Feature2D.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/features2d/FeatureDetector.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/features2d/Features2d.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/features2d/FlannBasedMatcher.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/features2d/GFTTDetector.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/features2d/KAZE.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/features2d/MSER.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/features2d/ORB.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/features2d/Params.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/imgcodecs/Imgcodecs.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/imgproc/CLAHE.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/imgproc/Imgproc.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/imgproc/LineSegmentDetector.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/imgproc/Moments.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/imgproc/Subdiv2D.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/ml/ANN_MLP.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/ml/ANN_MLP_ANNEAL.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/ml/Boost.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/ml/DTrees.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/ml/EM.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/ml/KNearest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/ml/LogisticRegression.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/ml/Ml.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/ml/NormalBayesClassifier.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/ml/ParamGrid.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/ml/RTrees.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/ml/SVM.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/ml/SVMSGD.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/ml/StatModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/ml/TrainData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/objdetect/BaseCascadeClassifier.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/objdetect/CascadeClassifier.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/objdetect/HOGDescriptor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/objdetect/Objdetect.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/osgi/OpenCVInterface.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/osgi/OpenCVNativeLoader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/photo/AlignExposures.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/photo/AlignMTB.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/photo/CalibrateCRF.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/photo/CalibrateDebevec.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/photo/CalibrateRobertson.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/photo/MergeDebevec.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/photo/MergeExposures.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/photo/MergeMertens.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/photo/MergeRobertson.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/photo/Photo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/photo/Tonemap.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/photo/TonemapDrago.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/photo/TonemapDurand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/photo/TonemapMantiuk.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/photo/TonemapReinhard.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/utils/Converters.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/video/BackgroundSubtractor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/video/BackgroundSubtractorKNN.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/video/BackgroundSubtractorMOG2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/video/DenseOpticalFlow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/video/DualTVL1OpticalFlow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/video/FarnebackOpticalFlow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/video/KalmanFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/video/SparseOpticalFlow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/video/SparsePyrLKOpticalFlow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/video/Video.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/videoio/VideoCapture.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/videoio/VideoWriter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes/org/opencv/videoio/Videoio.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/library_java_res/release/res.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/library_manifest/release/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/merged_manifests/debugAndroidTest/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/merged_manifests/debugAndroidTest/output.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/merged_manifests/release/output.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/packaged-classes/debug/classes.jar" beforeDir="false" afterPath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/packaged-classes/debug/classes.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/packaged_res/release/values/values.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/res/symbol-table-with-package/release/package-aware-r.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/runtime_library_classes/release/classes.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/symbols/release/R.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/transforms/mergeJniLibs/release/__content__.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/intermediates/transforms/stripDebugSymbol/debug/__content__.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/outputs/aar/openCVLibrary340-debug.aar" beforeDir="false" afterPath="$PROJECT_DIR$/openCVLibrary340/build/outputs/aar/openCVLibrary340-debug.aar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/openCVLibrary340/build/outputs/logs/manifest-merger-release-report.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/MainSystem/WelcomeActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/MainSystem/WelcomeActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/backgr.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/backgr.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/biglogo.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/biglogo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/f0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/f1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/f10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/f11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/f12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/f13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/f14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/f15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/f16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/f17.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/f18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/f19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/f2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/f20.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/f3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/f4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/f5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/f6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/f7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/f8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/f9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/glass.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/icona.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/icona.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/pg1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/pg1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/pg2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/pg2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/pg3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/pg3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/pg4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/pg4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/s0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/s1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/s10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/s11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/s2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/s3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/s4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/s5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/s6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/s7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/s8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/s9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -257,74 +101,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/KeyPointModule/Utils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="28" column="19" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
-            </state>
-          </provider>
-          <provider editor-type-id="android-manifest" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-          <provider editor-type-id="android-designer2" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/CameraViewActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="144" column="37" selection-start-line="144" selection-start-column="37" selection-end-line="144" selection-end-column="37" />
-              <folding>
-                <element signature="class#2064:2581" />
-                <element signature="method#onCreate#0;class#CameraViewActivity#0" />
-                <element signature="method#startService#0;class#CameraViewActivity#0" />
-                <element signature="method#initLoadOpenCVLibs#0;class#CameraViewActivity#0" />
-                <element signature="method#loadEffect#0;class#CameraViewActivity#0" />
-                <element signature="e#6224#6251#0" />
-                <element signature="method#onActivityResult#0;class#CameraViewActivity#0" />
-                <element signature="e#4726#5370#1" />
-                <element signature="method#onCreateOptionsMenu#0;class#CameraViewActivity#0" />
-                <element signature="method#onCameraViewStarted#0;class#CameraViewActivity#0" />
-                <element signature="method#onCameraViewStopped#0;class#CameraViewActivity#0" />
-                <element signature="method#onCameraFrame#0;class#CameraViewActivity#0" />
-                <element signature="method#onStop#0;class#CameraViewActivity#0" />
-                <element signature="method#onPause#0;class#CameraViewActivity#0" />
-                <element signature="method#onDestroy#0;class#CameraViewActivity#0" />
-                <element signature="method#onResume#0;class#CameraViewActivity#0" />
-                <element signature="method#onClick#0;class#CameraViewActivity#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_welcome.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-          <provider editor-type-id="android-designer2" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/MainActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="959">
-              <caret line="169" column="31" selection-start-line="169" selection-start-column="31" selection-end-line="169" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#onCreate#0;class#MainActivity#0" />
-                <element signature="method#initView#0;class#MainActivity#0" />
-                <element signature="method#initViewPagerData#0;class#MainActivity#0" />
-                <element signature="class#MyViewPager#0;class#MainActivity#0" />
-                <element signature="method#instantiateItem#0;class#MyViewPager#0;class#MainActivity#0" />
-                <element signature="method#destroyItem#0;class#MyViewPager#0;class#MainActivity#0" />
-                <element signature="method#onPageScrolled#0;class#MainActivity#0" />
-                <element signature="method#onPageSelected#0;class#MainActivity#0" />
-                <element signature="method#onPageScrollStateChanged#0;class#MainActivity#0" />
-                <element signature="method#onDestroy#0;class#MainActivity#0" />
-                <element signature="method#onClick#0;class#MainActivity#0" />
-              </folding>
+            <state relative-caret-position="19">
+              <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -332,84 +112,71 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_camera_view.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="18" column="56" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
+            <state relative-caret-position="418">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
             </state>
           </provider>
           <provider editor-type-id="android-designer2" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ParticleSystem/Particle.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="44" column="35" selection-start-line="44" selection-start-column="35" selection-end-line="44" selection-end-column="35" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-v24/ic_launcher_foreground.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_welcome.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="76">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-              <folding>
-                <element signature="e#1048#1379#0" />
-                <element signature="e#1385#1846#0" />
-                <element signature="e#1852#2070#0" />
-                <element signature="e#2076#2365#0" />
-                <element signature="e#2370#2454#0" />
-                <element signature="e#2459#2656#0" />
-                <element signature="e#2661#2874#0" />
-                <element signature="e#2880#3271#0" />
-                <element signature="e#3276#3334#0" />
-                <element signature="e#3339#3424#0" />
-                <element signature="e#3429#3573#0" />
-                <element signature="e#3578#3744#0" />
-                <element signature="e#3750#3843#0" />
-                <element signature="e#3849#4367#0" />
-                <element signature="e#4372#5244#0" />
-                <element signature="e#5249#6080#0" />
-                <element signature="e#6085#6710#0" />
-                <element signature="e#6715#7281#0" />
-                <element signature="e#7286#7697#0" />
-                <element signature="e#7702#8405#0" />
-                <element signature="e#8411#9500#0" />
-                <element signature="e#9505#9817#0" />
-                <element signature="e#9822#10477#0" />
-                <element signature="e#10482#10863#0" />
-                <element signature="e#10869#11039#0" />
-              </folding>
+              <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/RepositoryUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
-              <folding>
-                <element signature="method#fileIsExists#0;class#Repository#0" />
-                <element signature="method#ReadTxtFile#0;class#Repository#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ParticleSystem/ParticleSystem.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="12" column="78" selection-start-line="12" selection-start-column="78" selection-end-line="12" selection-end-column="78" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#Configuration#0;class#ParticleSystem#0" />
-                <element signature="method#runSystem#0;class#ParticleSystem#0" />
-              </folding>
-            </state>
-          </provider>
+          <provider editor-type-id="android-designer2" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/camera_view_menus.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="152">
-              <caret line="8" column="46" lean-forward="true" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
+              <caret line="8" column="59" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
             </state>
           </provider>
           <provider editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+          <provider editor-type-id="android-manifest" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="14" column="43" lean-forward="true" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/xml/network_security_config.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -460,28 +227,17 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/Particle.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/Process.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/Blend.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/FaceDetection/MTCNN.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/Processable.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/IProvider.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/IProviderExpand.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/Recorder.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/Record.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ParticleSystem/Motion.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ParticleSystem/ParticleSystem.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ParticleSystem/Particle.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/TextureMovieEncoder.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/WelcomeActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/Qnuploadh.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/QnUploadHelper.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/VideoRecordManager.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/ScreenRecordService.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_camera_view.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/ScreenRecordService.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/Notifications.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/VideoEncoder.java" />
@@ -501,16 +257,27 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/FileUtils.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/RecordUtils.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/RecordFileUtils.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/RecordService.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/Process.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/HttpDownload.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/xml/network_security_config.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/Repository.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/RepositoryUtil.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/MainActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ParticleSystem/ParticleSystem.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/camera_view_menus.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ParticleSystem/Particle.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/Process.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/RecordService.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/WelcomeActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/RepositoryUtil.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/CameraViewActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ProcessModule/RecordService.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ParticleModule/Particle.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_camera_view.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_welcome.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/MainSystem/WelcomeActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
       </list>
     </option>
   </component>
@@ -529,6 +296,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane" />
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
@@ -546,6 +314,19 @@
               <item name="ParticleEffectCameraV3" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="F:\Android\workspace\ParticleEffectCameraV3" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="libs" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="ParticleEffectCameraV3" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="F:\Android\workspace\ParticleEffectCameraV3" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="libs" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="armeabi-v7a" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="ParticleEffectCameraV3" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="F:\Android\workspace\ParticleEffectCameraV3" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
@@ -580,7 +361,7 @@
               <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="EffectSystem" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="KeyPointModule" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="ParticleEffectCameraV3" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
@@ -590,7 +371,7 @@
               <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="ParticleEffectCamera" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="MainSystem" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="ParticleEffectCameraV3" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
@@ -600,7 +381,17 @@
               <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="ParticleSystem" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="ParticleModule" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="ParticleEffectCameraV3" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="F:\Android\workspace\ParticleEffectCameraV3" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="ProcessModule" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="ParticleEffectCameraV3" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
@@ -609,6 +400,15 @@
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="res" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="ParticleEffectCameraV3" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="F:\Android\workspace\ParticleEffectCameraV3" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="res" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="drawable" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="ParticleEffectCameraV3" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
@@ -635,18 +435,38 @@
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="res" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="xml" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="mipmap-anydpi-v26" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="ParticleEffectCameraV3" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="F:\Android\workspace\ParticleEffectCameraV3" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="gradle" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="openCVLibrary340" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="ParticleEffectCameraV3" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="F:\Android\workspace\ParticleEffectCameraV3" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="openCVLibrary340" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="ParticleEffectCameraV3" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="F:\Android\workspace\ParticleEffectCameraV3" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="openCVLibrary340" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="ParticleEffectCameraV3" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="F:\Android\workspace\ParticleEffectCameraV3" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="openCVLibrary340" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -767,48 +587,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581334704039</updated>
-    </task>
-    <task id="LOCAL-00001" summary="YES">
-      <created>1581337380746</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1581337380746</updated>
-    </task>
-    <task id="LOCAL-00002" summary="YES">
-      <created>1581338418211</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1581338418211</updated>
-    </task>
-    <task id="LOCAL-00003" summary="YES">
-      <created>1581340301017</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1581340301017</updated>
-    </task>
-    <task id="LOCAL-00004" summary="YES">
-      <created>1581340482311</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1581340482311</updated>
-    </task>
-    <task id="LOCAL-00005" summary="change list add to welcome activity">
-      <created>1581352675124</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1581352675124</updated>
-    </task>
-    <task id="LOCAL-00006" summary="modular the process part and improve the effiency to&#10;picture process fps_8&#10;particle effect process fps_4.5&#10;pure process fps_8.5">
-      <created>1581360617396</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1581360617396</updated>
     </task>
     <task id="LOCAL-00007" summary="a small test">
       <created>1581361086733</created>
@@ -1090,7 +868,70 @@
       <option name="project" value="LOCAL" />
       <updated>1587398175690</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Final draft version of Particle Effect Camera">
+      <created>1587457543959</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1587457543960</updated>
+    </task>
+    <task id="LOCAL-00048" summary="New effect love">
+      <created>1587534504674</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1587534504674</updated>
+    </task>
+    <task id="LOCAL-00049" summary="add some explain and set reconfiguration in right method">
+      <created>1587817255820</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1587817255820</updated>
+    </task>
+    <task id="LOCAL-00050" summary="add some explain and set reconfiguration in right method">
+      <created>1588236704482</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1588236704483</updated>
+    </task>
+    <task id="LOCAL-00051" summary="add some explain and set reconfiguration in right method">
+      <created>1588238205059</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1588238205059</updated>
+    </task>
+    <task id="LOCAL-00052" summary="add some explain and set reconfiguration in right method">
+      <created>1588253740464</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1588253740464</updated>
+    </task>
+    <task id="LOCAL-00053" summary="add new effect select menu">
+      <created>1588260779221</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1588260779221</updated>
+    </task>
+    <task id="LOCAL-00054" summary="finish effect repository function">
+      <created>1588262522386</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1588262522386</updated>
+    </task>
+    <task id="LOCAL-00055" summary="comlete download method in Util class">
+      <created>1588327288033</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1588327288033</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1103,12 +944,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1858" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="1" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.49833888" visible="true" weight="0.1673774" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.49833888" visible="true" weight="0.17463848" />
       <window_info id="Structure" order="3" sideWeight="0.5016611" side_tool="true" weight="0.32995737" />
       <window_info id="Build Variants" order="4" side_tool="true" />
       <window_info id="Image Layers" order="5" />
@@ -1116,15 +957,15 @@
       <window_info id="Resources Explorer" order="7" />
       <window_info id="Favorites" order="8" side_tool="true" />
       <window_info id="simpleUML" order="9" weight="0.7107496" />
-      <window_info anchor="bottom" id="Run" order="0" weight="0.32739422" />
+      <window_info anchor="bottom" id="Run" order="0" visible="true" weight="0.3272921" />
       <window_info anchor="bottom" id="TODO" order="1" weight="0.32825485" />
       <window_info anchor="bottom" id="Android Profiler" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" />
       <window_info anchor="bottom" id="Terminal" order="4" weight="0.32962137" />
       <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.5026652" side_tool="true" weight="0.596882" />
-      <window_info anchor="bottom" id="Version Control" order="6" weight="0.32925472" />
-      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49946696" weight="0.38864142" />
-      <window_info anchor="bottom" id="Logcat" order="8" sideWeight="0.49733475" weight="0.7817372" />
+      <window_info anchor="bottom" id="Version Control" order="6" weight="0.32850778" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49946696" weight="0.38752785" />
+      <window_info anchor="bottom" id="Logcat" order="8" sideWeight="0.49733475" weight="0.32516703" />
       <window_info anchor="bottom" id="Messages" order="9" weight="0.32962137" />
       <window_info anchor="bottom" id="Find" order="10" sideWeight="0.49946696" weight="0.32739422" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
@@ -1188,12 +1029,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="a finish version of the simple particle effect system" />
-    <MESSAGE value="change the location which makes it more structurly right" />
-    <MESSAGE value="a new particle effect" />
-    <MESSAGE value="minfacesize to 120" />
-    <MESSAGE value="processing time add" />
-    <MESSAGE value="better performance of FPS" />
     <MESSAGE value="Best two ways to optimize FPS in OnCameraView()" />
     <MESSAGE value="a finish version of the" />
     <MESSAGE value="25fps with 3 effects" />
@@ -1213,69 +1048,33 @@
     <MESSAGE value="All rebuild and next Internet" />
     <MESSAGE value="Android 9 access non-http url" />
     <MESSAGE value="rebuild particle effect selecting1" />
-    <option name="LAST_COMMIT_MESSAGE" value="rebuild particle effect selecting1" />
+    <MESSAGE value="Final draft version of Particle Effect Camera" />
+    <MESSAGE value="New effect love" />
+    <MESSAGE value="add some explain and set reconfiguration in right method" />
+    <MESSAGE value="add new effect select menu" />
+    <MESSAGE value="finish effect repository function" />
+    <MESSAGE value="comlete download method in Util class" />
+    <option name="LAST_COMMIT_MESSAGE" value="comlete download method in Util class" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/ParticleModule/Particle.java</url>
+          <line>422</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/MainSystem/CameraViewActivity.java</url>
+          <line>181</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/app/libs/qiniu-android-sdk-7.5.2.jar!/com/qiniu/android/http/MultipartBody.class" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/QnUploadHelper.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/VideoRecordManager.java" />
-    <entry file="file://$PROJECT_DIR$/app/app.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2527">
-          <caret line="133" column="63" selection-start-line="133" selection-start-column="63" selection-end-line="133" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/FaceDetection/Box.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/FaceDetection/MTCNN.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2660">
-          <caret line="140" column="32" selection-start-line="140" selection-start-column="32" selection-end-line="140" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/proguard-rules.pro">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/ScreenRecordService.java" />
-    <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gradlew.bat">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gradlew">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gradle.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/ScreenRecordService.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/AudioEncoder.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/Utils.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/ScreenRecorder.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/VideoEncoder.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/BaseEncoder.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/Encoder.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/MicRecorder.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/Notifications.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/VideoEncodeConfig.java" />
@@ -1283,6 +1082,14 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/RecordApplication.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/RecordApplication.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/Recorder.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/TalScreenParams.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/FileUtils.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/ParticleDraw.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/Blend.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/HttpDownload.java" />
+    <entry file="file://$PROJECT_DIR$/app/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
@@ -1292,116 +1099,78 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+        <state>
+          <caret column="39" selection-start-column="39" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/TalScreenParams.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/FileUtils.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/ParticleDraw.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/Blend.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/HttpDownload.java" />
-    <entry file="file://$PROJECT_DIR$/app/.gitignore">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/Process.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/a36799.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/backgr.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/biglogo.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/button_circle_shape.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/RecordService.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/dot.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/icona.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/logo.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_background.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3458">
-          <caret line="212" column="45" selection-start-line="212" selection-start-column="45" selection-end-line="212" selection-end-column="45" />
-        </state>
+        <state relative-caret-position="-912" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/RecordFileUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="26" column="7" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/pg1.jpg">
+      <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/xml/network_security_config.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="android-designer2" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/pg2.jpg">
+      <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/RecordUtils.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/pg3.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/white.bmp">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ParticleModule/Particle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="191" column="13" selection-start-line="191" selection-start-column="13" selection-end-line="191" selection-end-column="13" />
+        <state relative-caret-position="183">
+          <caret line="354" column="45" selection-start-line="354" selection-start-column="45" selection-end-line="354" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/Process.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ParticleModule/ParticleSystem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="28" column="72" lean-forward="true" selection-start-line="28" selection-start-column="72" selection-end-line="28" selection-end-column="72" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/WelcomeActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="19" column="32" lean-forward="true" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/RepositoryUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
-          <folding>
-            <element signature="method#fileIsExists#0;class#Repository#0" />
-            <element signature="method#ReadTxtFile#0;class#Repository#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ParticleSystem/Particle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="e#1048#1379#0" />
-            <element signature="e#1385#1846#0" />
-            <element signature="e#1852#2070#0" />
-            <element signature="e#2076#2365#0" />
-            <element signature="e#2370#2454#0" />
-            <element signature="e#2459#2656#0" />
-            <element signature="e#2661#2874#0" />
-            <element signature="e#2880#3271#0" />
-            <element signature="e#3276#3334#0" />
-            <element signature="e#3339#3424#0" />
-            <element signature="e#3429#3573#0" />
-            <element signature="e#3578#3744#0" />
-            <element signature="e#3750#3843#0" />
-            <element signature="e#3849#4367#0" />
-            <element signature="e#4372#5244#0" />
-            <element signature="e#5249#6080#0" />
-            <element signature="e#6085#6710#0" />
-            <element signature="e#6715#7281#0" />
-            <element signature="e#7286#7697#0" />
-            <element signature="e#7702#8405#0" />
-            <element signature="e#8411#9500#0" />
-            <element signature="e#9505#9817#0" />
-            <element signature="e#9822#10477#0" />
-            <element signature="e#10482#10863#0" />
-            <element signature="e#10869#11039#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ParticleSystem/ParticleSystem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="78" selection-start-line="12" selection-start-column="78" selection-end-line="12" selection-end-column="78" />
+        <state relative-caret-position="114">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#Configuration#0;class#ParticleSystem#0" />
@@ -1410,13 +1179,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ProcessModule/RecordFileUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="959">
-          <caret line="169" column="31" selection-start-line="169" selection-start-column="31" selection-end-line="169" selection-end-column="31" />
+        <state relative-caret-position="19">
+          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ProcessModule/RecordService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="234" column="74" selection-start-line="234" selection-start-column="74" selection-end-line="234" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ProcessModule/RecordUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="871">
+          <caret line="151" column="43" selection-start-line="151" selection-start-column="43" selection-end-line="151" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#onCreate#0;class#MainActivity#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ProcessModule/RepositoryUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="79" column="78" selection-start-line="79" selection-start-column="78" selection-end-line="79" selection-end-column="78" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#fileIsExists#0;class#RepositoryUtil#0" />
+            <element signature="method#ReadTxtFile#0;class#RepositoryUtil#0" />
+            <element signature="method#ReadListFile#0;class#RepositoryUtil#0" />
+            <element signature="method#delete#0;class#RepositoryUtil#0" />
+            <element signature="method#download#0;class#RepositoryUtil#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/MainSystem/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#initView#0;class#MainActivity#0" />
             <element signature="method#initViewPagerData#0;class#MainActivity#0" />
             <element signature="class#MyViewPager#0;class#MainActivity#0" />
@@ -1431,52 +1238,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_welcome.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_camera_view.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/MainSystem/CameraViewActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
-          <caret line="18" column="56" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/camera_view_menus.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="46" lean-forward="true" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="28" column="19" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/CameraViewActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="144" column="37" selection-start-line="144" selection-start-column="37" selection-end-line="144" selection-end-column="37" />
+          <caret line="66" column="56" lean-forward="true" selection-start-line="66" selection-start-column="56" selection-end-line="66" selection-end-column="56" />
           <folding>
-            <element signature="class#2064:2581" />
+            <element signature="imports" expanded="true" />
             <element signature="method#onCreate#0;class#CameraViewActivity#0" />
+            <element signature="method#setEffectMenu#0;class#CameraViewActivity#0" />
             <element signature="method#startService#0;class#CameraViewActivity#0" />
             <element signature="method#initLoadOpenCVLibs#0;class#CameraViewActivity#0" />
+            <element signature="method#process#0;class#CameraViewActivity#0" />
+            <element signature="method#cacheEffect#0;class#CameraViewActivity#0" />
+            <element signature="method#effectLoad#0;class#CameraViewActivity#0" />
             <element signature="method#loadEffect#0;class#CameraViewActivity#0" />
-            <element signature="e#6224#6251#0" />
+            <element signature="method#pureProcess#0;class#CameraViewActivity#0" />
+            <element signature="method#particleSystemProcess#0;class#CameraViewActivity#0" />
             <element signature="method#onActivityResult#0;class#CameraViewActivity#0" />
-            <element signature="e#4726#5370#1" />
             <element signature="method#onCreateOptionsMenu#0;class#CameraViewActivity#0" />
+            <element signature="method#onOptionsItemSelected#0;class#CameraViewActivity#0" />
             <element signature="method#onCameraViewStarted#0;class#CameraViewActivity#0" />
             <element signature="method#onCameraViewStopped#0;class#CameraViewActivity#0" />
             <element signature="method#onCameraFrame#0;class#CameraViewActivity#0" />
@@ -1486,6 +1266,99 @@
             <element signature="method#onResume#0;class#CameraViewActivity#0" />
             <element signature="method#onClick#0;class#CameraViewActivity#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/MainSystem/WelcomeActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="32" column="21" lean-forward="true" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#initEffectList#0;class#WelcomeActivity#0" />
+            <element signature="method#downloadEffectImage#0;class#WelcomeActivity#0" />
+            <element signature="method#onDestroy#0;class#WelcomeActivity#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/KeyPointModule/MTCNN.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="871">
+          <caret line="145" column="17" selection-start-line="145" selection-start-column="17" selection-end-line="145" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/KeyPointModule/Box.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/KeyPointModule/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/camera_view_menus.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="59" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/xml/network_security_config.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-v24/ic_launcher_foreground.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_camera_view.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_welcome.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="44" column="35" selection-start-line="44" selection-start-column="35" selection-end-line="44" selection-end-column="35" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="14" column="43" lean-forward="true" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
         </state>
       </provider>
     </entry>
