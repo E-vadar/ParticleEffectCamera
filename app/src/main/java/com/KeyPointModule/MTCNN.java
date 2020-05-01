@@ -1,4 +1,4 @@
-package com.FaceDetection;
+package com.KeyPointModule;
 
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;

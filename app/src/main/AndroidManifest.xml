@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.ParticleEffectCamera">
+    package="com.MainSystem">
     <!-- 拍照 -->
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -16,18 +16,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:networkSecurityConfig="@xml/network_security_config">
-        <activity android:name=".MainActivity"
+        <activity android:name="com.MainSystem.MainActivity"
             android:screenOrientation="portrait"></activity>
-        <activity android:name=".CameraViewActivity"
+        <activity android:name="com.MainSystem.CameraViewActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name=".WelcomeActivity"
+        <activity android:name="com.MainSystem.WelcomeActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <service android:name="com.EffectSystem.RecordService"/>
+        <service android:name="com.ProcessModule.RecordService"/>
     </application>
 
 </manifest>

@@ -1,15 +1,13 @@
-package com.ParticleEffectCamera;
+package com.MainSystem;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import android.app.DownloadManager;
 import android.content.ComponentName;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.IBinder;
@@ -28,22 +26,19 @@ import org.opencv.android.Utils;
 import org.opencv.core.Mat;
 import android.util.Log;
 import android.widget.Toast;
-import com.EffectSystem.RecordFileUtils;
-import com.EffectSystem.RecordService;
-import com.EffectSystem.RecordUtils;
-import com.EffectSystem.RepositoryUtil;
-import com.FaceDetection.Box;
-import com.FaceDetection.MTCNN;
-import com.ParticleSystem.ParticleSystem;
+import com.ProcessModule.RecordFileUtils;
+import com.ProcessModule.RecordService;
+import com.ProcessModule.RecordUtils;
+import com.ProcessModule.RepositoryUtil;
+import com.KeyPointModule.Box;
+import com.KeyPointModule.MTCNN;
+import com.ParticleModule.ParticleSystem;
 import java.util.Vector;
 import static org.opencv.core.Core.flip;
 import static org.opencv.core.Core.transpose;
-
-import static org.opencv.imgproc.Imgproc.circle;
-import org.opencv.core.Point;
-import org.opencv.core.Scalar;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import static org.opencv.imgproc.Imgproc.circle;
 
 public class CameraViewActivity extends AppCompatActivity implements CameraBridgeViewBase.CvCameraViewListener2, View.OnClickListener{
     String TAG="CameraViewActivity";
@@ -171,19 +166,13 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
         }
     }
 
-    //Download particle effect templates from web server
     private void cacheEffect(String effectName){
         if(effectName.startsWith("C")){
             Toast.makeText(CameraViewActivity.this, "敬请期待！", Toast.LENGTH_SHORT).show();
         } else {
-            String effectFullName = effectName + ".txt";
-            if(RepositoryUtil.fileIsExists(Environment.getExternalStorageDirectory()+"/download/" + effectFullName)){
-                loadEffect(RepositoryUtil.ReadTxtFile(Environment.getExternalStorageDirectory()+"/download/" + effectFullName));
+            if(RepositoryUtil.download(2, effectName, this)){
+                loadEffect(RepositoryUtil.ReadTxtFile(Environment.getExternalStorageDirectory()+"/download/" + effectName + ".txt"));
             } else {
-                DownloadManager.Request request = new DownloadManager.Request(Uri.parse("http://q91np8f4n.bkt.clouddn.com/template/" + effectFullName));
-                request.setDestinationInExternalPublicDir("/download/", effectFullName);
-                DownloadManager downloadManager= (DownloadManager)getSystemService(CameraViewActivity.DOWNLOAD_SERVICE);
-                downloadManager.enqueue(request);
                 Toast.makeText(CameraViewActivity.this, "开始下载:" + effectName + ",请再次点击启动模板", Toast.LENGTH_SHORT).show();
             }
         }
@@ -280,8 +269,8 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
     private void pureProcess(Mat frame,Bitmap bm,Vector<Box> boxes){
         try {
             for (int i=0;i<boxes.size();i++){
-                com.FaceDetection.Utils.drawRect(bm,boxes.get(i).transform2Rect());
-                com.FaceDetection.Utils.drawPoints(bm,boxes.get(i).landmark);
+                com.KeyPointModule.Utils.drawRect(bm,boxes.get(i).transform2Rect());
+                com.KeyPointModule.Utils.drawPoints(bm,boxes.get(i).landmark);
             }
             Utils.bitmapToMat(bm,frame);
         }catch (Exception e){

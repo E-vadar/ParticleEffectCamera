@@ -1,4 +1,4 @@
-package com.EffectSystem;
+package com.ProcessModule;
 
 import android.app.Service;
 import android.content.Intent;
@@ -20,7 +20,7 @@ import android.os.Build;
 import android.content.Context;
 import androidx.annotation.RequiresApi;
 import android.annotation.TargetApi;
-import com.ParticleEffectCamera.CameraViewActivity;
+import com.MainSystem.CameraViewActivity;
 
 //首先呢实现的是Handle.Callback接口 主要是做时间及计时时间回调的,会重新写HandleMessage方法,其实我个觉得跟在括号{} 里面重写没啥区别就是简洁页面
 public class RecordService extends Service implements Handler.Callback {

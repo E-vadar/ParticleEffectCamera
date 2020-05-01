@@ -1,4 +1,4 @@
-package com.ParticleSystem;
+package com.ParticleModule;
 
 import android.graphics.Point;
 import java.util.ArrayDeque;

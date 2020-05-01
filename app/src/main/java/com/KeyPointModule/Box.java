@@ -1,4 +1,4 @@
-package com.FaceDetection;
+package com.KeyPointModule;
 
 import android.graphics.Point;
 import android.graphics.Rect;

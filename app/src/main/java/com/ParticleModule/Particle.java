@@ -1,4 +1,4 @@
-package com.ParticleSystem;
+package com.ParticleModule;
 
 import org.opencv.core.Point;
 import org.opencv.core.Scalar;

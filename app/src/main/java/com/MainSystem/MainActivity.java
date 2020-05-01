@@ -1,4 +1,4 @@
-package com.ParticleEffectCamera;
+package com.MainSystem;
 
 import android.content.Intent;
 import android.os.Bundle;

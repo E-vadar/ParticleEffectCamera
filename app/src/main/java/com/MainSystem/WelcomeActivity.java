@@ -1,15 +1,13 @@
-package com.ParticleEffectCamera;
+package com.MainSystem;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import android.Manifest;
 import android.annotation.SuppressLint;
-import android.app.DownloadManager;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
@@ -17,7 +15,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.view.WindowManager;
 import android.widget.Toast;
-import com.EffectSystem.RepositoryUtil;
+import com.ProcessModule.RepositoryUtil;
 import org.opencv.android.OpenCVLoader;
 import java.util.ArrayList;
 
@@ -58,34 +56,25 @@ public class WelcomeActivity extends AppCompatActivity {
         initLoadOpenCVLibs();
         handler.sendMessageDelayed(Message.obtain(),5000);
     }
+
     private void initLoadOpenCVLibs() {
         boolean success= OpenCVLoader.initDebug();
     }
 
     private void initEffectList(){
-        if(RepositoryUtil.fileIsExists(Environment.getExternalStorageDirectory()+"/download/List.txt")){
+        if(RepositoryUtil.download(0, "List", this)){
             RepositoryUtil.ReadListFile(Environment.getExternalStorageDirectory()+"/download/List.txt");
             for(int i=0;i<WelcomeActivity.effectList.size();i++){
                 downloadEffectImage(WelcomeActivity.effectList.get(i));
             }
             Toast.makeText(WelcomeActivity.this, "更新粒子特效目录完成！", Toast.LENGTH_SHORT).show();
         } else {
-            DownloadManager.Request request = new DownloadManager.Request(Uri.parse("http://q91np8f4n.bkt.clouddn.com/List.txt"));
-            request.setDestinationInExternalPublicDir("/download/","List.txt");
-            DownloadManager downloadManager= (DownloadManager)getSystemService(CameraViewActivity.DOWNLOAD_SERVICE);
-            downloadManager.enqueue(request);
             Toast.makeText(WelcomeActivity.this, "正在更新粒子特效目录！", Toast.LENGTH_SHORT).show();
         }
     }
-    private void downloadEffectImage(String effectName){
-        if(RepositoryUtil.fileIsExists(Environment.getExternalStorageDirectory()+"/download/" + effectName + ".png")){
 
-        } else {
-            DownloadManager.Request request = new DownloadManager.Request(Uri.parse("http://q91np8f4n.bkt.clouddn.com/image/" + effectName + ".png"));
-            request.setDestinationInExternalPublicDir("/download/",effectName + ".png");
-            DownloadManager downloadManager= (DownloadManager)getSystemService(CameraViewActivity.DOWNLOAD_SERVICE);
-            downloadManager.enqueue(request);
-        }
+    private void downloadEffectImage(String effectName){
+        RepositoryUtil.download(1, effectName, this);
     }
 
     @Override
