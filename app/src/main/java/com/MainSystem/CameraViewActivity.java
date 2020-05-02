@@ -17,16 +17,16 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.SurfaceView;
 import android.view.View;
-import android.view.Window;
 import android.view.WindowManager;
 import android.widget.RadioButton;
 import org.opencv.android.CameraBridgeViewBase;
 import org.opencv.android.JavaCameraView;
-import org.opencv.android.OpenCVLoader;
 import org.opencv.android.Utils;
 import org.opencv.core.Mat;
 import android.util.Log;
 import android.widget.Toast;
+
+import com.KeyPointModule.FaceUtils;
 import com.ProcessModule.RecordFileUtils;
 import com.ProcessModule.RecordService;
 import com.ProcessModule.RecordUtils;
@@ -242,8 +242,8 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
     private void pureProcess(Mat frame,Bitmap bm,Vector<Box> boxes){
         try {
             for (int i=0;i<boxes.size();i++){
-                com.KeyPointModule.Utils.drawRect(bm,boxes.get(i).transform2Rect());
-                com.KeyPointModule.Utils.drawPoints(bm,boxes.get(i).landmark);
+                FaceUtils.drawRect(bm,boxes.get(i).transform2Rect());
+                FaceUtils.drawPoints(bm,boxes.get(i).landmark);
             }
             Utils.bitmapToMat(bm,frame);
         }catch (Exception e){
