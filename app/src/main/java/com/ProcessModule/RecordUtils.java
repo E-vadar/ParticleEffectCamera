@@ -123,4 +123,5 @@ public class RecordUtils {
         void onBeforeShowAnim();
         void onAfterHideAnim();
     }
+
 }
