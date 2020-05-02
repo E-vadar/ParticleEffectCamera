@@ -8,7 +8,6 @@ import android.media.projection.MediaProjectionManager;
 import android.os.Build;
 import android.util.Log;
 import android.widget.Toast;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,18 +15,16 @@ public class RecordUtils {
     private static RecordService s_ScreenRecordService;
     private static List<RecordListener> s_RecordListener = new ArrayList<>();
     private static List<OnPageRecordListener> s_PageRecordListener = new ArrayList<>();
-    //true,录制结束的提示语正在显示
     public static boolean s_IsRecordingTipShowing = false;
-    /**
-     * 录屏功能 5.0+ 的手机才能使用
-     * @return
-     */
+
     public static boolean isScreenRecordEnable(){
         return Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP ;
     }
+
     public static void setScreenService(RecordService screenService){
         s_ScreenRecordService = screenService;
     }
+
     public static void clear(){
         if ( isScreenRecordEnable() && s_ScreenRecordService != null){
             s_ScreenRecordService.clearAll();
@@ -40,9 +37,7 @@ public class RecordUtils {
             s_PageRecordListener.clear();
         }
     }
-    /**
-     * 开始录制
-     */
+
     public static void startScreenRecord(Activity activity, int requestCode) {
         if (isScreenRecordEnable()){
             if (s_ScreenRecordService != null && !s_ScreenRecordService.ismIsRunning()){
@@ -53,10 +48,9 @@ public class RecordUtils {
                         Intent intent = mediaProjectionManager.createScreenCaptureIntent();
                         PackageManager packageManager = activity.getPackageManager();
                         if (packageManager.resolveActivity(intent, PackageManager.MATCH_DEFAULT_ONLY) != null){
-                            //存在录屏授权的Activity
                             activity.startActivityForResult(intent,requestCode);
                         }else {
-                            Toast.makeText(activity, "不能录音", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(activity, "No music", Toast.LENGTH_SHORT).show();
                         }
                     }
                 } else {
@@ -65,11 +59,7 @@ public class RecordUtils {
             }
         }
     }
-    /**
-     * 获取用户允许录屏后，设置必要的数据
-     * @param resultCode
-     * @param resultData
-     */
+
     public static void setUpData(int resultCode,Intent resultData) throws Exception{
         if (isScreenRecordEnable()){
             if (s_ScreenRecordService != null && !s_ScreenRecordService.ismIsRunning()){
@@ -78,50 +68,35 @@ public class RecordUtils {
             }
         }
     }
-    /**
-     * 停止录制
-     */
+
     public static void stopScreenRecord(Context context){
         if (isScreenRecordEnable()){
             if (s_ScreenRecordService != null && s_ScreenRecordService.ismIsRunning()){
-                String str = "停止录制";
+                String str = "Stop record";
                 s_ScreenRecordService.stopRecord(str);
             }
         }
     }
-    /**
-     * 获取录制后的文件地址
-     * @return
-     */
+
     public static String getScreenRecordFilePath(){
         if (isScreenRecordEnable() && s_ScreenRecordService!= null) {
             return s_ScreenRecordService.getRecordFilePath();
         }
         return null;
     }
-    /**
-     * 判断当前是否在录制
-     * @return
-     */
+
     public static boolean isCurrentRecording(){
         if (isScreenRecordEnable() && s_ScreenRecordService!= null) {
             return s_ScreenRecordService.ismIsRunning();
         }
         return false;
     }
-    /**
-     * true,录制结束的提示语正在显示
-     * @return
-     */
     public static boolean isRecodingTipShow(){
         return s_IsRecordingTipShowing;
     }
     public static void setRecordingStatus(boolean isShow){
         s_IsRecordingTipShowing = isShow;
     }
-    /**
-     * 系统正在录屏，app 录屏会有冲突，清理掉一些数据
-     */
     public static void clearRecordElement(){
         if (isScreenRecordEnable()){
             if (s_ScreenRecordService != null ){
@@ -177,6 +152,7 @@ public class RecordUtils {
             }
         }
     }
+
     public static void startRecord(){
         if (s_RecordListener.size() > 0 ){
             for (RecordListener listener : s_RecordListener){
@@ -185,6 +161,7 @@ public class RecordUtils {
             }
         }
     }
+
     public static void pauseRecord(){
         if (s_RecordListener.size() > 0 ){
             for (RecordListener listener : s_RecordListener){
@@ -199,6 +176,7 @@ public class RecordUtils {
             }
         }
     }
+
     public static void onRecording(String timeTip){
         if (s_RecordListener.size() > 0 ){
             for (RecordListener listener : s_RecordListener){
@@ -206,6 +184,7 @@ public class RecordUtils {
             }
         }
     }
+
     public static void stopRecord(String stopTip){
         if (s_RecordListener.size() > 0 ){
             for (RecordListener listener : s_RecordListener){
@@ -213,6 +192,7 @@ public class RecordUtils {
             }
         }
     }
+
     public interface RecordListener{
         void onStartRecord();
         void onPauseRecord();
@@ -220,6 +200,7 @@ public class RecordUtils {
         void onStopRecord(String stopTip);
         void onRecording(String timeTip);
     }
+
     public interface OnPageRecordListener {
         void onStartRecord();
         void onStopRecord();
