@@ -13,12 +13,12 @@
         android:id="@+id/record_btn"
         android:layout_width="75dp"
         android:layout_height="75dp"
-        android:layout_marginLeft="150dp"
-        android:layout_marginTop="580dp"
+        android:layout_marginLeft="142dp"
+        android:layout_marginTop="675dp"
         android:background="@drawable/button_circle_shape"
         android:onClick="onClick"
         android:text="Record"
-        android:textSize="15sp" />
+        android:textSize="12sp" />
 
 
     <org.opencv.android.JavaCameraView
@@ -63,7 +63,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="0dp">
+        android:layout_marginBottom="60dp">
 
         <LinearLayout
             android:id="@+id/scroll"

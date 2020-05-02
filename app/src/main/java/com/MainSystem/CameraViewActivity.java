@@ -22,6 +22,7 @@ import org.opencv.android.JavaCameraView;
 import org.opencv.android.Utils;
 import org.opencv.core.Mat;
 import android.util.Log;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 import com.KeyPointModule.FaceUtils;
 import com.ProcessModule.RecordFileUtils;
@@ -108,8 +109,8 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
             btn.setId(i);
             Drawable drawable = Drawable.createFromPath(Environment.getExternalStorageDirectory()+"/download/" + WelcomeActivity.effectList.get(i) + ".png");
             btn.setBackground(drawable);
-            btn.setHeight(250);
-            btn.setWidth(100);
+            btn.setHeight(200);
+            btn.setWidth(75);
             btn.setText(WelcomeActivity.effectList.get(i));
             btn.setTextSize(12);
             btn.setOnClickListener(new Button.OnClickListener() {
@@ -345,6 +346,9 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
     @Override
     public void onClick(View v) {
         int id = v.getId();
+        LinearLayout linear = (LinearLayout)findViewById(R.id.scroll);
+        RadioGroup radio = (RadioGroup)findViewById(R.id.radioGroup);
+        Button btn = (Button)findViewById(R.id.record_btn);
         if(id == R.id.frontCameraOption) {
             cameraIndex = 1;
         } else if(id == R.id.backCameraOption) {
@@ -355,6 +359,9 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
                 Log.i(TAG, "onClick: " + RecordUtils.getScreenRecordFilePath());
                 Toast.makeText(CameraViewActivity.this, "Record stop", Toast.LENGTH_SHORT).show();
                 recording = false;
+                linear.setVisibility(View.VISIBLE);
+                radio.setVisibility(View.VISIBLE);
+                btn.setText("Record");
             } else {
                 if (RecordFileUtils.getFreeMem(CameraViewActivity.this) < 100) {
                     Toast.makeText(CameraViewActivity.this, "Not enough space", Toast.LENGTH_SHORT).show();
@@ -363,6 +370,9 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
                 RecordUtils.startScreenRecord(CameraViewActivity.this, REQUEST_ALLOW);
                 Toast.makeText(CameraViewActivity.this, "Record start", Toast.LENGTH_SHORT).show();
                 recording = true;
+                linear.setVisibility(View.INVISIBLE);
+                radio.setVisibility(View.INVISIBLE);
+                btn.setText("Stop");
             }
         }
         mcameraView.setCameraIndex(cameraIndex);
