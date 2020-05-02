@@ -15,7 +15,6 @@ public class RecordUtils {
     private static RecordService s_ScreenRecordService;
     private static List<RecordListener> s_RecordListener = new ArrayList<>();
     private static List<OnPageRecordListener> s_PageRecordListener = new ArrayList<>();
-    public static boolean s_IsRecordingTipShowing = false;
 
     public static boolean isScreenRecordEnable(){
         return Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP ;
@@ -85,94 +84,11 @@ public class RecordUtils {
         return null;
     }
 
-    public static boolean isCurrentRecording(){
-        if (isScreenRecordEnable() && s_ScreenRecordService!= null) {
-            return s_ScreenRecordService.ismIsRunning();
-        }
-        return false;
-    }
-    public static boolean isRecodingTipShow(){
-        return s_IsRecordingTipShowing;
-    }
-    public static void setRecordingStatus(boolean isShow){
-        s_IsRecordingTipShowing = isShow;
-    }
-    public static void clearRecordElement(){
-        if (isScreenRecordEnable()){
-            if (s_ScreenRecordService != null ){
-                s_ScreenRecordService.clearRecordElement();
-            }
-        }
-    }
-    public static void addRecordListener(RecordListener listener){
-        if (listener != null && !s_RecordListener.contains(listener)){
-            s_RecordListener.add(listener);
-        }
-    }
-    public static void removeRecordListener(RecordListener listener){
-        if (listener != null && s_RecordListener.contains(listener)){
-            s_RecordListener.remove(listener);
-        }
-    }
-    public static void addPageRecordListener( OnPageRecordListener listener){
-        if (listener != null && !s_PageRecordListener.contains(listener)){
-            s_PageRecordListener.add(listener);
-        }
-    }
-    public static void removePageRecordListener( OnPageRecordListener listener){
-        if (listener != null && s_PageRecordListener.contains(listener)){
-            s_PageRecordListener.remove(listener);
-        }
-    }
-    public static void onPageRecordStart(){
-        if (s_PageRecordListener!= null && s_PageRecordListener.size() > 0 ){
-            for (OnPageRecordListener listener : s_PageRecordListener){
-                listener.onStartRecord();
-            }
-        }
-    }
-    public static void onPageRecordStop(){
-        if (s_PageRecordListener!= null && s_PageRecordListener.size() > 0 ){
-            for (OnPageRecordListener listener : s_PageRecordListener){
-                listener.onStopRecord();
-            }
-        }
-    }
-    public static void onPageBeforeShowAnim(){
-        if (s_PageRecordListener!= null && s_PageRecordListener.size() > 0 ){
-            for (OnPageRecordListener listener : s_PageRecordListener){
-                listener.onBeforeShowAnim();
-            }
-        }
-    }
-    public static void onPageAfterHideAnim(){
-        if (s_PageRecordListener!= null && s_PageRecordListener.size() > 0 ){
-            for (OnPageRecordListener listener : s_PageRecordListener){
-                listener.onAfterHideAnim();
-            }
-        }
-    }
-
     public static void startRecord(){
         if (s_RecordListener.size() > 0 ){
             for (RecordListener listener : s_RecordListener){
                 listener.onStartRecord();
                 Log.i("xxx", "startRecord: ");
-            }
-        }
-    }
-
-    public static void pauseRecord(){
-        if (s_RecordListener.size() > 0 ){
-            for (RecordListener listener : s_RecordListener){
-                listener.onPauseRecord();
-            }
-        }
-    }
-    public static void resumeRecord(){
-        if (s_RecordListener.size() > 0 ){
-            for (RecordListener listener : s_RecordListener){
-                listener.onResumeRecord();
             }
         }
     }
