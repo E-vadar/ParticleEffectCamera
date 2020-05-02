@@ -13,8 +13,6 @@ import android.os.Environment;
 import android.os.IBinder;
 import android.os.StrictMode;
 import android.util.DisplayMetrics;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.SurfaceView;
 import android.view.View;
 import android.view.WindowManager;
@@ -25,7 +23,6 @@ import org.opencv.android.Utils;
 import org.opencv.core.Mat;
 import android.util.Log;
 import android.widget.Toast;
-
 import com.KeyPointModule.FaceUtils;
 import com.ProcessModule.RecordFileUtils;
 import com.ProcessModule.RecordService;
@@ -57,7 +54,7 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
     public static int height;
     public static int DPI;
     private final int REQUEST_ALLOW = 100;
-    Button effectbtn[] = new Button[15];
+    Button effectbtn[] = new Button[20];
     private ServiceConnection mConnection = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
@@ -130,17 +127,30 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
         bindService(intent, mConnection, BIND_AUTO_CREATE);
     }
 
-
     private void process(Mat frame) {
         if(option == 0){
         } else {
             Utils.matToBitmap(frame,bitmap);
             Vector<Box> boxes=mtcnn.detectFaces(bitmap,150+cameraIndex*150);
             if(option == 1){
-                pureProcess(frame,bitmap,boxes);
+                try {
+                    for (int i=0;i<boxes.size();i++){
+                        FaceUtils.drawRect(bitmap,boxes.get(i).transform2Rect());
+                        FaceUtils.drawPoints(bitmap,boxes.get(i).landmark);
+                    }
+                    Utils.bitmapToMat(bitmap,frame);
+                }catch (Exception e){
+                }
             } else {
                 //circle(frame,new Point(300,300),1000,new Scalar(255,255,255),-1);
-                particleSystemProcess(frame,boxes,t);
+                try {
+                    for (int i=0;i<boxes.size();i++) {
+                        ParticleSystem.runSystem(frame,boxes.get(i).landmark,t);
+                        Log.v(TAG,"picture width"+ frame.height() + "picture height"+ frame.width());
+                        Log.v(TAG,"Box Width"+ boxes.get(i).width()+"Box Height"+ boxes.get(i).height());
+                    }
+                }catch (Exception e){
+                }
             }
         }
     }
@@ -148,6 +158,23 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
     private void cacheEffect(String effectName){
         if(effectName.startsWith("C")){
             Toast.makeText(CameraViewActivity.this, "The new effect is coming soon！", Toast.LENGTH_SHORT).show();
+        } else if(effectName.startsWith("P")) {
+            option = 0;
+        } else if(effectName.startsWith("F")) {
+            option = 1;
+        } else if(effectName.startsWith("E")) {
+            option = 2;
+            t = 0;
+            config_time = 0;
+            for(int i = 0; i <10; i++){
+                config[i][22] = 0;
+            }
+            option = 2;
+            effectLoad(0,1);
+            effectLoad(1,2);
+            effectLoad(2,3);
+            effectLoad(3,4);
+            ParticleSystem.Configuration(config,config_time);
         } else {
             if(RepositoryUtil.download(2, effectName, this)){
                 loadEffect(RepositoryUtil.ReadTxtFile(Environment.getExternalStorageDirectory()+"/download/" + effectName + ".txt"));
@@ -239,28 +266,6 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
         ParticleSystem.Configuration(config,config_time);
     }
 
-    private void pureProcess(Mat frame,Bitmap bm,Vector<Box> boxes){
-        try {
-            for (int i=0;i<boxes.size();i++){
-                FaceUtils.drawRect(bm,boxes.get(i).transform2Rect());
-                FaceUtils.drawPoints(bm,boxes.get(i).landmark);
-            }
-            Utils.bitmapToMat(bm,frame);
-        }catch (Exception e){
-        }
-    }
-
-    private void particleSystemProcess(Mat frame,Vector<Box> boxes,int t){
-        try {
-            for (int i=0;i<boxes.size();i++) {
-                ParticleSystem.runSystem(frame,boxes.get(i).landmark,t);
-                Log.v(TAG,"picture width"+ frame.height() + "picture height"+ frame.width());
-                Log.v(TAG,"Box Width"+ boxes.get(i).width()+"Box Height"+ boxes.get(i).height());
-            }
-        }catch (Exception e){
-        }
-    }
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -278,39 +283,6 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
         } else {
             Toast.makeText(this, "Record not allowed", Toast.LENGTH_SHORT).show();
         }
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.camera_view_menus, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        String title = item.getTitle().toString();
-        if(id == R.id.PureCamera){
-            option = 0;
-        } else if (id == R.id.MTCNN) {
-            option = 1;
-        } else if (id == R.id.Test){
-            t = 0;
-            config_time = 0;
-            for(int i = 0; i <10; i++){
-                config[i][22] = 0;
-            }
-            option = 2;
-            effectLoad(0,1);
-            effectLoad(1,2);
-            effectLoad(2,3);
-            effectLoad(3,4);
-            ParticleSystem.Configuration(config,config_time);
-        } else {
-            option = 2;
-            cacheEffect(title);
-        }
-        return super.onOptionsItemSelected(item);
     }
 
     @Override

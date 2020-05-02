@@ -44,7 +44,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="270dp"
         android:background="@drawable/button_circle_shape"
-        android:text="开始拍摄"
+        android:text="Start"
         android:textSize="23sp" />
 
     <TextView
@@ -53,19 +53,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/camera_btn"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="40dp"
         android:text="V1.20"
         android:textSize="20sp"/>
-
-<!--    <ImageView-->
-<!--        android:id="@+id/imageView"-->
-<!--        android:layout_width="131dp"-->
-<!--        android:layout_height="50dp"-->
-<!--        android:layout_alignParentStart="true"-->
-<!--        android:layout_alignParentTop="true"-->
-<!--        android:layout_marginStart="5dp"-->
-<!--        android:layout_marginTop="8dp"-->
-<!--        app:srcCompat="@drawable/biglogo" />-->
-
 
 </RelativeLayout>
