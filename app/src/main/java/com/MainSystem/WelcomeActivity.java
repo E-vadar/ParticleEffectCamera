@@ -12,9 +12,12 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
+import android.util.Log;
 import android.widget.Toast;
 import com.ProcessModule.RepositoryUtil;
+
 import org.opencv.android.OpenCVLoader;
+
 import java.util.ArrayList;
 
 public class WelcomeActivity extends AppCompatActivity {
@@ -39,18 +42,18 @@ public class WelcomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
         initEffectList();
-        localmap = BitmapFactory.decodeResource(getResources(),R.drawable.a36799,options);
+        initLoadOpenCVLibs();
+        localmap = BitmapFactory.decodeResource(getResources(),R.drawable.white,options);
         if (Build.VERSION.SDK_INT >= 23) {
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE,
                     Manifest.permission.WRITE_EXTERNAL_STORAGE,Manifest.permission.RECORD_AUDIO,
                     Manifest.permission.CAMERA}, 1);
         }
-        initLoadOpenCVLibs();
-        handler.sendMessageDelayed(Message.obtain(),5000);
+        handler.sendMessageDelayed(Message.obtain(),3000);
     }
 
     private void initLoadOpenCVLibs() {
-        boolean success= OpenCVLoader.initDebug();
+        OpenCVLoader.initDebug();
     }
 
     private void initEffectList(){
@@ -59,9 +62,9 @@ public class WelcomeActivity extends AppCompatActivity {
             for(int i=0;i<WelcomeActivity.effectList.size();i++){
                 downloadEffectImage(WelcomeActivity.effectList.get(i));
             }
-            Toast.makeText(WelcomeActivity.this, "更新粒子特效目录完成！", Toast.LENGTH_SHORT).show();
+            Toast.makeText(WelcomeActivity.this, "Updating finished！", Toast.LENGTH_SHORT).show();
         } else {
-            Toast.makeText(WelcomeActivity.this, "正在更新粒子特效目录！", Toast.LENGTH_SHORT).show();
+            Toast.makeText(WelcomeActivity.this, "Updating effects！", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -75,4 +78,5 @@ public class WelcomeActivity extends AppCompatActivity {
         RepositoryUtil.delete(Environment.getExternalStorageDirectory()+"/download/","List.txt");
         handler.removeCallbacksAndMessages(null);
     }
+
 }

@@ -15,6 +15,8 @@ import android.os.Message;
 import android.os.Looper;
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+
 import android.util.Log;
 import android.os.Build;
 import android.content.Context;
@@ -143,7 +145,8 @@ public class RecordService extends Service implements Handler.Callback {
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     private void setUpMediaRecorder() {
-        mRecordFilePath = getSaveDirectory() + File.separator + "1 Test Video_" + System.currentTimeMillis() + ".mp4";
+        SimpleDateFormat dateformat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        mRecordFilePath = getSaveDirectory() + File.separator + "Video " + dateformat.format(System.currentTimeMillis()) + ".mp4";
         Log.i(TAG, "setUpMediaRecorder: " + mRecordFilePath);
         if (mMediaRecorder == null) {
             mMediaRecorder = new MediaRecorder();

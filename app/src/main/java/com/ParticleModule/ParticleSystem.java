@@ -5,7 +5,6 @@ import java.util.ArrayDeque;
 import org.opencv.core.Mat;
 
 public class ParticleSystem {
-
     private static int total_duration = 0;
     private static int group_size = 0;
     private static ArrayDeque<Particle> ptcspool = new ArrayDeque<>();
@@ -96,9 +95,7 @@ public class ParticleSystem {
         key_position[2][1] = landmark[2].y;
         key_position[3][0] = (landmark[3].x + landmark[4].x)/2;//Mouth
         key_position[3][1] = (landmark[3].y + landmark[4].y)/2;
-
         int time = t % total_duration;//Transfer frame period to particle effect period
-
         //Update every particles in pool and draw them on frame image
         for (int i = 0; i < ptcspool.size(); i++) {
             Particle ptc = ptcspool.removeFirst();

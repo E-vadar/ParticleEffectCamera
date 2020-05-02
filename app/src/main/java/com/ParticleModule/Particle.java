@@ -4,11 +4,8 @@ import org.opencv.core.Point;
 import org.opencv.core.Scalar;
 import org.opencv.core.Mat;
 import static org.opencv.imgproc.Imgproc.circle;
-//import static org.opencv.imgproc.Imgproc.LINE_AA;
-//import static org.opencv.imgproc.Imgproc.line;
 
 public class Particle {
-
     int pNo;//Mark for particles
     double x,y;//x and y position
     double v ;//Velocity
@@ -110,10 +107,12 @@ public class Particle {
         color = new Scalar(col[0],col[1],col[2]);
     }
     public void color_random(){
-        color = new Scalar((new Double(Math.random()*10)).intValue()*25,(new Double(Math.random()*10)).intValue()*25,(new Double(Math.random()*10)).intValue()*25);
+        color = new Scalar((new Double(Math.random()*10)).intValue()*25,(new Double(Math.random()*10)).intValue()*25,
+                (new Double(Math.random()*10)).intValue()*25);
     }
     public void color_gradual(){
-        color = new Scalar(col[0]-(new Double(Math.random()*5)).intValue()*5,col[1]+(new Double(Math.random()*5)).intValue()*5,col[2]+(new Double(Math.random()*5)).intValue()*5);
+        color = new Scalar(col[0]-(new Double(Math.random()*5)).intValue()*5,col[1]+(new Double(Math.random()*5)).intValue()*5,
+                col[2]+(new Double(Math.random()*5)).intValue()*5);
     }
 
     //Set the velocity change type
@@ -405,7 +404,6 @@ public class Particle {
                 xp = new Double(Math.floor(xt[i] + x0)).intValue();
                 yp = new Double(Math.floor(yt[i] + y0)).intValue();
                 circle(frame,new Point(xp,yp),new Double(Math.floor(size/2)).intValue(),new Scalar(trajectoryColor[0],trajectoryColor[1],trajectoryColor[2]),-1);
-                //line(frame,new Point(xp, yp),new Point(xp0,yp0),new Scalar(trajectoryColor[0],trajectoryColor[1],trajectoryColor[2]),new Double(Math.floor(size/2)).intValue());
             }
         }
     }

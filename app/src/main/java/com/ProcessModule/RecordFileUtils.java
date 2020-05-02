@@ -14,7 +14,6 @@ import java.io.File;
 import android.content.Context;
 
 public class RecordFileUtils {
-
     public static boolean deleteSDFile(String path) {
         return deleteSDFile(path, false);
     }

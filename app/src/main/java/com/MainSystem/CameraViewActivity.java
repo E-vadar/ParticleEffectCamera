@@ -17,6 +17,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.SurfaceView;
 import android.view.View;
+import android.view.Window;
 import android.view.WindowManager;
 import android.widget.RadioButton;
 import org.opencv.android.CameraBridgeViewBase;
@@ -43,9 +44,9 @@ import static org.opencv.imgproc.Imgproc.circle;
 public class CameraViewActivity extends AppCompatActivity implements CameraBridgeViewBase.CvCameraViewListener2, View.OnClickListener{
     String TAG="CameraViewActivity";
     private JavaCameraView mcameraView;
-    private static int cameraIndex = 1;//前置1，后置0
+    private static int cameraIndex = 1;
     public static int option = 0;
-    static int t = 0;//计数器，60一个循环
+    static int t = 0;
     MTCNN mtcnn;
     BitmapFactory.Options options = new BitmapFactory.Options();
     public static boolean recording;
@@ -60,10 +61,8 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
     private ServiceConnection mConnection = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
-            //启动service
             RecordService.RecordBinder recordBinder = (RecordService.RecordBinder) service;
             RecordService recordService = recordBinder.getRecordService();
-            //这个其实是传值在使用的activity中拿到Service
             RecordUtils.setScreenService(recordService);
         }
         @Override
@@ -75,22 +74,18 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camera_view);
-        initLoadOpenCVLibs();//调用opencv库
         setEffectMenu();
-        //三行 摄像头权限相关
         StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
         StrictMode.setVmPolicy(builder.build());
         builder.detectFileUriExposure();
-        //全屏
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         mcameraView = findViewById(R.id.cv_camera_id);
         mcameraView.setVisibility(SurfaceView.VISIBLE);
-        mcameraView.setCvCameraViewListener(this); // setup frame listener
+        mcameraView.setCvCameraViewListener(this);
         mcameraView.setCameraIndex(0);
         mcameraView.enableView();
         mcameraView.enableFpsMeter();
-        //前置、后置摄像头按钮初始化
         RadioButton backOption = findViewById(R.id.backCameraOption);
         RadioButton frontOption = findViewById(R.id.frontCameraOption);
         backOption.setOnClickListener(this);
@@ -98,9 +93,7 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
         backOption.setSelected(true);
         options.inPreferredConfig = Bitmap.Config.ARGB_8888;
         bitmap=Bitmap.createScaledBitmap(bitmap,720,960,true);
-        //初始化MTCNN
         mtcnn=new MTCNN(getAssets());
-        //获取机型数据
         DisplayMetrics display = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(display);
         width = display.widthPixels;
@@ -110,7 +103,6 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
     }
 
     private void setEffectMenu(){
-        Log.v(TAG,"mark1"+WelcomeActivity.effectList);
         int effectsize = WelcomeActivity.effectList.size();
         LinearLayout linear = (LinearLayout)findViewById(R.id.scroll);
         for(int i=0;i<effectsize;i++){
@@ -133,33 +125,20 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
         }
     }
 
-    //开启录制服务
     private void startService() {
         Intent intent = new Intent(CameraViewActivity.this, RecordService.class);
         bindService(intent, mConnection, BIND_AUTO_CREATE);
     }
 
-    //装载openCV
-    private void initLoadOpenCVLibs() {
-        boolean success= OpenCVLoader.initDebug();
-        if(success) {
-            Log.i(TAG,"load library successfully");
-        }
-    }
 
-    //处理帧图片逻辑
     private void process(Mat frame) {
         if(option == 0){
-            //Pure
         } else {
-            //Face detect
             Utils.matToBitmap(frame,bitmap);
-            Vector<Box> boxes=mtcnn.detectFaces(bitmap,150+cameraIndex*150);//mtcnn()的作用结果为生成一系列Box类（结构）
+            Vector<Box> boxes=mtcnn.detectFaces(bitmap,150+cameraIndex*150);
             if(option == 1){
-                //Draw Face ROI
                 pureProcess(frame,bitmap,boxes);
             } else {
-                //Draw Particle Effect
                 //circle(frame,new Point(300,300),1000,new Scalar(255,255,255),-1);
                 particleSystemProcess(frame,boxes,t);
             }
@@ -168,12 +147,12 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
 
     private void cacheEffect(String effectName){
         if(effectName.startsWith("C")){
-            Toast.makeText(CameraViewActivity.this, "敬请期待！", Toast.LENGTH_SHORT).show();
+            Toast.makeText(CameraViewActivity.this, "The new effect is coming soon！", Toast.LENGTH_SHORT).show();
         } else {
             if(RepositoryUtil.download(2, effectName, this)){
                 loadEffect(RepositoryUtil.ReadTxtFile(Environment.getExternalStorageDirectory()+"/download/" + effectName + ".txt"));
             } else {
-                Toast.makeText(CameraViewActivity.this, "开始下载:" + effectName + ",请再次点击启动模板", Toast.LENGTH_SHORT).show();
+                Toast.makeText(CameraViewActivity.this, "Downloading:" + effectName + ", reclick to start", Toast.LENGTH_SHORT).show();
             }
         }
     }
@@ -242,15 +221,11 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
     }
 
     private void loadEffect(String content){
-
-        //Delete former effect template data
         t = 0;
         config_time = 0;
         for(int i = 0; i <10; i++){
             config[i][22] = 0;
         }
-
-        //Set effect template data
         config_time = Integer.parseInt(content.substring(0,1));
         content = content.substring(2);
         String[] column = content.split("\n");
@@ -261,8 +236,6 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
             }
             config[i][22] = 1;
         }
-
-        //Configure particle system
         ParticleSystem.Configuration(config,config_time);
     }
 
@@ -293,20 +266,17 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == REQUEST_ALLOW && data != null) {
             try {
-                //设置数据，在用户允许后 调用了开始录屏的方法
                 RecordUtils.setUpData(resultCode, data);
-                //拿到路径
                 String screenRecordFilePath = RecordUtils.getScreenRecordFilePath();
                 if (screenRecordFilePath == null) {
-                    Toast.makeText(this, "空的", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Empty", Toast.LENGTH_SHORT).show();
                 }
-                Toast.makeText(CameraViewActivity.this, "" + screenRecordFilePath, Toast.LENGTH_SHORT).show();
                 Log.i("zlq", "onClick: " + screenRecordFilePath);
             } catch (Exception e) {
                 e.printStackTrace();
             }
         } else {
-            Toast.makeText(this, "禁止录屏", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Record not allowed", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -356,12 +326,12 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
     @Override
     public Mat onCameraFrame(CameraBridgeViewBase.CvCameraViewFrame inputFrame) {
         Mat frame = inputFrame.rgba();
-        if(cameraIndex == 1) { // 前置摄像头
-            flip(frame,frame, 1);//Y轴翻转
+        if(cameraIndex == 1) {
+            flip(frame,frame, 1);
         }
-        transpose(frame,frame);//转置
+        transpose(frame,frame);
         process(frame);
-        transpose(frame,frame);//转置
+        transpose(frame,frame);
         if(t>=60){
             t=0;
         } else {
@@ -373,7 +343,6 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
     @Override
     protected void onStop() {
         super.onStop();
-        //在对用户可见不可交互的时候防止异常
         RecordUtils.clear();
     }
 
@@ -410,16 +379,17 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
             cameraIndex = 0;
         } else if(id == R.id.record_btn) {
             if(recording){
-                RecordUtils.stopScreenRecord(CameraViewActivity.this);//停止
+                RecordUtils.stopScreenRecord(CameraViewActivity.this);
                 Log.i(TAG, "onClick: " + RecordUtils.getScreenRecordFilePath());
+                Toast.makeText(CameraViewActivity.this, "Record stop", Toast.LENGTH_SHORT).show();
                 recording = false;
             } else {
                 if (RecordFileUtils.getFreeMem(CameraViewActivity.this) < 100) {
-                    Toast.makeText(CameraViewActivity.this, "手机内存不足,请清理后再进行录屏", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(CameraViewActivity.this, "Not enough space", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                //开始录屏录音
                 RecordUtils.startScreenRecord(CameraViewActivity.this, REQUEST_ALLOW);
+                Toast.makeText(CameraViewActivity.this, "Record start", Toast.LENGTH_SHORT).show();
                 recording = true;
             }
         }
@@ -429,4 +399,5 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
         }
         mcameraView.enableView();
     }
+
 }

@@ -14,7 +14,6 @@ import java.util.List;
 public class RecordUtils {
     private static RecordService s_ScreenRecordService;
     private static List<RecordListener> s_RecordListener = new ArrayList<>();
-    private static List<OnPageRecordListener> s_PageRecordListener = new ArrayList<>();
 
     public static boolean isScreenRecordEnable(){
         return Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP ;
@@ -31,9 +30,6 @@ public class RecordUtils {
         }
         if (s_RecordListener != null && s_RecordListener.size() > 0){
             s_RecordListener.clear();
-        }
-        if (s_PageRecordListener != null && s_PageRecordListener.size() > 0 ){
-            s_PageRecordListener.clear();
         }
     }
 
@@ -111,17 +107,8 @@ public class RecordUtils {
 
     public interface RecordListener{
         void onStartRecord();
-        void onPauseRecord();
-        void onResumeRecord();
         void onStopRecord(String stopTip);
         void onRecording(String timeTip);
-    }
-
-    public interface OnPageRecordListener {
-        void onStartRecord();
-        void onStopRecord();
-        void onBeforeShowAnim();
-        void onAfterHideAnim();
     }
 
 }
