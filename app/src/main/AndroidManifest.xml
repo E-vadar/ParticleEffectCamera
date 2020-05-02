@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.MainSystem">
-    <!-- 拍照 -->
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -14,14 +13,14 @@
         android:label="ParticleEffectCamera"
         android:roundIcon="@drawable/icona"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
+        android:theme="@style/AppTheme.NoActionBar"
         android:networkSecurityConfig="@xml/network_security_config">
         <activity android:name="com.MainSystem.MainActivity"
             android:screenOrientation="portrait"></activity>
         <activity android:name="com.MainSystem.CameraViewActivity"
             android:screenOrientation="portrait"/>
         <activity android:name="com.MainSystem.WelcomeActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
