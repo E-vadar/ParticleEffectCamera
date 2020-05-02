@@ -129,16 +129,15 @@ public class RecordService extends Service implements Handler.Callback {
         if (mRecordSeconds <= 2) {
             RecordFileUtils.deleteSDFile(mRecordFilePath);
         } else {
-            RecordFileUtils.fileScanVideo(this, mRecordFilePath, 1280, 720, mRecordSeconds);
+            RecordFileUtils.fileScanVideo(this, mRecordFilePath, 1080, 2340, mRecordSeconds);
         }
         mRecordSeconds = 0;
         return true;
     }
 
-    //这个就是刚才讲过的 绘制窗口大小,dpi问题 VirtualDisplay
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     private void createVirtualDisplay() {
-        mVirtualDisplay = mMediaProjection.createVirtualDisplay("MainScreen", 1280, 720, mScreenDpi,
+        mVirtualDisplay = mMediaProjection.createVirtualDisplay("MainScreen", 1080, 2340, mScreenDpi,
                 DisplayManager.VIRTUAL_DISPLAY_FLAG_AUTO_MIRROR, mMediaRecorder.getSurface(), null, null);
     }
 
@@ -157,14 +156,11 @@ public class RecordService extends Service implements Handler.Callback {
         } else if (mRecordFilePath == null) {
             mMediaRecorder.setOutputFile(mRecordFilePath);
         }
-        //设置录屏时屏幕大小,这个可跟mVirtualDisplay 一起控制屏幕大小
-        //mVirtualDisplay 是将屏幕设置成多大多小，setVideoSize是输出文件时屏幕多大多小
-        mMediaRecorder.setVideoSize(1280, 720);
+        mMediaRecorder.setVideoSize(1080, 2340);
         mMediaRecorder.setVideoEncoder(MediaRecorder.VideoEncoder.H264);
         mMediaRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
-        //设置码率 高清的话的要数越大
-        mMediaRecorder.setVideoEncodingBitRate((int) (1280 * 720 * 2.6));
-        mMediaRecorder.setVideoFrameRate(20);
+        mMediaRecorder.setVideoEncodingBitRate((int) (1080 * 2340 * 5));
+        mMediaRecorder.setVideoFrameRate(25);
         try {
             //准备
             mMediaRecorder.prepare();
@@ -172,6 +168,7 @@ public class RecordService extends Service implements Handler.Callback {
             e.printStackTrace();
         }
     }
+
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public void clearAll() {
         if (mMediaProjection != null) {
@@ -179,6 +176,7 @@ public class RecordService extends Service implements Handler.Callback {
             mMediaProjection = null;
         }
     }
+
     public String getRecordFilePath() {
         return mRecordFilePath;
     }
