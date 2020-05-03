@@ -1,5 +1,10 @@
 package com.ProcessModule;
 
+/**
+ * Author: He Jingze
+ * Description: Some static methods to deal with call the record service
+ */
+
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;

@@ -1,5 +1,10 @@
 package com.ParticleModule;
 
+/**
+ * Author: He Jingze
+ * Description: One particle object and method to control particle's motion
+ */
+
 import org.opencv.core.Point;
 import org.opencv.core.Scalar;
 import org.opencv.core.Mat;

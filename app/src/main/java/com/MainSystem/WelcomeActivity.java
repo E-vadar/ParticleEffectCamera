@@ -1,5 +1,10 @@
 package com.MainSystem;
 
+/**
+ * Author: He Jingze
+ * Description: Welcome page and basic resources or library loading
+ */
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import android.Manifest;
@@ -12,9 +17,8 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
-import android.util.Log;
 import android.widget.Toast;
-import com.ProcessModule.RepositoryUtil;
+import com.ProcessModule.RepositoryUtils;
 
 import org.opencv.android.OpenCVLoader;
 
@@ -57,8 +61,8 @@ public class WelcomeActivity extends AppCompatActivity {
     }
 
     private void initEffectList(){
-        if(RepositoryUtil.download(0, "List", this)){
-            RepositoryUtil.ReadListFile(Environment.getExternalStorageDirectory()+"/download/List.txt");
+        if(RepositoryUtils.download(0, "List", this)){
+            RepositoryUtils.ReadListFile(Environment.getExternalStorageDirectory()+"/download/List.txt");
             for(int i=0;i<WelcomeActivity.effectList.size();i++){
                 downloadEffectImage(WelcomeActivity.effectList.get(i));
             }
@@ -69,13 +73,13 @@ public class WelcomeActivity extends AppCompatActivity {
     }
 
     private void downloadEffectImage(String effectName){
-        RepositoryUtil.download(1, effectName, this);
+        RepositoryUtils.download(1, effectName, this);
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        RepositoryUtil.delete(Environment.getExternalStorageDirectory()+"/download/","List.txt");
+        RepositoryUtils.delete(Environment.getExternalStorageDirectory()+"/download/","List.txt");
         handler.removeCallbacksAndMessages(null);
     }
 

@@ -1,5 +1,10 @@
 package com.KeyPointModule;
 
+/**
+ * Author: He Jingze
+ * Description: Call the MTCNN face detection model and 3 layers network input
+ */
+
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.Matrix;

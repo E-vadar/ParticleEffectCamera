@@ -1,5 +1,10 @@
 package com.ProcessModule;
 
+/**
+ * Author: He Jingze
+ * Description: Some static method to deal with repository of effect templates on web server
+ */
+
 import android.app.DownloadManager;
 import android.content.Context;
 import android.net.Uri;
@@ -13,7 +18,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
-public class RepositoryUtil {
+public class RepositoryUtils {
     public static boolean fileIsExists(String filePath) {
         try {
             File f = new File(filePath);

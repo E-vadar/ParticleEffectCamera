@@ -1,5 +1,10 @@
 package com.ProcessModule;
 
+/**
+ * Author: He Jingze
+ * Description: Record service and record state check
+ */
+
 import android.app.Service;
 import android.content.Intent;
 import android.hardware.display.DisplayManager;

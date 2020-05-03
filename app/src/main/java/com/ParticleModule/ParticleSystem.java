@@ -1,5 +1,10 @@
 package com.ParticleModule;
 
+/**
+ * Author: He Jingze
+ * Description: A system managing all groups of particles and configuration of particles
+ */
+
 import android.graphics.Point;
 import java.util.ArrayDeque;
 import org.opencv.core.Mat;

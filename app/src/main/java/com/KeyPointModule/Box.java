@@ -1,5 +1,10 @@
 package com.KeyPointModule;
 
+/**
+ * Author: He Jingze
+ * Description: Box object to set a box of a face detected
+ */
+
 import android.graphics.Point;
 import android.graphics.Rect;
 import static java.lang.Math.max;

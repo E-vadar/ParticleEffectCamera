@@ -1,5 +1,10 @@
 package com.ProcessModule;
 
+/**
+ * Author: He Jingze
+ * Description: Some static methods to deal with file write or read operation about recording
+ */
+
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.content.ContentResolver;

@@ -1,5 +1,10 @@
 package com.MainSystem;
 
+/**
+ * Author: He Jingze
+ * Description: Main camera view page and basic video processing logic
+ */
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.ComponentName;
@@ -28,7 +33,7 @@ import com.KeyPointModule.FaceUtils;
 import com.ProcessModule.RecordFileUtils;
 import com.ProcessModule.RecordService;
 import com.ProcessModule.RecordUtils;
-import com.ProcessModule.RepositoryUtil;
+import com.ProcessModule.RepositoryUtils;
 import com.KeyPointModule.Box;
 import com.KeyPointModule.MTCNN;
 import com.ParticleModule.ParticleSystem;
@@ -178,8 +183,8 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
             effectTest(3,4);
             ParticleSystem.Configuration(config,config_time);
         } else {
-            if(RepositoryUtil.download(2, effectName, this)){
-                loadEffect(RepositoryUtil.ReadTxtFile(Environment.getExternalStorageDirectory()+"/download/" + effectName + ".txt"));
+            if(RepositoryUtils.download(2, effectName, this)){
+                loadEffect(RepositoryUtils.ReadTxtFile(Environment.getExternalStorageDirectory()+"/download/" + effectName + ".txt"));
             } else {
                 Toast.makeText(CameraViewActivity.this, "Downloading:" + effectName + ", reclick to start", Toast.LENGTH_SHORT).show();
             }

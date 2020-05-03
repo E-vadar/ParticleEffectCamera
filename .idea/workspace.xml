@@ -9,10 +9,10 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/app/src/main/java/com/MainSystem/CameraViewActivity.java" line="366" />
+    <bookmark url="file://$PROJECT_DIR$/app/src/main/java/com/MainSystem/CameraViewActivity.java" line="378" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="57e589d6-45b6-4dc5-af82-9d8156bffe02" name="Default Changelist" comment="Final version">
+    <list default="true" id="57e589d6-45b6-4dc5-af82-9d8156bffe02" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -23,10 +23,18 @@
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/KeyPointModule/Box.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/KeyPointModule/Box.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/KeyPointModule/FaceUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/KeyPointModule/FaceUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/KeyPointModule/MTCNN.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/KeyPointModule/MTCNN.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/MainSystem/CameraViewActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/MainSystem/CameraViewActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_camera_view.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_camera_view.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/camera_view_menus.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/MainSystem/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/MainSystem/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/MainSystem/WelcomeActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/MainSystem/WelcomeActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ParticleModule/Particle.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ParticleModule/Particle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ParticleModule/ParticleSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ParticleModule/ParticleSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ProcessModule/RecordFileUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ProcessModule/RecordFileUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ProcessModule/RecordService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ProcessModule/RecordService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ProcessModule/RecordUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ProcessModule/RecordUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ProcessModule/RepositoryUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ProcessModule/RepositoryUtils.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -58,18 +66,102 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_camera_view.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="19" column="29" lean-forward="true" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="653">
+              <caret line="55" column="39" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_welcome.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/KeyPointModule/Box.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+              <folding>
+                <element signature="method#Box#0;class#Box#0" />
+                <element signature="method#transform2Rect#0;class#Box#0" />
+                <element signature="method#calibrate#0;class#Box#0" />
+                <element signature="method#toSquareShape#0;class#Box#0" />
+                <element signature="method#limit_square#0;class#Box#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/KeyPointModule/FaceUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+              <folding>
+                <element signature="method#drawRect#0;class#FaceUtils#0" />
+                <element signature="method#drawPoints#0;class#FaceUtils#0" />
+                <element signature="method#flip_diag#0;class#FaceUtils#0" />
+                <element signature="method#updateBoxes#0;class#FaceUtils#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/KeyPointModule/MTCNN.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="38">
+              <caret line="2" column="3" lean-forward="true" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+              <folding>
+                <element signature="method#MTCNN#0;class#MTCNN#0" />
+                <element signature="method#loadModel#0;class#MTCNN#0" />
+                <element signature="method#normalizeImage#0;class#MTCNN#0" />
+                <element signature="method#bitmapResize#0;class#MTCNN#0" />
+                <element signature="method#PNetForward#0;class#MTCNN#0" />
+                <element signature="method#nms#0;class#MTCNN#0" />
+                <element signature="method#generateBoxes#0;class#MTCNN#0" />
+                <element signature="method#BoundingBoxReggression#0;class#MTCNN#0" />
+                <element signature="method#PNet#0;class#MTCNN#0" />
+                <element signature="method#crop_and_resize#0;class#MTCNN#0" />
+                <element signature="method#RNetForward#0;class#MTCNN#0" />
+                <element signature="method#RNet#0;class#MTCNN#0" />
+                <element signature="method#ONetForward#0;class#MTCNN#0" />
+                <element signature="method#ONet#0;class#MTCNN#0" />
+                <element signature="method#square_limit#0;class#MTCNN#0" />
+                <element signature="method#detectFaces#0;class#MTCNN#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/MainSystem/CameraViewActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="51" column="51" lean-forward="true" selection-start-line="51" selection-start-column="51" selection-end-line="51" selection-end-column="51" />
+            <state relative-caret-position="437">
+              <caret line="142" column="24" selection-start-line="142" selection-start-column="24" selection-end-line="142" selection-end-column="24" />
               <folding>
-                <element signature="class#2187:2636" />
                 <element signature="method#onCreate#0;class#CameraViewActivity#0" />
                 <element signature="method#setEffectMenu#0;class#CameraViewActivity#0" />
                 <element signature="method#startService#0;class#CameraViewActivity#0" />
-                <element signature="method#process#0;class#CameraViewActivity#0" />
-                <element signature="method#cacheEffect#0;class#CameraViewActivity#0" />
-                <element signature="method#effectLoad#0;class#CameraViewActivity#0" />
                 <element signature="method#loadEffect#0;class#CameraViewActivity#0" />
                 <element signature="method#onActivityResult#0;class#CameraViewActivity#0" />
                 <element signature="method#onCameraViewStarted#0;class#CameraViewActivity#0" />
@@ -86,76 +178,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/MainSystem/MainActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="33" column="38" lean-forward="true" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
-              <folding>
-                <element signature="method#onCreate#0;class#MainActivity#0" />
-                <element signature="method#initView#0;class#MainActivity#0" />
-                <element signature="method#initViewPagerData#0;class#MainActivity#0" />
-                <element signature="class#MyViewPager#0;class#MainActivity#0" />
-                <element signature="method#instantiateItem#0;class#MyViewPager#0;class#MainActivity#0" />
-                <element signature="method#destroyItem#0;class#MyViewPager#0;class#MainActivity#0" />
-                <element signature="method#onPageScrolled#0;class#MainActivity#0" />
-                <element signature="method#onPageSelected#0;class#MainActivity#0" />
-                <element signature="method#onPageScrollStateChanged#0;class#MainActivity#0" />
-                <element signature="method#onDestroy#0;class#MainActivity#0" />
-                <element signature="method#onClick#0;class#MainActivity#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-          <provider editor-type-id="android-designer2" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="55" column="39" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/MainSystem/WelcomeActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="66" column="57" selection-start-line="66" selection-start-column="57" selection-end-line="66" selection-end-column="57" />
-              <folding>
-                <element signature="method#downloadEffectImage#0;class#WelcomeActivity#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ProcessModule/RepositoryUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
-              <folding>
-                <element signature="method#fileIsExists#0;class#RepositoryUtil#0" />
-                <element signature="method#ReadTxtFile#0;class#RepositoryUtil#0" />
-                <element signature="method#ReadListFile#0;class#RepositoryUtil#0" />
-                <element signature="method#delete#0;class#RepositoryUtil#0" />
-                <element signature="method#download#0;class#RepositoryUtil#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_welcome.xml">
-          <provider editor-type-id="android-designer2" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="418">
@@ -166,18 +188,21 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_background.xml">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="8" column="39" lean-forward="true" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/xml/network_security_config.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/button_circle_shape.xml">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1330">
+              <caret line="70" column="52" selection-start-line="70" selection-start-column="52" selection-end-line="70" selection-end-column="52" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -229,8 +254,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/ScreenRecordService.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/ScreenRecordService.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/Notifications.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/VideoEncoder.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/EffectSystem/Encoder.java" />
@@ -263,23 +286,25 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/CameraViewActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_welcome.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ProcessModule/RecordUtils.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ProcessModule/RecordService.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/MainSystem/MainActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ProcessModule/RepositoryUtil.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ProcessModule/RecordFileUtils.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ParticleModule/Particle.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ParticleModule/ParticleSystem.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/KeyPointModule/Utils.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/KeyPointModule/FaceUtils.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/KeyPointModule/Box.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/KeyPointModule/MTCNN.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_camera_view.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/MainSystem/CameraViewActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/button_circle_shape_2.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/MainSystem/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/MainSystem/WelcomeActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ParticleModule/Particle.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ParticleModule/ParticleSystem.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ProcessModule/RecordFileUtils.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ProcessModule/RecordUtils.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ProcessModule/RecordService.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ProcessModule/RepositoryUtil.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/KeyPointModule/Box.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/MainSystem/CameraViewActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/KeyPointModule/FaceUtils.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/KeyPointModule/MTCNN.java" />
       </list>
     </option>
   </component>
@@ -297,7 +322,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="ProjectPane" />
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
@@ -414,33 +438,26 @@
             <path>
               <item name="ParticleEffectCameraV3" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="F:\Android\workspace\ParticleEffectCameraV3" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="openCVLibrary340" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="ParticleEffectCameraV3" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="F:\Android\workspace\ParticleEffectCameraV3" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="openCVLibrary340" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="ParticleEffectCameraV3" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="F:\Android\workspace\ParticleEffectCameraV3" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="openCVLibrary340" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="res" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="layout" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="ParticleEffectCameraV3" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="F:\Android\workspace\ParticleEffectCameraV3" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="openCVLibrary340" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="res" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="values" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -449,11 +466,11 @@
     <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-02-25T08:57:01.636Z" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$PROJECT_DIR$/../../android-sdk" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ScreenRecorder-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.updates" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
   </component>
   <component name="PsdUISettings">
     <option name="MODULE_TAB" value="Properties" />
@@ -472,10 +489,10 @@
       <recent name="com.EffectSystem" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Android\workspace\ParticleEffectCameraV3\app\src\main\res\drawable" />
       <recent name="F:\Android\workspace\ParticleEffectCameraV3\app\src\main\java\com\EffectSystem" />
       <recent name="F:\Android\workspace\ParticleEffectCameraV3\app\src\main\java\com\ParticleEffectCamera\ParticleSystem" />
       <recent name="F:\Android\workspace\ParticleEffectCameraV3\app\src\main\java\com\ParticleEffectCamera\DroidParticle" />
-      <recent name="F:\Android\workspace\ParticleEffectCameraV3\app\src\main\res\drawable" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -562,55 +579,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581334704039</updated>
-    </task>
-    <task id="LOCAL-00015" summary="perfect simple particle system">
-      <created>1581437321881</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1581437321881</updated>
-    </task>
-    <task id="LOCAL-00016" summary="a small test333">
-      <created>1581438025098</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1581438025098</updated>
-    </task>
-    <task id="LOCAL-00017" summary="a small improve for particle system">
-      <created>1581439987308</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1581439987308</updated>
-    </task>
-    <task id="LOCAL-00018" summary="a small test333">
-      <created>1581441686231</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1581441686231</updated>
-    </task>
-    <task id="LOCAL-00019" summary="a finish version of the simple particle effect system">
-      <created>1581446763784</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1581446763784</updated>
-    </task>
-    <task id="LOCAL-00020" summary="change the location which makes it more structurly right">
-      <created>1581447419544</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1581447419544</updated>
-    </task>
-    <task id="LOCAL-00021" summary="a new particle effect">
-      <created>1582634092488</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1582634092488</updated>
     </task>
     <task id="LOCAL-00022" summary="minfacesize to 120">
       <created>1584607582424</created>
@@ -906,7 +874,56 @@
       <option name="project" value="LOCAL" />
       <updated>1588425201029</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="Final version 5-2">
+      <created>1588428176537</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1588428176537</updated>
+    </task>
+    <task id="LOCAL-00065" summary="Final version 5-2">
+      <created>1588428232504</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1588428232504</updated>
+    </task>
+    <task id="LOCAL-00066" summary="Final version 5-2">
+      <created>1588430521555</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1588430521555</updated>
+    </task>
+    <task id="LOCAL-00067" summary="Final version 5-2">
+      <created>1588507849907</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1588507849907</updated>
+    </task>
+    <task id="LOCAL-00068" summary="Final version 5-2">
+      <created>1588508028394</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1588508028394</updated>
+    </task>
+    <task id="LOCAL-00069" summary="Final version 5-2">
+      <created>1588508462868</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1588508462868</updated>
+    </task>
+    <task id="LOCAL-00070" summary="Final version 5-2">
+      <created>1588508527385</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1588508527385</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1036,20 +1053,20 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/MainSystem/CameraViewActivity.java</url>
-          <line>189</line>
+          <line>195</line>
           <properties />
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/MainSystem/CameraViewActivity.java</url>
+          <line>107</line>
+          <properties />
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/VideoEncodeConfig.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/ScreenRecorder.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/RecordApplication.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ParticleEffectCamera/RecordApplication.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/Recorder.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/TalScreenParams.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/FileUtils.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/ParticleDraw.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/Blend.java" />
@@ -1057,35 +1074,10 @@
     <entry file="file://$PROJECT_DIR$/app/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="39" selection-start-column="39" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/EffectSystem/Process.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/a36799.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/a36799.jpg" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/logo.png" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/pg1.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/pg2.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/pg3.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/white.bmp">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-v24/ic_launcher_foreground.xml">
@@ -1097,18 +1089,6 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/backgr.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/biglogo.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/icona.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/dot.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/openCVLibrary340/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
@@ -1117,39 +1097,77 @@
       </provider>
       <provider editor-type-id="android-manifest" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/camera_view_menus.xml" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/xml/network_security_config.xml">
       <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ParticleModule/Particle.java">
+    <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ParticleModule/ParticleSystem.java">
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="86" column="68" selection-start-line="86" selection-start-column="68" selection-end-line="86" selection-end-column="68" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#Configuration#0;class#ParticleSystem#0" />
-            <element signature="method#runSystem#0;class#ParticleSystem#0" />
-          </folding>
+        <state relative-caret-position="-494">
+          <caret column="39" selection-start-column="39" selection-end-column="39" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/button_circle_shape_2.xml" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/pg1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/pg2.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/backgr.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/biglogo.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/button_circle_shape.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="31" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/dot.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/icona.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/pg4.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/white.bmp">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_background.xml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ProcessModule/RecordFileUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
-          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+          <caret line="4" column="93" selection-start-line="4" selection-start-column="93" selection-end-line="4" selection-end-column="93" />
           <folding>
             <element signature="method#deleteSDFile#1;class#RecordFileUtils#0" />
             <element signature="method#deleteFile#0;class#RecordFileUtils#0" />
@@ -1161,29 +1179,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ProcessModule/RecordService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="831">
-          <caret line="183" column="15" selection-start-line="183" selection-start-column="15" selection-end-line="183" selection-end-column="15" />
-          <folding>
-            <element signature="method#onCreate#0;class#RecordService#0" />
-            <element signature="method#setResultData#0;class#RecordService#0" />
-            <element signature="method#startRecord#0;class#RecordService#0" />
-            <element signature="method#stopRecord#0;class#RecordService#0" />
-            <element signature="method#createVirtualDisplay#0;class#RecordService#0" />
-            <element signature="method#setUpMediaRecorder#0;class#RecordService#0" />
-            <element signature="method#clearAll#0;class#RecordService#0" />
-            <element signature="method#getSaveDirectory#0;class#RecordService#0" />
-            <element signature="method#handleMessage#0;class#RecordService#0" />
-            <element signature="class#RecordBinder#0;class#RecordService#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ProcessModule/RecordUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="35" column="77" selection-start-line="35" selection-start-column="77" selection-end-line="35" selection-end-column="77" />
+        <state relative-caret-position="76">
+          <caret line="4" column="72" selection-start-line="4" selection-start-column="72" selection-end-line="4" selection-end-column="72" />
           <folding>
             <element signature="method#isScreenRecordEnable#0;class#RecordUtils#0" />
             <element signature="method#setScreenService#0;class#RecordUtils#0" />
@@ -1200,10 +1199,186 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ProcessModule/RecordService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
+          <folding>
+            <element signature="method#onCreate#0;class#RecordService#0" />
+            <element signature="method#setResultData#0;class#RecordService#0" />
+            <element signature="method#startRecord#0;class#RecordService#0" />
+            <element signature="method#stopRecord#0;class#RecordService#0" />
+            <element signature="method#createVirtualDisplay#0;class#RecordService#0" />
+            <element signature="method#setUpMediaRecorder#0;class#RecordService#0" />
+            <element signature="method#clearAll#0;class#RecordService#0" />
+            <element signature="method#getSaveDirectory#0;class#RecordService#0" />
+            <element signature="method#handleMessage#0;class#RecordService#0" />
+            <element signature="class#RecordBinder#0;class#RecordService#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ProcessModule/RepositoryUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="62" selection-start-line="4" selection-start-column="62" selection-end-line="4" selection-end-column="62" />
+          <folding>
+            <element signature="method#fileIsExists#0;class#RepositoryUtil#0" />
+            <element signature="method#ReadTxtFile#0;class#RepositoryUtil#0" />
+            <element signature="method#ReadListFile#0;class#RepositoryUtil#0" />
+            <element signature="method#delete#0;class#RepositoryUtil#0" />
+            <element signature="method#download#0;class#RepositoryUtil#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ParticleModule/Particle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ParticleModule/ParticleSystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#runSystem#0;class#ParticleSystem#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/MainSystem/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+          <folding>
+            <element signature="method#onCreate#0;class#MainActivity#0" />
+            <element signature="method#initView#0;class#MainActivity#0" />
+            <element signature="method#initViewPagerData#0;class#MainActivity#0" />
+            <element signature="class#MyViewPager#0;class#MainActivity#0" />
+            <element signature="method#instantiateItem#0;class#MyViewPager#0;class#MainActivity#0" />
+            <element signature="method#destroyItem#0;class#MyViewPager#0;class#MainActivity#0" />
+            <element signature="method#onPageScrolled#0;class#MainActivity#0" />
+            <element signature="method#onPageSelected#0;class#MainActivity#0" />
+            <element signature="method#onPageScrollStateChanged#0;class#MainActivity#0" />
+            <element signature="method#onDestroy#0;class#MainActivity#0" />
+            <element signature="method#onClick#0;class#MainActivity#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/MainSystem/WelcomeActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+          <folding>
+            <element signature="method#downloadEffectImage#0;class#WelcomeActivity#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/MainSystem/CameraViewActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="142" column="24" selection-start-line="142" selection-start-column="24" selection-end-line="142" selection-end-column="24" />
+          <folding>
+            <element signature="method#onCreate#0;class#CameraViewActivity#0" />
+            <element signature="method#setEffectMenu#0;class#CameraViewActivity#0" />
+            <element signature="method#startService#0;class#CameraViewActivity#0" />
+            <element signature="method#loadEffect#0;class#CameraViewActivity#0" />
+            <element signature="method#onActivityResult#0;class#CameraViewActivity#0" />
+            <element signature="method#onCameraViewStarted#0;class#CameraViewActivity#0" />
+            <element signature="method#onCameraViewStopped#0;class#CameraViewActivity#0" />
+            <element signature="method#onCameraFrame#0;class#CameraViewActivity#0" />
+            <element signature="method#onStop#0;class#CameraViewActivity#0" />
+            <element signature="method#onPause#0;class#CameraViewActivity#0" />
+            <element signature="method#onDestroy#0;class#CameraViewActivity#0" />
+            <element signature="method#onResume#0;class#CameraViewActivity#0" />
+            <element signature="method#onClick#0;class#CameraViewActivity#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="22" column="49" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-manifest" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="39" lean-forward="true" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1330">
+          <caret line="70" column="52" selection-start-line="70" selection-start-column="52" selection-end-line="70" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_camera_view.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="29" lean-forward="true" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="653">
+          <caret line="55" column="39" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_welcome.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/KeyPointModule/Box.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="method#Box#0;class#Box#0" />
+            <element signature="method#transform2Rect#0;class#Box#0" />
+            <element signature="method#calibrate#0;class#Box#0" />
+            <element signature="method#toSquareShape#0;class#Box#0" />
+            <element signature="method#limit_square#0;class#Box#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/KeyPointModule/FaceUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding>
+            <element signature="method#drawRect#0;class#FaceUtils#0" />
+            <element signature="method#drawPoints#0;class#FaceUtils#0" />
+            <element signature="method#flip_diag#0;class#FaceUtils#0" />
+            <element signature="method#updateBoxes#0;class#FaceUtils#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/KeyPointModule/MTCNN.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="24" column="33" lean-forward="true" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+        <state relative-caret-position="38">
+          <caret line="2" column="3" lean-forward="true" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
           <folding>
             <element signature="method#MTCNN#0;class#MTCNN#0" />
             <element signature="method#loadModel#0;class#MTCNN#0" />
@@ -1221,154 +1396,6 @@
             <element signature="method#ONet#0;class#MTCNN#0" />
             <element signature="method#square_limit#0;class#MTCNN#0" />
             <element signature="method#detectFaces#0;class#MTCNN#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/KeyPointModule/FaceUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/KeyPointModule/Box.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
-          <folding>
-            <element signature="method#Box#0;class#Box#0" />
-            <element signature="method#transform2Rect#0;class#Box#0" />
-            <element signature="method#calibrate#0;class#Box#0" />
-            <element signature="method#toSquareShape#0;class#Box#0" />
-            <element signature="method#limit_square#0;class#Box#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="39" lean-forward="true" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/camera_view_menus.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="59" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_camera_view.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1368">
-          <caret line="72" column="45" selection-start-line="72" selection-start-column="45" selection-end-line="72" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_welcome.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="55" column="39" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="49" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_background.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/button_circle_shape.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/xml/network_security_config.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/MainSystem/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="33" column="38" lean-forward="true" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
-          <folding>
-            <element signature="method#onCreate#0;class#MainActivity#0" />
-            <element signature="method#initView#0;class#MainActivity#0" />
-            <element signature="method#initViewPagerData#0;class#MainActivity#0" />
-            <element signature="class#MyViewPager#0;class#MainActivity#0" />
-            <element signature="method#instantiateItem#0;class#MyViewPager#0;class#MainActivity#0" />
-            <element signature="method#destroyItem#0;class#MyViewPager#0;class#MainActivity#0" />
-            <element signature="method#onPageScrolled#0;class#MainActivity#0" />
-            <element signature="method#onPageSelected#0;class#MainActivity#0" />
-            <element signature="method#onPageScrollStateChanged#0;class#MainActivity#0" />
-            <element signature="method#onDestroy#0;class#MainActivity#0" />
-            <element signature="method#onClick#0;class#MainActivity#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/MainSystem/CameraViewActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="51" column="51" lean-forward="true" selection-start-line="51" selection-start-column="51" selection-end-line="51" selection-end-column="51" />
-          <folding>
-            <element signature="class#2187:2636" />
-            <element signature="method#onCreate#0;class#CameraViewActivity#0" />
-            <element signature="method#setEffectMenu#0;class#CameraViewActivity#0" />
-            <element signature="method#startService#0;class#CameraViewActivity#0" />
-            <element signature="method#process#0;class#CameraViewActivity#0" />
-            <element signature="method#cacheEffect#0;class#CameraViewActivity#0" />
-            <element signature="method#effectLoad#0;class#CameraViewActivity#0" />
-            <element signature="method#loadEffect#0;class#CameraViewActivity#0" />
-            <element signature="method#onActivityResult#0;class#CameraViewActivity#0" />
-            <element signature="method#onCameraViewStarted#0;class#CameraViewActivity#0" />
-            <element signature="method#onCameraViewStopped#0;class#CameraViewActivity#0" />
-            <element signature="method#onCameraFrame#0;class#CameraViewActivity#0" />
-            <element signature="method#onStop#0;class#CameraViewActivity#0" />
-            <element signature="method#onPause#0;class#CameraViewActivity#0" />
-            <element signature="method#onDestroy#0;class#CameraViewActivity#0" />
-            <element signature="method#onResume#0;class#CameraViewActivity#0" />
-            <element signature="method#onClick#0;class#CameraViewActivity#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ProcessModule/RepositoryUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
-          <folding>
-            <element signature="method#fileIsExists#0;class#RepositoryUtil#0" />
-            <element signature="method#ReadTxtFile#0;class#RepositoryUtil#0" />
-            <element signature="method#ReadListFile#0;class#RepositoryUtil#0" />
-            <element signature="method#delete#0;class#RepositoryUtil#0" />
-            <element signature="method#download#0;class#RepositoryUtil#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/MainSystem/WelcomeActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="66" column="57" selection-start-line="66" selection-start-column="57" selection-end-line="66" selection-end-column="57" />
-          <folding>
-            <element signature="method#downloadEffectImage#0;class#WelcomeActivity#0" />
           </folding>
         </state>
       </provider>

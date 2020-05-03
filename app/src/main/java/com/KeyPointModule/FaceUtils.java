@@ -1,5 +1,10 @@
 package com.KeyPointModule;
 
+/**
+ * Author: He Jingze
+ * Description: Some static methods to draw boxed and key points on a face detected
+ */
+
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;

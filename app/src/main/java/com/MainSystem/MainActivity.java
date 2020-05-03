@@ -1,5 +1,10 @@
 package com.MainSystem;
 
+/**
+ * Author: He Jingze
+ * Description: Main page of this application and some friendly user information
+ */
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
