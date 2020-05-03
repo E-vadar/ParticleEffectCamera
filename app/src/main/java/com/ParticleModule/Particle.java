@@ -3,6 +3,9 @@ package com.ParticleModule;
 import org.opencv.core.Point;
 import org.opencv.core.Scalar;
 import org.opencv.core.Mat;
+
+import java.security.acl.Group;
+
 import static org.opencv.imgproc.Imgproc.circle;
 
 public class Particle {
@@ -103,7 +106,6 @@ public class Particle {
         }
     }
     public void color_normal(){
-
         color = new Scalar(col[0],col[1],col[2]);
     }
     public void color_random(){
@@ -186,6 +188,9 @@ public class Particle {
             case 6:
                 shape_love();
                 break;
+            case 7:
+                shape_firework2();
+                break;
         }
     }
     public void shape_snake(){
@@ -210,8 +215,8 @@ public class Particle {
                 direction[1] = 1 - 0.1*mark;
                 break;
         }
-        direction[0] = direction[0] * (group-group/2)* 0.3;
-        direction[1] = direction[1] * (group-group/2+1)* 0.3;
+        direction[0] = direction[0] * (group-group/2)* 0.1;
+        direction[1] = direction[1] * (group-group/2+1)* 0.6;
     }
     public void shape_circle(){
         int smallDuration = duration/4;
@@ -262,9 +267,9 @@ public class Particle {
         int smallDuration = duration/2;
         int mark = lifetime%smallDuration;
         int period = new Double(Math.floor(lifetime/smallDuration)).intValue()%2;
-        switch(period){
+            switch(period){
             case 0:
-                x = x + (Math.random()-0.5)*3*groupNo%8;
+                y = y + (Math.random()-0.5)*0.1*config[4]*groupNo%8;
                 direction[0] = 0;
                 direction[1] = 6-0.2*mark;
                 break;
@@ -353,6 +358,28 @@ public class Particle {
             case 5:
                 direction[0] = 1 - 0.05*mark;
                 direction[1] = -0.05*mark;
+                break;
+        }
+    }
+    public void shape_firework2(){
+        int smallDuration = duration/2;
+        int mark = lifetime%smallDuration;
+        int period = new Double(Math.floor(lifetime/smallDuration)).intValue()%2;
+        if(mark == 0)
+            x = 3 * (group-2);
+        switch(period){
+            case 0:
+                config[2]=2;
+                y = y + (Math.random()-0.5)*0.2*config[4]*groupNo%8;
+                direction[0] = 0;
+                direction[1] = 12-0.4*mark;
+                break;
+            case 1:
+                config[2]=1;
+                x = x + (Math.random()-0.5)*1*config[4]*groupNo%8;
+                direction[0] = (Math.random()*15-7.5)*3;
+                direction[1] = (Math.random()*15-7.5)*0.6-0.05*mark;
+                        //(Math.random()*2-2-0.1*mark)*0.5;
                 break;
         }
     }

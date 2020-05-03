@@ -186,36 +186,37 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
     }
 
     private void effectLoad(int groupNo,int size){
+        int factor = 30;
             //Motion config
-            config[groupNo][0] = 6;
+            config[groupNo][0] = 7;
             config[groupNo][1] = 0;
-            config[groupNo][2] = 0;
-            config[groupNo][3] = 2;
-            config[groupNo][4] = 4;
+            config[groupNo][2] = 2;
+            config[groupNo][3] = 0;
+            config[groupNo][4] = 4 ;
             //Particle config
             config[groupNo][5] = 60;
-            config[groupNo][6] = 55;
+            config[groupNo][6] = 70;
             config[groupNo][7] = 2;
-            config[groupNo][8] = size;
+            config[groupNo][8] = 2;
             config[groupNo][9] = 1;
-            config[groupNo][10] = 8;
+            config[groupNo][10] = 7;
             config[groupNo][11] = 1;
-            config[groupNo][12] = 2;
+            config[groupNo][12] = 1;
             //Particle color
-            config[groupNo][13] = 255-size*15;
-            config[groupNo][14] = 192-size*15;
-            config[groupNo][15] = 203-size*15;
+            config[groupNo][13] = 255-size*factor;
+            config[groupNo][14] = 23+size*factor;
+            config[groupNo][15] = 0;
             //Trajectory color
-            config[groupNo][16] = 220-size*15;
-            config[groupNo][17] = 140-size*15;
-            config[groupNo][18] = 130-size*15;
+            config[groupNo][16] = 220-size*factor;
+            config[groupNo][17] = 95-size*factor;
+            config[groupNo][18] = 0;
             //Halo color
-            config[groupNo][19] = 0;
-            config[groupNo][20] = 0;
+            config[groupNo][19] = 220-size*factor;
+            config[groupNo][20] = 215-size*factor;
             config[groupNo][21] = 0;
             //Whether activated group?
             config[groupNo][22] = 1;
-            config_time = 2;
+            config_time = 1;
 
         //            Motion config
 //            config[groupNo][0] = shape_type;
