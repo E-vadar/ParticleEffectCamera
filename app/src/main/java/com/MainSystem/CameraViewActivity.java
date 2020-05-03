@@ -172,10 +172,10 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
                 config[i][22] = 0;
             }
             option = 2;
-            effectLoad(0,1);
-            effectLoad(1,2);
-            effectLoad(2,3);
-            effectLoad(3,4);
+            effectTest(0,1);
+            effectTest(1,2);
+            effectTest(2,3);
+            effectTest(3,4);
             ParticleSystem.Configuration(config,config_time);
         } else {
             if(RepositoryUtil.download(2, effectName, this)){
@@ -186,7 +186,7 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
         }
     }
 
-    private void effectLoad(int groupNo,int size){
+    private void effectTest(int groupNo, int size){
         int factor = 30;
             //Motion config
             config[groupNo][0] = 7;
