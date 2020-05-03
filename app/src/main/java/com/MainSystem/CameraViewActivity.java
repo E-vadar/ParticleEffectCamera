@@ -37,7 +37,6 @@ import static org.opencv.core.Core.flip;
 import static org.opencv.core.Core.transpose;
 import android.widget.Button;
 import android.widget.LinearLayout;
-import static org.opencv.imgproc.Imgproc.circle;
 
 public class CameraViewActivity extends AppCompatActivity implements CameraBridgeViewBase.CvCameraViewListener2, View.OnClickListener{
     String TAG="CameraViewActivity";
@@ -143,7 +142,8 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
                 }catch (Exception e){
                 }
             } else {
-                //circle(frame,new Point(300,300),1000,new Scalar(255,255,255),-1);
+                //The way to design effect image:
+                //circle(frame,new Point(300,300),1000,new Scalar(0,0,0),-1);
                 try {
                     for (int i=0;i<boxes.size();i++) {
                         ParticleSystem.runSystem(frame,boxes.get(i).landmark,t);
