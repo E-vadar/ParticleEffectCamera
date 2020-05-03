@@ -159,6 +159,7 @@ public class CameraViewActivity extends AppCompatActivity implements CameraBridg
     private void cacheEffect(String effectName){
         if(effectName.startsWith("C")){
             Toast.makeText(CameraViewActivity.this, "The new effect is coming soon！", Toast.LENGTH_SHORT).show();
+            option = 0;
         } else if(effectName.startsWith("P")) {
             option = 0;
         } else if(effectName.startsWith("F")) {
