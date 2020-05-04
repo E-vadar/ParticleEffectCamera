@@ -1,7 +1,7 @@
 package com.KeyPointModule;
 
 /**
- * Author: He Jingze
+ * Author: He Jingze, vcvycy
  * Description: Some static methods to draw boxed and key points on a face detected
  */
 

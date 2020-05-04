@@ -1,7 +1,7 @@
 package com.KeyPointModule;
 
 /**
- * Author: He Jingze
+ * Author: He Jingze, vcvycy
  * Description: Call the MTCNN face detection model and 3 layers network input
  */
 

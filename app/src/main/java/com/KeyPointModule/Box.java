@@ -1,7 +1,7 @@
 package com.KeyPointModule;
 
 /**
- * Author: He Jingze
+ * Author: He Jingze, vcvycy
  * Description: Box object to set a box of a face detected
  */
 
