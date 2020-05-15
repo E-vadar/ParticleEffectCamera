@@ -100,7 +100,7 @@ public class RepositoryUtils {
         if(fileIsExists(Environment.getExternalStorageDirectory()+"/download/" + fileName + filetype)){
             return true;
         } else {
-            DownloadManager.Request request = new DownloadManager.Request(Uri.parse("http://q91np8f4n.bkt.clouddn.com" + doc + fileName + filetype));
+            DownloadManager.Request request = new DownloadManager.Request(Uri.parse("http://qacn29ngr.bkt.clouddn.com" + doc + fileName + filetype));
             request.setDestinationInExternalPublicDir("/download/",fileName + filetype);
             DownloadManager downloadManager= (DownloadManager)context.getSystemService(context.DOWNLOAD_SERVICE);
             downloadManager.enqueue(request);
