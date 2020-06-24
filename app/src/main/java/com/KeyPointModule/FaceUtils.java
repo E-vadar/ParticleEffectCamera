@@ -15,7 +15,7 @@ import android.util.Log;
 import java.util.Vector;
 
 public class FaceUtils {
-
+    static String TAG="FaceUtils";
     public static void drawRect(Bitmap bitmap,Rect rect){
         try {
             Canvas canvas = new Canvas(bitmap);
@@ -37,6 +37,7 @@ public class FaceUtils {
             int x=landmark[i].x;
             int y=landmark[i].y;
             drawRect(bitmap,new Rect(x-1,y-1,x+1,y+1));
+            Log.v(TAG,"x:"+ x + "y"+ y+"aiugeiubakudhjias");
         }
     }
 
